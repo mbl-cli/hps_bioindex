@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+ENV['DS_ENV'] ||= 'development'
+
+require_relative '../lib/ds_crawler'
+
+DsCrawler.logger = Logger.new($stdout)
+
+
