@@ -2,6 +2,7 @@ require 'coveralls'
 Coveralls.wear!
 
 require 'factory_girl'
+require 'webmock/rspec'
 
 ENV['DS_ENV'] = 'test'
 require_relative '../lib/hps_bioindex'
@@ -17,6 +18,7 @@ def truncate_tables
 end
 
 unless defined?(DS_CONSTANTS)
+  FILES_DIR = File.expand_path(File.join( File.dirname(__FILE__), 'files'))
   ITEMS_ALL_6 = File.read(File.join(File.dirname(__FILE__), 
                                     'files', 'items_all_6.xml'))
   ITEMS_20130805_6 = File.read(File.join(File.dirname(__FILE__), 
