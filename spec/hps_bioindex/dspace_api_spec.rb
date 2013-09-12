@@ -1,7 +1,7 @@
 require_relative '../spec_helper'
 
-describe DsCrawler::DspaceApi do
-  let(:api) { DsCrawler::DspaceApi.new }
+describe HpsBioindex::DspaceApi do
+  let(:api) { HpsBioindex::DspaceApi.new }
 
   it 'should have site' do
     api.site.class.should == RestClient::Resource
@@ -16,13 +16,13 @@ describe DsCrawler::DspaceApi do
 
   it 'should have public_key' do
     api.key.should == '123'
-    stub(DsCrawler.conf).api_key_public { nil }
+    stub(HpsBioindex.conf).api_key_public { nil }
     -> { api.key }.should raise_error
   end
 
   it 'should make digest' do
     api.digest(api.updates_path).should == 'bee68db3'
-    stub(DsCrawler.conf).api_key_private { nil }
+    stub(HpsBioindex.conf).api_key_private { nil }
     -> { api.digest(api.updates.url) }.should raise_error
   end
 

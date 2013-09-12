@@ -1,11 +1,11 @@
 require_relative '../spec_helper'
 
-describe DsCrawler::Harvester do
-  let(:harvester) { DsCrawler::Harvester.new }
+describe HpsBioindex::Harvester do
+  let(:harvester) { HpsBioindex::Harvester.new }
   before(:all) { truncate_tables }
 
   it 'should initiate' do
-    harvester.class.should == DsCrawler::Harvester
+    harvester.class.should == HpsBioindex::Harvester
   end
 
   it 'should get updates from items of a community' do

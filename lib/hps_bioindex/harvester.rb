@@ -1,12 +1,12 @@
-module DsCrawler
+module HpsBioindex
   class Harvester
 
     def initialize
-      @api = DsCrawler::DspaceApi.new
+      @api = HpsBioindex::DspaceApi.new
     end
 
     def harvest(opts = {})
-      DsCrawler.logger.info('Starting harvest from repository')
+      HpsBioindex.logger.info('Starting harvest from repository')
       res = get_updates(opts)
       if res && res[:items_collection][:items].size > 0
         res[:items_collection][:items].each do |item|
@@ -17,7 +17,7 @@ module DsCrawler
     end
     
     def get_updates(opts = {})
-      DsCrawler.logger.info('Getting new items')
+      HpsBioindex.logger.info('Getting new items')
       res = @api.updates.get(params: updates_params(opts))
       res =~ /xml/ ? Hash.from_xml(res) : nil
     end

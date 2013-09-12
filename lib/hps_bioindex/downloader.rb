@@ -1,4 +1,4 @@
-module DsCrawler
+module HpsBioindex
   class Downloader
   end
 end

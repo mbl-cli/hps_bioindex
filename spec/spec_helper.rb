@@ -4,7 +4,7 @@ Coveralls.wear!
 require 'factory_girl'
 
 ENV['DS_ENV'] = 'test'
-require_relative '../lib/ds_crawler'
+require_relative '../lib/hps_bioindex'
 
 RSpec.configure do |c|
   c.mock_with :rr

@@ -57,9 +57,9 @@ namespace :db do
   
   desc "Migrate the database"
   task(:migrate => :environment) do
-    DsCrawler.env = ENV['DS_ENV'].to_sym rescue :development
+    HpsBioindex.env = ENV['DS_ENV'].to_sym rescue :development
     ActiveRecord::Base.establish_connection(
-      ActiveRecord::Base.configurations[DsCrawler.env.to_s])
+      ActiveRecord::Base.configurations[HpsBioindex.env.to_s])
     ActiveRecord::Base.logger = Logger.new(STDOUT)
     ActiveRecord::Migration.verbose = true
     ActiveRecord::Migrator.migrate("db/migrate")
@@ -67,10 +67,10 @@ namespace :db do
 end
 
 task :environment do
-  require_relative 'lib/ds_crawler'
+  require_relative 'lib/hps_bioindex'
 end
 
 desc "Open an irb session preloaded with this library"
 task :console do
-    sh "irb -I lib -I extra -r ds_crawler.rb"
+    sh "irb -I lib -I extra -r hps_bioindex.rb"
 end

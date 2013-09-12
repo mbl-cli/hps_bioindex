@@ -9,7 +9,7 @@ class Bitstream < ActiveRecord::Base
   has_many :items, through: :bitstreams_items
   
   def path
-    dir = File.join(DsCrawler.conf.harvest_dir,
+    dir = File.join(HpsBioindex.conf.harvest_dir,
               internal_id[0..1],
               internal_id[2..3],
               internal_id)

@@ -2,8 +2,8 @@
 
 ENV['DS_ENV'] ||= 'development'
 
-require_relative '../lib/ds_crawler'
+require_relative '../lib/hps_bioindex'
 
-DsCrawler.logger = Logger.new($stdout)
+HpsBioindex.logger = Logger.new($stdout)
 
 

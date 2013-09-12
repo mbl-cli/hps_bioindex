@@ -5,7 +5,7 @@ require 'nokogiri'
 require 'active_record'
 require 'rest_client'
 
-module DsCrawler
+module HpsBioindex
 
   def self.env
     @env ||= ENV['DS_ENV'] ? ENV['DS_ENV'].to_sym : :development
@@ -57,4 +57,4 @@ module DsCrawler
   end
 end
 
-DsCrawler.get_db_connection
+HpsBioindex.get_db_connection

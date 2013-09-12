@@ -1,31 +1,31 @@
 development:
   dspace_api_url: http://0.0.0.0:9292
-  harvest_dir: /tmp/ds_crawler
+  harvest_dir: /tmp/hps_bioindex
   api_key_public: 123
   api_key_private: 456
   adapter: mysql2
   host: localhost
   username: root
   password:
-  database: ds_crawler_dev
+  database: hps_bioindex_dev
 test:
   dspace_api_url: http://example.org
-  harvest_dir: /tmp/ds_crawler
+  harvest_dir: /tmp/hps_bioindex
   api_key_public: 123
   api_key_private: 456
   adapter: mysql2
   host: localhost
   username: root
   password:
-  database: ds_crawler_test
+  database: hps_bioindex_test
 production:
   dspace_api_url: http://0.0.0.0:9292
-  harvest_dir: /tmp/ds_crawler
+  harvest_dir: /tmp/hps_bioindex
   api_key_public: 123
   api_key_private: 456
   adapter: mysql2
   host: localhost
   username: root
   password:
-  database: ds_crawler
+  database: hps_bioindex
 

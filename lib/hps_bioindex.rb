@@ -1,12 +1,12 @@
 require_relative '../environment'
 require_relative 'monkey_patches.rb'
 require_relative '../models'
-require_relative 'ds_crawler/version'
-require_relative 'ds_crawler/downloader'
-require_relative 'ds_crawler/harvester'
-require_relative 'ds_crawler/dspace_api'
+require_relative 'hps_bioindex/version'
+require_relative 'hps_bioindex/downloader'
+require_relative 'hps_bioindex/harvester'
+require_relative 'hps_bioindex/dspace_api'
 
-module DsCrawler
+module HpsBioindex
 
   def self.version
     VERSION

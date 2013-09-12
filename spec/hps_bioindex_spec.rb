@@ -1,13 +1,13 @@
 require 'spec_helper'
 
-describe DsCrawler do
+describe HpsBioindex do
   
-  let(:ds) { DsCrawler }
+  let(:ds) { HpsBioindex }
 
   describe '.version' do
     it 'should return version' do
       ds.version.should =~ /\d+\.\d+\.\d+/
-      ds::VERSION.should == DsCrawler.version
+      ds::VERSION.should == HpsBioindex.version
     end
   end
 
@@ -21,7 +21,7 @@ describe DsCrawler do
   describe '.config' do
     it 'should return config data' do
       ds.conf.dspace_api_url.should == 'http://example.org'
-      ds.conf.harvest_dir.should == '/tmp/ds_crawler'
+      ds.conf.harvest_dir.should == '/tmp/hps_bioindex'
       ds.conf.api_key_public.should == '123'
       ds.conf.api_key_private.should == '456'
     end
