@@ -1,59 +1,74 @@
 class Hash
   class << self
     def from_xml(xml_io) 
-      begin
-        result = Nokogiri::XML(xml_io)
-        return { result.root.name.to_sym => xml_node_to_hash(result.root)} 
-      rescue Exception => e
-        # raise your custom exception here
-      end
+      result = Nokogiri::XML(xml_io)
+      return { result.root.name.to_sym => xml_node_to_hash(result.root)} 
     end 
+
+    private 
 
     def xml_node_to_hash(node) 
       # If we are at the root of the document, start the hash 
       if node.element?
-        result_hash = {}
-        if node.attributes != {}
-          result_hash[:attributes] = {}
-          node.attributes.keys.each do |key|
-            result_hash[:attributes][node.attributes[key].name.to_sym] = prepare(node.attributes[key].value)
-          end
-        end
-        if node.children.size > 0
-          node.children.each do |child| 
-            result = xml_node_to_hash(child) 
-
-            if child.name == "text"
-              unless child.next_sibling || child.previous_sibling
-                return prepare(result)
-              end
-            elsif result_hash[child.name.to_sym]
-              if result_hash[child.name.to_sym].is_a?(Object::Array)
-                result_hash[child.name.to_sym] << prepare(result)
-              else
-                result_hash[child.name.to_sym] = [result_hash[child.name.to_sym]] << prepare(result)
-              end
-            else 
-              result_hash[child.name.to_sym] = prepare(result)
-            end
-          end
-
-          return result_hash 
-        else 
-          return result_hash
-        end 
+        prepare_node_element(node)
       else 
         return prepare(node.content.to_s) 
       end 
     end          
+    
+    def add_attributes(node, result_hash)
+      if node.attributes != {}
+        result_hash[:attributes] = {}
+        node.attributes.keys.each do |key|
+          result_hash[:attributes][node.attributes[key].name.to_sym] = 
+            prepare(node.attributes[key].value)
+        end
+      end
+    end
+
+    def prepare_node_element(node)
+      result_hash = {}
+      add_attributes(node, result_hash)
+      if node.children.size > 0
+        result_hash = add_children(node, result_hash)
+      end 
+      result_hash
+    end
+    
+    def add_children(node, result_hash)
+      node.children.each do |child| 
+        result = xml_node_to_hash(child) 
+
+        if child.name == "text"
+          text = handle_text(child, result)
+          return text if text
+        elsif result_hash[child.name.to_sym]
+          handle_child_node(child, result_hash, result)
+        else 
+          result_hash[child.name.to_sym] = prepare(result)
+        end
+      end
+      result_hash
+    end
+
+    def handle_child_node(child, result_hash, result)
+      if result_hash[child.name.to_sym].is_a?(Object::Array)
+        result_hash[child.name.to_sym] << prepare(result)
+      else
+        result_hash[child.name.to_sym] = 
+          [result_hash[child.name.to_sym]] << prepare(result)
+      end
+    end
+
+    def handle_text(child, result)
+      unless child.next_sibling || child.previous_sibling
+        prepare(result)
+      end
+    end
 
     def prepare(data)
       (data.class == String && data.to_i.to_s == data) ? data.to_i : data
     end
-  end
-  
-  def to_struct(struct_name)
-      Struct.new(struct_name,*keys).new(*values)
   end
 end
 
