@@ -1,0 +1,35 @@
+#!/usr/bin/env ruby
+require 'optparse'
+ 
+OPTS = {}
+OptionParser.new do |o|
+  o.on('-n') { |bool| OPTS[:new] = bool }
+  o.on('-e ENVIRONMENT') { |env| OPTS[:environment] = env }
+  o.on('-h') { puts o; exit }
+  o.parse!
+end
+
+ENV['DS_ENV'] = OPTS[:environment] || 'development'
+
+require_relative '../lib/hps_bioindex'
+
+HpsBioindex.logger = Logger.new($stdout)
+
+if OPTS[:new]
+  %w(bitstreams items bitstreams_items).each do |table|
+    Item.connection.execute("truncate table %s" % table)
+  end
+end
+
+
+timestamp = Item.connection.
+  select_value('select max(last_modified) from items') ||
+  '1970-01-01'
+
+harvester = HpsBioindex::Harvester.new()
+
+HpsBioindex.conf.communities.each do |community_id|
+  harvester.harvest(community_id: community_id, timestamp: timestamp.to_s)  
+end 
+
+

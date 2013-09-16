@@ -1,9 +1,0 @@
-#!/usr/bin/env ruby
-
-ENV['DS_ENV'] ||= 'development'
-
-require_relative '../lib/hps_bioindex'
-
-HpsBioindex.logger = Logger.new($stdout)
-
-

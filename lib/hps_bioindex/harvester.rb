@@ -6,10 +6,14 @@ module HpsBioindex
     end
 
     def harvest(opts = {})
-      HpsBioindex.logger.info('Starting harvest from repository')
+      HpsBioindex.logger.info("Starting harvest from community '%s'" %
+                              get_community(opts))
       res = get_updates(opts)
-      if res && res[:items_collection][:items].size > 0
-        res[:items_collection][:items].each do |item|
+      if defined?(res[:items_collection][:items].size) &&
+        res[:items_collection][:items].size > 0
+        items = res[:items_collection][:items]
+        items = [items] unless items.is_a?(Array)
+        items.each do |item|
           store_item(item)
         end
       end
@@ -18,7 +22,8 @@ module HpsBioindex
     
     def get_updates(opts = {})
       HpsBioindex.logger.info('Getting new items')
-      res = @api.updates.get(params: updates_params(opts))
+      params = updates_params(opts)
+      res = @api.updates.get(params: params)
       res =~ /xml/ ? Hash.from_xml(res) : nil
     end
 
@@ -30,34 +35,42 @@ module HpsBioindex
       timestamp = opts[:timestamp] || '1970-01-01'
       args = { api_key: @api.key,
                api_digest: @api.digest(@api.updates_path),
-               timestamp: URI.escape(timestamp),
+               timestamp: timestamp,
              }
       args.merge!(community: community_id) if community_id
       args
     end
     
-    def store_item(item)
-      db_item = Item.find(item[:id]) rescue nil
+    def store_item(an_item)
+      db_item = Item.find(an_item[:id]) rescue nil
       if db_item 
-         if db_item.last_modified < Time.parse(item[:last_modified])
-           db_item.update(last_modified: item[:last_modified], harvested: false)
+         if db_item.last_modified < Time.parse(an_item[:last_modified])
+           db_item.update(last_modified: an_item[:last_modified], 
+                          harvested: false)
            db_item.save!
          end
       else
-        Item.create(id: item[:id], 
-                  last_modified: item[:last_modified],
-                  resource: "/rest/items%s.xml" % item[:id],
+        Item.create(id: an_item[:id], 
+                  last_modified: an_item[:last_modified], 
+                  resource: "/rest/items%s.xml" % an_item[:id],
+                  harvested: false,
                  )
       end
     end
 
     def get_bitstreams
-      Item.where(harvested: false).each do |item|
+      Item.where(harvested: false).
+        order(:last_modified).each_with_index do |item, i|
+        HpsBioindex.logger.
+          info("Processing bitstreams for item %s from %s" % 
+               [i, item[:last_modified]]) if i % 10 == 0
         path = "/rest/items/%s.xml" % item.id
         params = { api_key: @api.key, api_digest: @api.digest(path) }
         item_xml = @api.site[path].get(params: params)
         item_hash = Hash.from_xml(item_xml)
         process_bitstreams(item_hash, item)
+        item.harvested = true
+        item.save!
       end
     end
 
@@ -93,6 +106,21 @@ module HpsBioindex
       params = { api_key: @api.key, api_digest: @api.digest(path) }
       w.write(@api.site[path].get(params: params))
       w.close
+    end
+
+    def get_community(opts)
+      if opts[:community_id]
+        res = @api.site["/rest/communities/%s.xml" % opts[:community_id]].get
+        res = Hash.from_xml(res)
+        if defined?(res[:communities][:name].size)
+        res[:communities][:name] 
+        else
+          raise RuntimeError.new("Cannot find community with id %s" %
+                                      opts[:community_id])
+        end
+      else
+        raise ArgumentError.new("havest needs community_id parameter")
+      end
     end
 
   end

@@ -3,6 +3,9 @@ development:
   harvest_dir: /tmp/hps_bioindex
   api_key_public: 123
   api_key_private: 456
+  communities:
+    - 1
+    - 2
   adapter: mysql2
   host: localhost
   username: root
@@ -13,6 +16,9 @@ test:
   harvest_dir: /tmp/hps_bioindex
   api_key_public: 123
   api_key_private: 456
+  communities:
+    - 1
+    - 2
   adapter: mysql2
   host: localhost
   username: root
@@ -23,6 +29,9 @@ production:
   harvest_dir: /tmp/hps_bioindex
   api_key_public: 123
   api_key_private: 456
+  communities:
+    - 1
+    - 2
   adapter: mysql2
   host: localhost
   username: root

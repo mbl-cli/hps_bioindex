@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<communities type="bean" size="19">
+  <administrators/>
+  <canEdit type="boolean">false</canEdit>
+  <collections type="collection" size="6">
+    <collectionentityid type="bean" size="1">
+      <id type="number">26</id>
+    </collectionentityid>
+    <collectionentityid type="bean" size="1">
+      <id type="number">6</id>
+    </collectionentityid>
+    <collectionentityid type="bean" size="1">
+      <id type="number">30</id>
+    </collectionentityid>
+    <collectionentityid type="bean" size="1">
+      <id type="number">22</id>
+    </collectionentityid>
+    <collectionentityid type="bean" size="1">
+      <id type="number">23</id>
+    </collectionentityid>
+    <collectionentityid type="bean" size="1">
+      <id type="number">27</id>
+    </collectionentityid>
+  </collections>
+  <copyrightText/>
+  <countItems type="number">1562</countItems>
+  <handle>10776/434</handle>
+  <id type="number">6</id>
+  <introductoryText/>
+  <logo type="bean" size="1">
+    <id type="number">869</id>
+  </logo>
+  <name>The Embryo Project</name>
+  <parentCommunity/>
+  <recentSubmissions type="collection" size="0">
+  </recentSubmissions>
+  <shortDescription>The Embryo Project at Arizona State University</shortDescription>
+  <sidebarText/>
+  <subCommunities type="collection" size="0">
+  </subCommunities>
+  <type type="number">4</type>
+  <entityReference>/communities/6</entityReference>
+  <entityURL>http://localhost:8080/rest/communities/6</entityURL>
+  <entityId>6</entityId>
+</communities>

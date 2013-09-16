@@ -31,4 +31,10 @@
     <last_modified>2013-09-06 20:03:08 UTC</last_modified>
     <entityId>9917</entityId>
   </items>
+  <items>
+    <id>9587</id>
+    <entityReference>/items/9587</entityReference>
+    <last_modified>2013-09-06 20:03:08 UTC</last_modified>
+    <entityId>9587</entityId>
+  </items>
 </items_collection>

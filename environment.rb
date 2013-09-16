@@ -48,6 +48,7 @@ module HpsBioindex
                             harvest_dir:     conf['harvest_dir'],
                             api_key_public:  conf['api_key_public'].to_s,
                             api_key_private: conf['api_key_private'].to_s,
+                            communities:     conf['communities'],
                             adapter:         conf['adapter'],
                             host:            conf['host'],
                             username:        conf['username'],
