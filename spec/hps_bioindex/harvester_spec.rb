@@ -28,6 +28,9 @@ describe HpsBioindex::Harvester do
     stub_request(:get, %r|/rest/updates/|).to_return(
       body: open(File.join(FILES_DIR, 'items_all_6.xml')))
     
+    stub_request(:get, %r|/rest/communities/|).to_return(
+      body: open(File.join(FILES_DIR, 'community_6.xml')))
+    
     stub_request(:get, %r|/rest/items/|).to_return do |request|
       { body: get_item_file(request) }
     end
@@ -45,6 +48,8 @@ describe HpsBioindex::Harvester do
   it 'should havest only new data' do
     truncate_tables
     
+    stub_request(:get, %r|/rest/communities/|).to_return(
+      body: open(File.join(FILES_DIR, 'community_6.xml')))
     stub_request(:get, %r|/rest/updates/|).to_return(
       body: open(File.join(FILES_DIR, 'items_all_6.xml')))
     stub_request(:get, %r|/rest/items/|).to_return do |request|
@@ -70,6 +75,8 @@ describe HpsBioindex::Harvester do
   it 'should not do bitstream harvest for duplicate harvests' do
     truncate_tables
     
+    stub_request(:get, %r|/rest/communities/|).to_return(
+      body: open(File.join(FILES_DIR, 'community_6.xml')))
     stub_request(:get, %r|/rest/updates/|).to_return(
       body: open(File.join(FILES_DIR, 'items_all_6.xml')))
     stub_request(:get, %r|/rest/items/|).to_return do |request|
