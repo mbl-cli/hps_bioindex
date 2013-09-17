@@ -23,4 +23,15 @@ FactoryGirl.define do
     bitstream
     item
   end
+
+  factory :community do
+    id FactoryGirl.generate(:num)
+    name { "Community #%s" % id }
+  end
+  
+  factory :communities_item do
+    community
+    item
+  end
+
 end

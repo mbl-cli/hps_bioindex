@@ -2,6 +2,8 @@
 class Item < ActiveRecord::Base
   has_many :bitstreams_items
   has_many :bitstreams, through: :bitstreams_items
+  has_many :communities_items
+  has_many :communities, through: :communities_items
 end
 
 class Bitstream < ActiveRecord::Base
@@ -23,4 +25,12 @@ class BitstreamsItem < ActiveRecord::Base
   belongs_to :bitstream
 end
 
+class Community < ActiveRecord::Base
+  has_many :communities_items
+  has_many :items, through: :communities_items
+end
 
+class CommunitiesItem < ActiveRecord::Base
+  belongs_to :community
+  belongs_to :item
+end

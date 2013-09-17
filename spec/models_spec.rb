@@ -33,3 +33,13 @@ describe BitstreamsItem do
     Bitstream.first.items.first.should == Item.first
   end
 end
+
+describe Community do
+  let(:community) { FactoryGirl.create(:community) }
+  before(:all) { truncate_tables }
+
+  it 'should work' do
+    community.class.should == Community
+    Community.count.should == 1
+  end
+end
