@@ -22,7 +22,7 @@ describe HpsBioindex::Harvester do
     res[:items_collection][:items].size.should == 26
   end
 
-  it 'should store found items' do
+  it 'should store found items and nuke them' do
     truncate_tables
     
     stub_request(:get, %r|/rest/updates/|).to_return(
@@ -43,6 +43,14 @@ describe HpsBioindex::Harvester do
     harvester.harvest(community_id: 6)
     Item.count.should == 26
     Bitstream.count.should == 25
+    Community.count.should == 1
+    CommunitiesItem.count.should == 26
+    HpsBioindex::Harvester.nuke
+    Item.count.should == 0
+    Bitstream.count.should == 0
+    Community.count.should == 0 
+    CommunitiesItem.count.should == 0
+    File.exist?(HpsBioindex.conf.harvest_dir).should be_false
   end
 
   it 'should havest only new data' do

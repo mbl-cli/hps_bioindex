@@ -12,9 +12,7 @@ RSpec.configure do |c|
 end
 
 def truncate_tables
-  ['items', 'bitstreams', 'bitstreams_items'].each do |t|
-    ActiveRecord::Base.connection.execute("truncate table %s" % t)
-  end
+  HpsBioindex::Harvester.nuke
 end
 
 unless defined?(DS_CONSTANTS)

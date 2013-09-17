@@ -1,20 +1,31 @@
 module HpsBioindex
   class Harvester
 
+    def self.nuke
+      tables = Item.connection.tables
+      tables.each do |t|
+        unless t == 'schema_migrations'
+          Item.connection.execute("truncate %s" % t)
+        end
+      end
+      FileUtils.rm_rf(HpsBioindex.conf.harvest_dir)
+    end
+
     def initialize
       @api = HpsBioindex::DspaceApi.new
     end
 
     def harvest(opts = {})
+      community = get_community(opts)
       HpsBioindex.logger.info("Starting harvest from community '%s'" %
-                              get_community(opts))
+                              community.name)
       res = get_updates(opts)
       if defined?(res[:items_collection][:items].size) &&
         res[:items_collection][:items].size > 0
         items = res[:items_collection][:items]
         items = [items] unless items.is_a?(Array)
         items.each do |item|
-          store_item(item)
+          store_item(item, community)
         end
       end
       get_bitstreams
@@ -41,20 +52,22 @@ module HpsBioindex
       args
     end
     
-    def store_item(an_item)
-      db_item = Item.find(an_item[:id]) rescue nil
+    def store_item(item, community)
+      db_item = Item.find(item[:id]) rescue nil
       if db_item 
-         if db_item.last_modified < Time.parse(an_item[:last_modified])
-           db_item.update(last_modified: an_item[:last_modified], 
+         if db_item.last_modified < Time.parse(item[:last_modified])
+           db_item.update(last_modified: item[:last_modified], 
                           harvested: false)
            db_item.save!
          end
       else
-        Item.create(id: an_item[:id], 
-                  last_modified: an_item[:last_modified], 
-                  resource: "/rest/items%s.xml" % an_item[:id],
+        Item.create(id: item[:id], 
+                  last_modified: item[:last_modified], 
+                  resource: "/rest/items%s.xml" % item[:id],
                   harvested: false,
                  )
+        CommunitiesItem.create(item_id: item[:id], 
+                               community_id: community.id)
       end
     end
 
@@ -109,18 +122,18 @@ module HpsBioindex
     end
 
     def get_community(opts)
-      if opts[:community_id]
-        res = @api.site["/rest/communities/%s.xml" % opts[:community_id]].get
-        res = Hash.from_xml(res)
-        if defined?(res[:communities][:name].size)
-        res[:communities][:name] 
-        else
-          raise RuntimeError.new("Cannot find community with id %s" %
-                                      opts[:community_id])
-        end
-      else
-        raise ArgumentError.new("havest needs community_id parameter")
+      Community.where(id: opts[:community_id]).first ||
+        make_community(opts)
+    end
+
+    def make_community(opts)
+      unless opts[:community_id]
+        raise ArgumentError.new("Missed community parameters")
       end
+      res = @api.site["/rest/communities/%s.xml" % opts[:community_id]].get
+      res = Hash.from_xml(res)
+        Community.create(id: opts[:community_id], 
+                         name: res[:communities][:name])
     end
 
   end

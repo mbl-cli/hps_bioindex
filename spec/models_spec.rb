@@ -43,3 +43,15 @@ describe Community do
     Community.count.should == 1
   end
 end
+
+describe CommunitiesItem do
+  let(:communities_item) { FactoryGirl.create(:communities_item) }
+  before(:all) { truncate_tables }
+
+  it 'should work' do
+    communities_item.class.should == CommunitiesItem
+    CommunitiesItem.count.should == 1
+    Community.count.should == 1
+    Item.count.should == 1
+  end
+end
