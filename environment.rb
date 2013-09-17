@@ -8,7 +8,7 @@ require 'rest_client'
 module HpsBioindex
 
   def self.env
-    @env ||= ENV['DS_ENV'] ? ENV['DS_ENV'].to_sym : :development
+    @env ||= ENV['HPS_ENV'] ? ENV['HPS_ENV'].to_sym : :development
   end
 
   def self.env=(env)

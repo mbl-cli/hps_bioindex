@@ -9,4 +9,4 @@ before_script:
   - cp config/config.yml.example config/config.yml
   - rake db:create:all
   - rake db:migrate
-  - rake db:migrate DS_ENV=test
+  - rake db:migrate HPS_ENV=test

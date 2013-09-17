@@ -57,7 +57,7 @@ namespace :db do
   
   desc "Migrate the database"
   task(:migrate => :environment) do
-    HpsBioindex.env = ENV['DS_ENV'].to_sym rescue :development
+    HpsBioindex.env = ENV['HPS_ENV'].to_sym rescue :development
     ActiveRecord::Base.establish_connection(
       ActiveRecord::Base.configurations[HpsBioindex.env.to_s])
     ActiveRecord::Base.logger = Logger.new(STDOUT)

@@ -9,16 +9,14 @@ OptionParser.new do |o|
   o.parse!
 end
 
-ENV['DS_ENV'] = OPTS[:environment] || 'development'
+ENV['HPS_ENV'] = OPTS[:environment] || 'development'
 
 require_relative '../lib/hps_bioindex'
 
 HpsBioindex.logger = Logger.new($stdout)
 
 if OPTS[:new]
-  %w(bitstreams items bitstreams_items).each do |table|
-    Item.connection.execute("truncate table %s" % table)
-  end
+  HpsBioindex::Harvester.nuke
 end
 
 

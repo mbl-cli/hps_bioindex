@@ -1,6 +1,6 @@
 class CreateItems < ActiveRecord::Migration
 
-  def up
+  def change
     create_table :items do |t|
       t.datetime :last_modified
       t.string   :resource
@@ -9,10 +9,6 @@ class CreateItems < ActiveRecord::Migration
     end
 
     add_index :items, :last_modified, name: 'idx_items_1' 
-  end
-  
-  def down
-    drop_table :items
   end
 
 end
