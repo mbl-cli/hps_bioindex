@@ -5,11 +5,6 @@ describe HpsBioindex::Harvester do
   
   before(:all) { truncate_tables }
 
-  def get_item_file(request)
-    id = request.uri.path.match(%r|items/([\d]+)\.xml|)[1]
-    open(File.join(FILES_DIR, "item_%s.xml" % id))
-  end
-
   it 'should initiate' do
     harvester.class.should == HpsBioindex::Harvester
   end

@@ -15,6 +15,11 @@ def truncate_tables
   HpsBioindex::Harvester.nuke
 end
 
+def get_item_file(request)
+  id = request.uri.path.match(%r|items/([\d]+)\.xml|)[1]
+  open(File.join(FILES_DIR, "item_%s.xml" % id))
+end
+
 unless defined?(HPS_CONSTANTS)
   FILES_DIR = File.expand_path(File.join( File.dirname(__FILE__), 'files'))
   ITEMS_ALL_6 = File.read(File.join(File.dirname(__FILE__), 
