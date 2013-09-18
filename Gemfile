@@ -4,6 +4,7 @@ gem 'rake', '~> 10.1'
 gem 'activerecord', '~> 4.0'
 gem 'mysql2', '~> 0.3'
 gem 'rest-client', '~> 1.6'
+gem 'karousel', git: 'git@github.com:GlobalNamesArchitecture/karousel.git'
 gem 'nokogiri', '~> 1.6'
 
 

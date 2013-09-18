@@ -40,6 +40,7 @@ describe HpsBioindex::Harvester do
     Bitstream.count.should == 25
     Community.count.should == 1
     CommunitiesItem.count.should == 26
+    File.exist?(HpsBioindex.conf.harvest_dir).should be_true
     HpsBioindex::Harvester.nuke
     Item.count.should == 0
     Bitstream.count.should == 0

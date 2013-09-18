@@ -6,6 +6,7 @@ require_relative 'hps_bioindex/downloader'
 require_relative 'hps_bioindex/harvester'
 require_relative 'hps_bioindex/dspace_api'
 require_relative 'hps_bioindex/name_finder'
+require_relative 'hps_bioindex/gnrd_api'
 
 module HpsBioindex
 

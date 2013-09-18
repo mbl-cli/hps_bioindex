@@ -9,6 +9,8 @@ end
 class Bitstream < ActiveRecord::Base
   has_many :bitstreams_items
   has_many :items, through: :bitstreams_items
+  has_many :bitstream_name_strings
+  has_many :name_strings, through: :bitstream_name_strings
   
   def path
     dir = File.join(HpsBioindex.conf.harvest_dir,
@@ -33,4 +35,24 @@ end
 class CommunitiesItem < ActiveRecord::Base
   belongs_to :community
   belongs_to :item
+end
+
+class NameString < ActiveRecord::Base
+  has_many :resolved_name_strings
+  has_many :bitstream_name_strings
+  has_many :bitstreams, through: :bitstream_name_strings
+end
+
+class ResolvedNameString < ActiveRecord::Base
+  belongs_to :name_string
+  belongs_to :canonical_form
+end
+
+class CanonicalForm < ActiveRecord::Base
+  has_many :resolved_name_strings
+end
+
+class BitstreamNameString < ActiveRecord::Base
+  belongs_to :bitstream
+  belongs_to :name_string
 end

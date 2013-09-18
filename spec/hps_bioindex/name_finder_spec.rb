@@ -20,7 +20,7 @@ def prepare_data
 end
 
 describe HpsBioindex::NameFinder do 
-  let(:nf) { HpsBioindex::NameFinder.new }
+  let(:nf) { HpsBioindex::NameFinder.new(FactoryGirl.create(:bitstream)) }
   before(:all) { prepare_data }
   
   it 'should exist' do
@@ -28,7 +28,8 @@ describe HpsBioindex::NameFinder do
   end
 
   it 'should find_names' do
-    Bitstream.count.should == 25
+    Bitstream.count.should == 26
+    File.exist?(HpsBioindex.conf.harvest_dir).should be_true
   end
 
 end

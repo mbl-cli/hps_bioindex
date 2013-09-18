@@ -4,6 +4,7 @@ require 'digest'
 require 'nokogiri'
 require 'active_record'
 require 'rest_client'
+require 'karousel'
 
 module HpsBioindex
 
@@ -44,16 +45,17 @@ module HpsBioindex
   def self.get_conf
     conf = self.db_conf[self.env.to_s]
     @conf = OpenStruct.new(      
-                            dspace_api_url:  conf['dspace_api_url'],
-                            harvest_dir:     conf['harvest_dir'],
-                            api_key_public:  conf['api_key_public'].to_s,
-                            api_key_private: conf['api_key_private'].to_s,
-                            communities:     conf['communities'],
-                            adapter:         conf['adapter'],
-                            host:            conf['host'],
-                            username:        conf['username'],
-                            password:        conf['password'],
-                            database:        conf['database'],
+                            dspace_api_url:   conf['dspace_api_url'],
+                            name_finding_url: conf['name_finding_url'],
+                            harvest_dir:      conf['harvest_dir'],
+                            api_key_public:   conf['api_key_public'].to_s,
+                            api_key_private:  conf['api_key_private'].to_s,
+                            communities:      conf['communities'],
+                            adapter:          conf['adapter'],
+                            host:             conf['host'],
+                            username:         conf['username'],
+                            password:         conf['password'],
+                            database:         conf['database'],
                            )
   end
 end

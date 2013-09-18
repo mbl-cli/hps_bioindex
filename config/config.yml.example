@@ -1,5 +1,6 @@
 development:
   dspace_api_url: http://0.0.0.0:9292
+  name_finding_url: http://gnrd.globalnames.org
   harvest_dir: /tmp/hps_bioindex
   api_key_public: 123
   api_key_private: 456
@@ -13,6 +14,7 @@ development:
   database: hps_bioindex_dev
 test:
   dspace_api_url: http://example.org
+  name_finding_url: http://gnrd.globalnames.org
   harvest_dir: /tmp/hps_bioindex
   api_key_public: 123
   api_key_private: 456
@@ -26,6 +28,7 @@ test:
   database: hps_bioindex_test
 production:
   dspace_api_url: http://0.0.0.0:9292
+  name_finding_url: http://gnrd.globalnames.org
   harvest_dir: /tmp/hps_bioindex
   api_key_public: 123
   api_key_private: 456
