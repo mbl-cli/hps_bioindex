@@ -52,7 +52,7 @@ class CanonicalForm < ActiveRecord::Base
   has_many :resolved_name_strings
 end
 
-class BitstreamNameString < ActiveRecord::Base
+class BitstreamsNameString < ActiveRecord::Base
   belongs_to :bitstream
   belongs_to :name_string
 end

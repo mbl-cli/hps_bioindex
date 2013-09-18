@@ -20,3 +20,7 @@ k = Karousel.new(HpsBioindex::NameFinder, 10, 20)
 k.run  do 
   puts k.seats.map {|s| "%s, %s" % [s, s.finished?]}
 end
+
+norg = HpsBioindex::NameOrganizer.new
+
+norg.organize
