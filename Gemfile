@@ -17,6 +17,6 @@ group :test do
   gem 'rr', '~> 1.1'
   gem 'webmock', '~> 1.13'
   gem 'factory_girl', '~> 4.2'
-  gem 'coveralls', require: false
+  gem 'coveralls', '~> 0.7', require: false
 end
 
