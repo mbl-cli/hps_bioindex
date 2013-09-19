@@ -14,7 +14,7 @@ development:
   database: hps_bioindex_dev
 test:
   dspace_api_url: http://example.org
-  name_finding_url: http://gnrd.globalnames.org
+  name_finding_url: http://gnrd.example.org
   harvest_dir: /tmp/hps_bioindex
   api_key_public: 123
   api_key_private: 456
