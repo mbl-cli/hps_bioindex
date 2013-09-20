@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'rake', '~> 10.1'
 gem 'activerecord', '~> 4.0'
 gem 'mysql2', '~> 0.3'
 gem 'rest-client', '~> 1.6'
@@ -19,7 +20,6 @@ gem 'haml', '~> 4.0'
 
 
 group :development do
-  gem 'rake', '~> 10.1'
   gem 'debugger', '~> 1.6'
   gem 'git', '~> 1.2'
 end

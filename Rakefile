@@ -56,7 +56,7 @@ namespace :db do
   end
   
   desc "Migrate the database"
-  task(:migrate => :environment) do
+  task(migrate: :environment) do
     HpsBioindex.env = ENV['HPS_ENV'].to_sym rescue :development
     ActiveRecord::Base.establish_connection(
       ActiveRecord::Base.configurations[HpsBioindex.env.to_s])
@@ -68,6 +68,20 @@ end
 
 task :environment do
   require_relative 'lib/hps_bioindex'
+end
+
+task(release: :environment) do
+  require 'git'
+  g = Git.open(__dir__)
+  new_tag = HpsBioindex.version
+  begin
+    g.add_tag(new_tag)
+    g.add(all: true)
+    g.commit("Releasing version %s" % new_tag)
+    g.push('--tags')
+  rescue Git::GitExecuteError
+    puts "'#{new_tag}' already exists, update your version." 
+  end
 end
 
 desc "Open an irb session preloaded with this library"

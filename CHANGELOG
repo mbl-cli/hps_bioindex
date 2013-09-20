@@ -1,0 +1,3 @@
+0.1.1 -- fixed problem with travis, added release task
+
+0.1.0 -- backend is there, 'hello world' sinatra is added on top
