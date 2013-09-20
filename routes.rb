@@ -10,7 +10,6 @@ class HpsBioindexApp < Sinatra::Base
   end
 
   get '/' do
-    require 'ruby-debug'; debugger
     haml :index
     # redirect '/bitstreams'
   end

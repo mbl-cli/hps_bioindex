@@ -21,6 +21,7 @@ gem 'haml', '~> 4.0'
 group :development do
   gem 'rake', '~> 10.1'
   gem 'debugger', '~> 1.6'
+  gem 'git', '~> 1.2'
 end
 
 group :test do
