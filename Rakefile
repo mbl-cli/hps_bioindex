@@ -75,7 +75,7 @@ task(release: :environment) do
   g = Git.open(__dir__)
   new_tag = HpsBioindex.version
   begin
-    g.add_tag(new_tag)
+    g.add_tag("v.%s" % new_tag)
     g.add(all: true)
     g.commit("Releasing version %s" % new_tag)
     g.push('--tags')
