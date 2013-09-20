@@ -1,14 +1,21 @@
 require 'coveralls'
 Coveralls.wear!
 
+require 'rack/test'
 require 'find'
 require 'factory_girl'
 require 'webmock/rspec'
 
 ENV['HPS_ENV'] = 'test'
-require_relative '../lib/hps_bioindex'
+require_relative '../application.rb'
+
+module RSpecMixin
+  include Rack::Test::Methods
+  def app() HpsBioindexApp end
+end
 
 RSpec.configure do |c|
+  c.include RSpecMixin
   c.mock_with :rr
 end
 

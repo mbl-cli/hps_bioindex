@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+ENV['HPS_ENV'] ||= (ENV['RACK_ENV'] || :development)
+
 require 'zen-grids'
 require 'rack/timeout'
 require 'sinatra'
@@ -10,7 +12,6 @@ require 'sass'
 require_relative 'lib/hps_bioindex'
 require_relative 'routes'
 
-ENV['HPS_ENV'] = ENV['RACK_ENV'] || :development
 
 class HpsBioindexApp < Sinatra::Base
   
