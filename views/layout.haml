@@ -1,0 +1,25 @@
+!!! 5
+%html
+  %head
+    %title 
+      HPS Biodiversity Index
+    %link{ rel: 'stylesheet', href: '/css/app.css', type: 'text/css' }
+  %body
+    .container
+      %h1{ id: 'title' }
+        %a{ href: '/' } HPS Biodiversity Index
+      #sidebar
+        %ul
+          %li
+            %a{ href: :books }= "Documents (#{ Bitstream.count })"
+          %li
+            %a{ href: :names }= "Names (#{ CanonicalForm.count })"
+
+        
+      #content
+        = yield
+    .clear &nbsp;
+    #footer
+      Version:
+      = HpsBioindex::VERSION
+
