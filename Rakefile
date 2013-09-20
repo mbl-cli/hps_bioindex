@@ -74,13 +74,13 @@ task(release: :environment) do
   require 'git'
   g = Git.open(__dir__)
   new_tag = HpsBioindex.version
-  begin
     g.add_tag("v.%s" % new_tag)
     g.add(all: true)
     g.commit("Releasing version %s" % new_tag)
     g.push('--tags')
+  begin
   rescue Git::GitExecuteError
-    puts "'#{new_tag}' already exists, update your version." 
+    puts "'v.#{new_tag}' already exists, update your version." 
   end
 end
 
