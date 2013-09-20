@@ -56,3 +56,7 @@ class BitstreamsNameString < ActiveRecord::Base
   belongs_to :bitstream
   belongs_to :name_string
 end
+
+class Outlink < ActiveRecord::Base
+  belongs_to :resolved_name_string
+end

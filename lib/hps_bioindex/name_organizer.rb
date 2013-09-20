@@ -1,8 +1,10 @@
 module HpsBioindex
   class NameOrganizer
     def organize
-      cleanup
-      import_names
+      Item.transaction do
+        cleanup
+        import_names
+      end
     end
 
     private
