@@ -2,19 +2,11 @@ module HpsBioindex
   class NameOrganizer
     def organize
       Item.transaction do
-        cleanup
         import_names
       end
     end
 
     private
-
-    def cleanup
-      %w(name_strings canonical_forms outlinks
-         resolved_name_strings bitstreams_name_strings).each do |t|
-        NameString.connection.execute("truncate table %s" % t)
-      end
-    end
 
     def import_names
       Bitstream.all.each do |b|
