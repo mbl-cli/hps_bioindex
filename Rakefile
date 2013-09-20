@@ -77,6 +77,7 @@ task(release: :environment) do
     g.add_tag("v.%s" % new_tag)
     g.add(all: true)
     g.commit("Releasing version %s" % new_tag)
+    g.push
     `git push --tags`
   begin
   rescue Git::GitExecuteError
