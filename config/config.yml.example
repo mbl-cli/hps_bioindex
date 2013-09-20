@@ -1,4 +1,5 @@
 development:
+  session_secret: chnge_me
   dspace_api_url: http://0.0.0.0:9292
   name_finding_url: http://gnrd.globalnames.org
   harvest_dir: /tmp/hps_bioindex
@@ -13,6 +14,7 @@ development:
   password:
   database: hps_bioindex_dev
 test:
+  session_secret: chnge_me
   dspace_api_url: http://example.org
   name_finding_url: http://gnrd.example.org
   harvest_dir: /tmp/hps_bioindex
@@ -27,6 +29,7 @@ test:
   password:
   database: hps_bioindex_test
 production:
+  session_secret: chnge_me
   dspace_api_url: http://0.0.0.0:9292
   name_finding_url: http://gnrd.globalnames.org
   harvest_dir: /tmp/hps_bioindex

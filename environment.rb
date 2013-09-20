@@ -45,6 +45,7 @@ module HpsBioindex
   def self.get_conf
     conf = self.db_conf[self.env.to_s]
     @conf = OpenStruct.new(      
+                            session_secret:   conf['session_secret'], 
                             dspace_api_url:   conf['dspace_api_url'],
                             name_finding_url: conf['name_finding_url'],
                             harvest_dir:      conf['harvest_dir'],
