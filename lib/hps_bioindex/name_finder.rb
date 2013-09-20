@@ -50,7 +50,6 @@ module HpsBioindex
       w.close
       @bitstream.name_processed = true
       @bitstream.save!
-      puts "Items left: %s" % @@bitstreams.size
     end
 
     private

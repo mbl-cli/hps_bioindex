@@ -13,14 +13,15 @@ def prepare_data
   end
   
   stub_request(:get, %r|/rest/bitstream/|).to_return do |request|
-    { body: open(File.join(FILES_DIR, 'bitstream_0.xhtml')) }
+    { body: open(File.join(FILES_DIR, 'bitstream_0.txt')) }
   end
+    
   harvester = HpsBioindex::Harvester.new
   harvester.harvest(community_id: 6)
 end
 
 describe HpsBioindex::NameFinder do 
-  let(:nf) { HpsBioindex::NameFinder.new(FactoryGirl.create(:bitstream)) }
+  let(:nf) { HpsBioindex::NameFinder.new(Bitstream.first) }
   before(:all) { prepare_data }
   
   it 'should exist' do
@@ -28,8 +29,16 @@ describe HpsBioindex::NameFinder do
   end
 
   it 'should find_names' do
-    Bitstream.count.should == 26
+    Bitstream.count.should == 25
     File.exist?(HpsBioindex.conf.harvest_dir).should be_true
+    url = "http://gnrd.example.org/name_finder.json?token=123"
+    stub_request(:post, %r|/name_finder.json|).to_return(
+      headers: {location: url}, status: 303)
+    stub_request(:get, url).to_return(
+      body: open(File.join(FILES_DIR, 'bitstream_0.txt.json')))
+
+    k = Karousel.new(HpsBioindex::NameFinder, 10, 0)
+    k.run
   end
 
 end

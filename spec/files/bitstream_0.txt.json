@@ -1,0 +1,3009 @@
+{
+  "token_url": "http://gnrd.globalnames.org/name_finder.json?token=uoeUN37qQ6uDmwUjRINsEw",
+  "input_url": null,
+  "file": "generalembryolog071958hubr.pdf.txt",
+  "status": 200,
+  "engines": [
+    "TaxonFinder",
+    "NetiNeti"
+  ],
+  "unique": false,
+  "verbatim": true,
+  "english": true,
+  "execution_time": {
+    "find_names_duration": 2.013109162,
+    "resolve_names_duration": 4.472315374,
+    "total_duration": 6.795530541
+  },
+  "agent": "",
+  "created": "2013-09-17T22:23:58-04:00",
+  "total": 89,
+  "names": [
+    {
+      "verbatim": "E.xper",
+      "scientificName": "E. xper",
+      "offsetStart": 5988,
+      "offsetEnd": 5993,
+      "identifiedName": "E.xper"
+    },
+    {
+      "verbatim": "PASQUINI",
+      "scientificName": "PASQUINI",
+      "offsetStart": 6053,
+      "offsetEnd": 6060,
+      "identifiedName": "PASQUINI"
+    },
+    {
+      "verbatim": "Regina",
+      "scientificName": "Regina",
+      "offsetStart": 6131,
+      "offsetEnd": 6136,
+      "identifiedName": "Regina"
+    },
+    {
+      "verbatim": "St. PHILA-",
+      "scientificName": "Phila delphia",
+      "offsetStart": 6863,
+      "offsetEnd": 6872,
+      "identifiedName": "Phila delphia"
+    },
+    {
+      "verbatim": "TOBA.",
+      "scientificName": "Toba",
+      "offsetStart": 7074,
+      "offsetEnd": 7078,
+      "identifiedName": "Toba"
+    },
+    {
+      "verbatim": "Dugesia gonocephala",
+      "scientificName": "Dugesia gonocephala",
+      "offsetStart": 8613,
+      "offsetEnd": 8631,
+      "identifiedName": "Dugesia gonocephala"
+    },
+    {
+      "verbatim": "Dugesia tigrina",
+      "scientificName": "Dugesia tigrina",
+      "offsetStart": 8637,
+      "offsetEnd": 8651,
+      "identifiedName": "Dugesia tigrina"
+    },
+    {
+      "verbatim": "Euplanaria polychroa",
+      "scientificName": "Euplanaria polychroa",
+      "offsetStart": 8693,
+      "offsetEnd": 8712,
+      "identifiedName": "Euplanaria polychroa"
+    },
+    {
+      "verbatim": "Lumbricus terrestris",
+      "scientificName": "Lumbricus terrestris",
+      "offsetStart": 8727,
+      "offsetEnd": 8746,
+      "identifiedName": "Lumbricus terrestris"
+    },
+    {
+      "verbatim": "Oncorhynchus gorbuscha",
+      "scientificName": "Oncorhynchus gorbuscha",
+      "offsetStart": 8752,
+      "offsetEnd": 8773,
+      "identifiedName": "Oncorhynchus gorbuscha"
+    },
+    {
+      "verbatim": "Oncorhynchus keta",
+      "scientificName": "Oncorhynchus keta",
+      "offsetStart": 8815,
+      "offsetEnd": 8831,
+      "identifiedName": "Oncorhynchus keta"
+    },
+    {
+      "verbatim": "Oncorhynchus nerka",
+      "scientificName": "Oncorhynchus nerka",
+      "offsetStart": 8874,
+      "offsetEnd": 8891,
+      "identifiedName": "Oncorhynchus nerka"
+    },
+    {
+      "verbatim": "Poeciliidae",
+      "scientificName": "Poeciliidae",
+      "offsetStart": 8934,
+      "offsetEnd": 8944,
+      "identifiedName": "Poeciliidae"
+    },
+    {
+      "verbatim": "Umbra limi",
+      "scientificName": "Umbra limi",
+      "offsetStart": 8962,
+      "offsetEnd": 8971,
+      "identifiedName": "Umbra limi"
+    },
+    {
+      "verbatim": "AMPHIBIA",
+      "scientificName": "Amphibia",
+      "offsetStart": 8974,
+      "offsetEnd": 8981,
+      "identifiedName": "Amphibia"
+    },
+    {
+      "verbatim": "Amphibia",
+      "scientificName": "Amphibia",
+      "offsetStart": 8984,
+      "offsetEnd": 8991,
+      "identifiedName": "Amphibia"
+    },
+    {
+      "verbatim": "Ambystoma maculatum",
+      "scientificName": "Ambystoma maculatum",
+      "offsetStart": 9106,
+      "offsetEnd": 9124,
+      "identifiedName": "Ambystoma maculatum"
+    },
+    {
+      "verbatim": "Ambystoma mexicanum",
+      "scientificName": "Ambystoma mexicanum",
+      "offsetStart": 9127,
+      "offsetEnd": 9145,
+      "identifiedName": "Ambystoma mexicanum"
+    },
+    {
+      "verbatim": "Ambystoma mexicanum",
+      "scientificName": "Ambystoma mexicanum",
+      "offsetStart": 9148,
+      "offsetEnd": 9166,
+      "identifiedName": "Ambystoma mexicanum"
+    },
+    {
+      "verbatim": "Ambystoma opacum",
+      "scientificName": "Ambystoma opacum",
+      "offsetStart": 9188,
+      "offsetEnd": 9203,
+      "identifiedName": "Ambystoma opacum"
+    },
+    {
+      "verbatim": "Ambystoma punctatum",
+      "scientificName": "Ambystoma punctatum",
+      "offsetStart": 9206,
+      "offsetEnd": 9224,
+      "identifiedName": "Ambystoma punctatum"
+    },
+    {
+      "verbatim": "Ambystoma tigrinum",
+      "scientificName": "Ambystoma tigrinum",
+      "offsetStart": 9240,
+      "offsetEnd": 9257,
+      "identifiedName": "Ambystoma tigrinum"
+    },
+    {
+      "verbatim": "Hynobius nebulosus",
+      "scientificName": "Hynobius nebulosus",
+      "offsetStart": 9260,
+      "offsetEnd": 9277,
+      "identifiedName": "Hynobius nebulosus"
+    },
+    {
+      "verbatim": "Necturus",
+      "scientificName": "Necturus",
+      "offsetStart": 9294,
+      "offsetEnd": 9301,
+      "identifiedName": "Necturus"
+    },
+    {
+      "verbatim": "Pleurodeles",
+      "scientificName": "Pleurodeles",
+      "offsetStart": 9314,
+      "offsetEnd": 9324,
+      "identifiedName": "Pleurodeles"
+    },
+    {
+      "verbatim": "Triturus alpestris",
+      "scientificName": "Triturus alpestris",
+      "offsetStart": 9362,
+      "offsetEnd": 9379,
+      "identifiedName": "Triturus alpestris"
+    },
+    {
+      "verbatim": "Triturus alpestris",
+      "scientificName": "Triturus alpestris",
+      "offsetStart": 9401,
+      "offsetEnd": 9418,
+      "identifiedName": "Triturus alpestris"
+    },
+    {
+      "verbatim": "Triturus boscai",
+      "scientificName": "Triturus boscai",
+      "offsetStart": 9421,
+      "offsetEnd": 9435,
+      "identifiedName": "Triturus boscai"
+    },
+    {
+      "verbatim": "Triturus cristatus",
+      "scientificName": "Triturus cristatus",
+      "offsetStart": 9438,
+      "offsetEnd": 9455,
+      "identifiedName": "Triturus cristatus"
+    },
+    {
+      "verbatim": "Triturus cristatus",
+      "scientificName": "Triturus cristatus",
+      "offsetStart": 9458,
+      "offsetEnd": 9475,
+      "identifiedName": "Triturus cristatus"
+    },
+    {
+      "verbatim": "Triturus helveticus",
+      "scientificName": "Triturus helveticus",
+      "offsetStart": 9496,
+      "offsetEnd": 9514,
+      "identifiedName": "Triturus helveticus"
+    },
+    {
+      "verbatim": "Triturus helveticus",
+      "scientificName": "Triturus helveticus",
+      "offsetStart": 9517,
+      "offsetEnd": 9535,
+      "identifiedName": "Triturus helveticus"
+    },
+    {
+      "verbatim": "Triturus marmoratus",
+      "scientificName": "Triturus marmoratus",
+      "offsetStart": 9657,
+      "offsetEnd": 9675,
+      "identifiedName": "Triturus marmoratus"
+    },
+    {
+      "verbatim": "Triturus pyrrhogaster",
+      "scientificName": "Triturus pyrrhogaster",
+      "offsetStart": 9681,
+      "offsetEnd": 9701,
+      "identifiedName": "Triturus pyrrhogaster"
+    },
+    {
+      "verbatim": "Triturus pyrrhogaster",
+      "scientificName": "Triturus pyrrhogaster",
+      "offsetStart": 9730,
+      "offsetEnd": 9750,
+      "identifiedName": "Triturus pyrrhogaster"
+    },
+    {
+      "verbatim": "Triturus pyrrhogaster",
+      "scientificName": "Triturus pyrrhogaster",
+      "offsetStart": 9773,
+      "offsetEnd": 9793,
+      "identifiedName": "Triturus pyrrhogaster"
+    },
+    {
+      "verbatim": "Triturus pyrrhogaster",
+      "scientificName": "Triturus pyrrhogaster",
+      "offsetStart": 9821,
+      "offsetEnd": 9841,
+      "identifiedName": "Triturus pyrrhogaster"
+    },
+    {
+      "verbatim": "Triturus taeniatus",
+      "scientificName": "Triturus taeniatus",
+      "offsetStart": 9849,
+      "offsetEnd": 9866,
+      "identifiedName": "Triturus taeniatus"
+    },
+    {
+      "verbatim": "Triturus torosus",
+      "scientificName": "Triturus torosus",
+      "offsetStart": 9888,
+      "offsetEnd": 9903,
+      "identifiedName": "Triturus torosus"
+    },
+    {
+      "verbatim": "Triturus viridescens",
+      "scientificName": "Triturus viridescens",
+      "offsetStart": 9909,
+      "offsetEnd": 9928,
+      "identifiedName": "Triturus viridescens"
+    },
+    {
+      "verbatim": "Triturus vittatus",
+      "scientificName": "Triturus vittatus",
+      "offsetStart": 9941,
+      "offsetEnd": 9957,
+      "identifiedName": "Triturus vittatus"
+    },
+    {
+      "verbatim": "Triturus vulgaris",
+      "scientificName": "Triturus vulgaris",
+      "offsetStart": 9963,
+      "offsetEnd": 9979,
+      "identifiedName": "Triturus vulgaris"
+    },
+    {
+      "verbatim": "Triturus vulgaris",
+      "scientificName": "Triturus vulgaris",
+      "offsetStart": 9985,
+      "offsetEnd": 10001,
+      "identifiedName": "Triturus vulgaris"
+    },
+    {
+      "verbatim": "Anura",
+      "scientificName": "Anura",
+      "offsetStart": 10026,
+      "offsetEnd": 10030,
+      "identifiedName": "Anura"
+    },
+    {
+      "verbatim": "Anura",
+      "scientificName": "Anura",
+      "offsetStart": 10033,
+      "offsetEnd": 10037,
+      "identifiedName": "Anura"
+    },
+    {
+      "verbatim": "Acris",
+      "scientificName": "Acris",
+      "offsetStart": 10061,
+      "offsetEnd": 10065,
+      "identifiedName": "Acris"
+    },
+    {
+      "verbatim": "Alytes",
+      "scientificName": "Alytes",
+      "offsetStart": 10077,
+      "offsetEnd": 10082,
+      "identifiedName": "Alytes"
+    },
+    {
+      "verbatim": "Alytes obstetricans",
+      "scientificName": "Alytes obstetricans",
+      "offsetStart": 10099,
+      "offsetEnd": 10117,
+      "identifiedName": "Alytes obstetricans"
+    },
+    {
+      "verbatim": "Bombina bombina",
+      "scientificName": "Bombina bombina",
+      "offsetStart": 10123,
+      "offsetEnd": 10137,
+      "identifiedName": "Bombina bombina"
+    },
+    {
+      "verbatim": "Bufo",
+      "scientificName": "Bufo",
+      "offsetStart": 10145,
+      "offsetEnd": 10148,
+      "identifiedName": "Bufo"
+    },
+    {
+      "verbatim": "Bufo americanus",
+      "scientificName": "Bufo americanus",
+      "offsetStart": 10160,
+      "offsetEnd": 10174,
+      "identifiedName": "Bufo americanus"
+    },
+    {
+      "verbatim": "Bufo bufo",
+      "scientificName": "Bufo bufo",
+      "offsetStart": 10192,
+      "offsetEnd": 10200,
+      "identifiedName": "Bufo bufo"
+    },
+    {
+      "verbatim": "Bufo regularis",
+      "scientificName": "Bufo regularis",
+      "offsetStart": 10208,
+      "offsetEnd": 10221,
+      "identifiedName": "Bufo regularis"
+    },
+    {
+      "verbatim": "Bufo valliceps",
+      "scientificName": "Bufo valliceps",
+      "offsetStart": 10229,
+      "offsetEnd": 10242,
+      "identifiedName": "Bufo valliceps"
+    },
+    {
+      "verbatim": "Bufo vulgaris formosus",
+      "scientificName": "Bufo vulgaris formosus",
+      "offsetStart": 10259,
+      "offsetEnd": 10280,
+      "identifiedName": "Bufo vulgaris formosus"
+    },
+    {
+      "verbatim": "Hyla",
+      "scientificName": "Hyla",
+      "offsetStart": 10301,
+      "offsetEnd": 10304,
+      "identifiedName": "Hyla"
+    },
+    {
+      "verbatim": "Hyla",
+      "scientificName": "Hyla",
+      "offsetStart": 10327,
+      "offsetEnd": 10330,
+      "identifiedName": "Hyla"
+    },
+    {
+      "verbatim": "Hyla regilla",
+      "scientificName": "Hyla regilla",
+      "offsetStart": 10352,
+      "offsetEnd": 10363,
+      "identifiedName": "Hyla regilla"
+    },
+    {
+      "verbatim": "Hyla savigny",
+      "scientificName": "Hyla savigny",
+      "offsetStart": 10369,
+      "offsetEnd": 10380,
+      "identifiedName": "Hyla savigny"
+    },
+    {
+      "verbatim": "Hyla versicolor",
+      "scientificName": "Hyla versicolor",
+      "offsetStart": 10386,
+      "offsetEnd": 10400,
+      "identifiedName": "Hyla versicolor"
+    },
+    {
+      "verbatim": "Microhyla olivacea",
+      "scientificName": "Microhyla olivacea",
+      "offsetStart": 10406,
+      "offsetEnd": 10423,
+      "identifiedName": "Microhyla olivacea"
+    },
+    {
+      "verbatim": "Pseudacris",
+      "scientificName": "Pseudacris",
+      "offsetStart": 10429,
+      "offsetEnd": 10438,
+      "identifiedName": "Pseudacris"
+    },
+    {
+      "verbatim": "Rana catesbiana",
+      "scientificName": "Rana catesbiana",
+      "offsetStart": 10450,
+      "offsetEnd": 10464,
+      "identifiedName": "Rana catesbiana"
+    },
+    {
+      "verbatim": "Rana -catesbiana",
+      "scientificName": "Rana catesbiana",
+      "offsetStart": 10508,
+      "offsetEnd": 10523,
+      "identifiedName": "Rana catesbiana"
+    },
+    {
+      "verbatim": "Rana catesbiana",
+      "scientificName": "Rana catesbiana",
+      "offsetStart": 10533,
+      "offsetEnd": 10547,
+      "identifiedName": "Rana catesbiana"
+    },
+    {
+      "verbatim": "Branchiostoma",
+      "scientificName": "Branchiostoma",
+      "offsetStart": 10586,
+      "offsetEnd": 10598,
+      "identifiedName": "Branchiostoma"
+    },
+    {
+      "verbatim": "A. tigrinum",
+      "scientificName": "Alytes tigrinum",
+      "offsetStart": 10658,
+      "offsetEnd": 10668,
+      "identifiedName": "A. tigrinum"
+    },
+    {
+      "verbatim": "Ambystoma tigrinum",
+      "scientificName": "Ambystoma tigrinum",
+      "offsetStart": 10704,
+      "offsetEnd": 10721,
+      "identifiedName": "Ambystoma tigrinum"
+    },
+    {
+      "verbatim": "A. punctatum",
+      "scientificName": "Ambystoma punctatum",
+      "offsetStart": 10724,
+      "offsetEnd": 10735,
+      "identifiedName": "A. punctatum"
+    },
+    {
+      "verbatim": "Xenopus laevis",
+      "scientificName": "Xenopus laevis",
+      "offsetStart": 10758,
+      "offsetEnd": 10771,
+      "identifiedName": "Xenopus laevis"
+    },
+    {
+      "verbatim": "Anolis carolinensis",
+      "scientificName": "Anolis carolinensis",
+      "offsetStart": 10774,
+      "offsetEnd": 10792,
+      "identifiedName": "Anolis carolinensis"
+    },
+    {
+      "verbatim": "Triturus cristatus carnifex",
+      "scientificName": "Triturus cristatus carnifex",
+      "offsetStart": 10815,
+      "offsetEnd": 10841,
+      "identifiedName": "Triturus cristatus carnifex"
+    },
+    {
+      "verbatim": "Pleurodeles",
+      "scientificName": "Pleurodeles",
+      "offsetStart": 10844,
+      "offsetEnd": 10854,
+      "identifiedName": "Pleurodeles"
+    },
+    {
+      "verbatim": "Xenopus laevis",
+      "scientificName": "Xenopus laevis",
+      "offsetStart": 10865,
+      "offsetEnd": 10878,
+      "identifiedName": "Xenopus laevis"
+    },
+    {
+      "verbatim": "Ambystoma",
+      "scientificName": "Ambystoma",
+      "offsetStart": 10902,
+      "offsetEnd": 10910,
+      "identifiedName": "Ambystoma"
+    },
+    {
+      "verbatim": "Pleurodeles",
+      "scientificName": "Pleurodeles",
+      "offsetStart": 10920,
+      "offsetEnd": 10930,
+      "identifiedName": "Pleurodeles"
+    },
+    {
+      "verbatim": "Rana esculenta",
+      "scientificName": "Rana esculenta",
+      "offsetStart": 10961,
+      "offsetEnd": 10974,
+      "identifiedName": "Rana esculenta"
+    },
+    {
+      "verbatim": "Triturus vulgaris",
+      "scientificName": "Triturus vulgaris",
+      "offsetStart": 10977,
+      "offsetEnd": 10993,
+      "identifiedName": "Triturus vulgaris"
+    },
+    {
+      "verbatim": "Xenopus laevis",
+      "scientificName": "Xenopus laevis",
+      "offsetStart": 11016,
+      "offsetEnd": 11029,
+      "identifiedName": "Xenopus laevis"
+    },
+    {
+      "verbatim": "Amphibia.",
+      "scientificName": "Amphibia",
+      "offsetStart": 11059,
+      "offsetEnd": 11067,
+      "identifiedName": "Amphibia"
+    },
+    {
+      "verbatim": "Rana clamitans",
+      "scientificName": "Rana clamitans",
+      "offsetStart": 11116,
+      "offsetEnd": 11129,
+      "identifiedName": "Rana clamitans"
+    },
+    {
+      "verbatim": "Horstadius",
+      "scientificName": "Horstadius",
+      "offsetStart": 15979,
+      "offsetEnd": 15988,
+      "identifiedName": "Horstadius"
+    },
+    {
+      "verbatim": "Spiralia,",
+      "scientificName": "Spiralia",
+      "offsetStart": 17929,
+      "offsetEnd": 17937,
+      "identifiedName": "Spiralia"
+    },
+    {
+      "verbatim": "Mammalia.",
+      "scientificName": "Mammalia",
+      "offsetStart": 18134,
+      "offsetEnd": 18142,
+      "identifiedName": "Mammalia"
+    },
+    {
+      "verbatim": "O.xford",
+      "scientificName": "O. xford",
+      "offsetStart": 20521,
+      "offsetEnd": 20527,
+      "identifiedName": "O.xford"
+    },
+    {
+      "verbatim": "Ammocoetes.",
+      "scientificName": "Ammocoetes",
+      "offsetStart": 23936,
+      "offsetEnd": 23946,
+      "identifiedName": "Ammocoetes"
+    },
+    {
+      "verbatim": "Amphioxus",
+      "scientificName": "Amphioxus",
+      "offsetStart": 24003,
+      "offsetEnd": 24011,
+      "identifiedName": "Amphioxus"
+    },
+    {
+      "verbatim": "Necturus,",
+      "scientificName": "Necturus",
+      "offsetStart": 24506,
+      "offsetEnd": 24514,
+      "identifiedName": "Necturus"
+    },
+    {
+      "verbatim": "Porifera",
+      "scientificName": "Porifera",
+      "offsetStart": 27138,
+      "offsetEnd": 27145,
+      "identifiedName": "Porifera"
+    }
+  ],
+  "data_sources": [
+
+  ],
+  "context": null,
+  "resolved_names": [
+    {
+      "supplied_name_string": "E. xper"
+    },
+    {
+      "supplied_name_string": "PASQUINI"
+    },
+    {
+      "supplied_name_string": "Regina",
+      "results": [
+        {
+          "data_source_id": 1,
+          "data_source_title": "Catalogue of Life",
+          "gni_uuid": "c8f52051-3dee-5644-95fa-8cb01d1ae898",
+          "name_string": "Regina",
+          "canonical_form": "Regina",
+          "classification_path": "Animalia|Chordata|Reptilia|Squamata|Colubridae|Regina",
+          "classification_path_ranks": "kingdom|phylum|class|order|family|genus",
+          "classification_path_ids": "2362377|2362754|2362907|2363418|2363682|2412358",
+          "taxon_id": "2412358",
+          "match_type": 1,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "c8f52051-3dee-5644-95fa-8cb01d1ae898",
+          "name_string": "Regina",
+          "canonical_form": "Regina",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "20632538",
+          "local_id": "35504",
+          "url": "http://eol.org/pages/35504",
+          "match_type": 1,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "data_sources_number": 14,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Phila delphia",
+      "results": [
+        {
+          "data_source_id": 8,
+          "data_source_title": "Interim Register of Marine and Nonmarine Genera",
+          "gni_uuid": "92fb3b74-2066-59db-8780-0f807a9f66d1",
+          "name_string": "Phila Brenske, 1897",
+          "canonical_form": "Phila",
+          "classification_path": "Animalia|Arthropoda|Insecta|Coleoptera|Scarabaeidae|Energetia",
+          "classification_path_ranks": "kingdom|phylum|class|order|family|genus",
+          "classification_path_ids": "11|235|1096|10279|104781|1458907",
+          "taxon_id": "1317128",
+          "current_taxon_id": "1458907",
+          "current_name_string": "Energetia Dalle Torre, 1912",
+          "match_type": 6,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "preferred_results": [
+
+      ],
+      "data_sources_number": 4,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Toba",
+      "results": [
+        {
+          "data_source_id": 1,
+          "data_source_title": "Catalogue of Life",
+          "gni_uuid": "9fec91e5-ebe8-571f-8720-36cdcee8d793",
+          "name_string": "Toba",
+          "canonical_form": "Toba",
+          "classification_path": "Animalia|Arthropoda|Insecta|Hemiptera|Hemiptera|Cicadellidae|Toba",
+          "classification_path_ranks": "kingdom|phylum|class|order|order|family|genus",
+          "classification_path_ids": "2362377|2362444|2362601|2362726|2367319|2367350|2540254",
+          "taxon_id": "2540254",
+          "match_type": 1,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "9fec91e5-ebe8-571f-8720-36cdcee8d793",
+          "name_string": "Toba",
+          "canonical_form": "Toba",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "39741543",
+          "local_id": "8989994",
+          "url": "http://eol.org/pages/8989994",
+          "match_type": 1,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "data_sources_number": 9,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Dugesia gonocephala",
+      "results": [
+        {
+          "data_source_id": 1,
+          "data_source_title": "Catalogue of Life",
+          "gni_uuid": "a8f10d31-c3b4-5e68-a180-92645e0a7f74",
+          "name_string": "Dugesia gonocephala",
+          "canonical_form": "Dugesia gonocephala",
+          "classification_path": "Animalia|Platyhelminthes|Turbellaria|Tricladida|Planariidae|Dugesia|Dugesia gonocephala",
+          "classification_path_ranks": "kingdom|phylum|class|order|family|genus|species",
+          "classification_path_ids": "2362377|2364008|2364162|2370790|2370797|2493717|6859926",
+          "taxon_id": "6859926",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "a8f10d31-c3b4-5e68-a180-92645e0a7f74",
+          "name_string": "Dugesia gonocephala",
+          "canonical_form": "Dugesia gonocephala",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "29000430",
+          "local_id": "592249",
+          "url": "http://eol.org/pages/592249",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "data_sources_number": 15,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Dugesia tigrina",
+      "results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "8043781e-94d3-545e-a1a9-a4367bdd84da",
+          "name_string": "Dugesia tigrina",
+          "canonical_form": "Dugesia tigrina",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "s_5165403",
+          "local_id": "399574",
+          "url": "http://eol.org/pages/399574/names/synonyms",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "8043781e-94d3-545e-a1a9-a4367bdd84da",
+          "name_string": "Dugesia tigrina",
+          "canonical_form": "Dugesia tigrina",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "s_5165403",
+          "local_id": "399574",
+          "url": "http://eol.org/pages/399574/names/synonyms",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "data_sources_number": 14,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Euplanaria polychroa",
+      "results": [
+        {
+          "data_source_id": 168,
+          "data_source_title": "Index to Organism Names",
+          "gni_uuid": "f4de23cf-178d-5cef-88db-03dd3a5c96f3",
+          "name_string": "Euplanaria polychroa",
+          "canonical_form": "Euplanaria polychroa",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "128130509",
+          "url": "http://www.organismnames.com/details.htm?lsid=2796753",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "preferred_results": [
+
+      ],
+      "data_sources_number": 2,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Lumbricus terrestris",
+      "results": [
+        {
+          "data_source_id": 4,
+          "data_source_title": "NCBI",
+          "gni_uuid": "38df3d19-140d-5fd0-a89c-2a6ffd8320f1",
+          "name_string": "Lumbricus terrestris",
+          "canonical_form": "Lumbricus terrestris",
+          "classification_path": "|Eukaryota|Opisthokonta|Metazoa|Eumetazoa|Bilateria|Coelomata|Protostomia|Lophotrochozoa|Annelida|Clitellata|Oligochaeta|Haplotaxida|Lumbricina|Lumbricidae|Lumbricinae|Lumbricus|Lumbricus terrestris complex|Lumbricus terrestris",
+          "classification_path_ranks": "|superkingdom||kingdom||||||phylum||subclass|order|suborder|family|subfamily|genus||species",
+          "classification_path_ids": "131567|2759|33154|33208|6072|33213|33316|33317|1206795|6340|42113|6381|6382|6391|6392|1046325|6397|1050931|6398",
+          "taxon_id": "6398",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "38df3d19-140d-5fd0-a89c-2a6ffd8320f1",
+          "name_string": "Lumbricus terrestris",
+          "canonical_form": "Lumbricus terrestris",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "39142788",
+          "local_id": "3126801",
+          "url": "http://eol.org/pages/3126801",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "data_sources_number": 18,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Oncorhynchus gorbuscha",
+      "results": [
+        {
+          "data_source_id": 4,
+          "data_source_title": "NCBI",
+          "gni_uuid": "08060463-eb62-5c76-9770-0b55dbc5933c",
+          "name_string": "Oncorhynchus gorbuscha",
+          "canonical_form": "Oncorhynchus gorbuscha",
+          "classification_path": "|Eukaryota|Opisthokonta|Metazoa|Eumetazoa|Bilateria|Coelomata|Deuterostomia|Chordata|Craniata|Vertebrata|Gnathostomata|Teleostomi|Euteleostomi|Actinopterygii|Actinopteri|Neopterygii|Teleostei|Elopocephala|Clupeocephala|Euteleostei|Protacanthopterygii|Salmoniformes|Salmonoidei|Salmonidae|Salmoninae|Oncorhynchus|Oncorhynchus gorbuscha",
+          "classification_path_ranks": "|superkingdom||kingdom|||||phylum|subphylum||superclass|||class||||||||order|suborder|family|subfamily|genus|species",
+          "classification_path_ids": "131567|2759|33154|33208|6072|33213|33316|33511|7711|89593|7742|7776|117570|117571|7898|186623|41665|32443|186624|186625|32447|41705|8006|186841|8015|504568|8016|8017",
+          "taxon_id": "8017",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "08060463-eb62-5c76-9770-0b55dbc5933c",
+          "name_string": "Oncorhynchus gorbuscha",
+          "canonical_form": "Oncorhynchus gorbuscha",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "35654650",
+          "local_id": "205246",
+          "url": "http://eol.org/pages/205246",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "data_sources_number": 22,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Oncorhynchus keta",
+      "results": [
+        {
+          "data_source_id": 4,
+          "data_source_title": "NCBI",
+          "gni_uuid": "c210fc8b-e2a1-5bbe-b9d4-d552718ede62",
+          "name_string": "Oncorhynchus keta",
+          "canonical_form": "Oncorhynchus keta",
+          "classification_path": "|Eukaryota|Opisthokonta|Metazoa|Eumetazoa|Bilateria|Coelomata|Deuterostomia|Chordata|Craniata|Vertebrata|Gnathostomata|Teleostomi|Euteleostomi|Actinopterygii|Actinopteri|Neopterygii|Teleostei|Elopocephala|Clupeocephala|Euteleostei|Protacanthopterygii|Salmoniformes|Salmonoidei|Salmonidae|Salmoninae|Oncorhynchus|Oncorhynchus keta",
+          "classification_path_ranks": "|superkingdom||kingdom|||||phylum|subphylum||superclass|||class||||||||order|suborder|family|subfamily|genus|species",
+          "classification_path_ids": "131567|2759|33154|33208|6072|33213|33316|33511|7711|89593|7742|7776|117570|117571|7898|186623|41665|32443|186624|186625|32447|41705|8006|186841|8015|504568|8016|8018",
+          "taxon_id": "8018",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "c210fc8b-e2a1-5bbe-b9d4-d552718ede62",
+          "name_string": "Oncorhynchus keta",
+          "canonical_form": "Oncorhynchus keta",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "35659014",
+          "local_id": "205247",
+          "url": "http://eol.org/pages/205247",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "data_sources_number": 22,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Oncorhynchus nerka",
+      "results": [
+        {
+          "data_source_id": 4,
+          "data_source_title": "NCBI",
+          "gni_uuid": "9e887252-9b1d-5c43-87cc-35edf9a2fc31",
+          "name_string": "Oncorhynchus nerka",
+          "canonical_form": "Oncorhynchus nerka",
+          "classification_path": "|Eukaryota|Opisthokonta|Metazoa|Eumetazoa|Bilateria|Coelomata|Deuterostomia|Chordata|Craniata|Vertebrata|Gnathostomata|Teleostomi|Euteleostomi|Actinopterygii|Actinopteri|Neopterygii|Teleostei|Elopocephala|Clupeocephala|Euteleostei|Protacanthopterygii|Salmoniformes|Salmonoidei|Salmonidae|Salmoninae|Oncorhynchus|Oncorhynchus nerka",
+          "classification_path_ranks": "|superkingdom||kingdom|||||phylum|subphylum||superclass|||class||||||||order|suborder|family|subfamily|genus|species",
+          "classification_path_ids": "131567|2759|33154|33208|6072|33213|33316|33511|7711|89593|7742|7776|117570|117571|7898|186623|41665|32443|186624|186625|32447|41705|8006|186841|8015|504568|8016|8023",
+          "taxon_id": "8023",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "9e887252-9b1d-5c43-87cc-35edf9a2fc31",
+          "name_string": "Oncorhynchus nerka",
+          "canonical_form": "Oncorhynchus nerka",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "35667150",
+          "local_id": "205251",
+          "url": "http://eol.org/pages/205251",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "data_sources_number": 22,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Poeciliidae",
+      "results": [
+        {
+          "data_source_id": 1,
+          "data_source_title": "Catalogue of Life",
+          "gni_uuid": "f106625c-ba0c-56d2-8ca2-444d3b1e20cb",
+          "name_string": "Poeciliidae",
+          "canonical_form": "Poeciliidae",
+          "classification_path": "Animalia|Chordata|Actinopterygii|Cyprinodontiformes|Poeciliidae",
+          "classification_path_ranks": "kingdom|phylum|class|order|family",
+          "classification_path_ids": "2362377|2362754|2365430|2369356|2369360",
+          "taxon_id": "2369360",
+          "match_type": 1,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "f106625c-ba0c-56d2-8ca2-444d3b1e20cb",
+          "name_string": "Poeciliidae",
+          "canonical_form": "Poeciliidae",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "37305660",
+          "local_id": "19745488",
+          "url": "http://eol.org/pages/19745488",
+          "match_type": 1,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "data_sources_number": 17,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Umbra limi",
+      "results": [
+        {
+          "data_source_id": 4,
+          "data_source_title": "NCBI",
+          "gni_uuid": "cb298021-5616-5585-acbe-2ed40252f63f",
+          "name_string": "Umbra limi",
+          "canonical_form": "Umbra limi",
+          "classification_path": "|Eukaryota|Opisthokonta|Metazoa|Eumetazoa|Bilateria|Coelomata|Deuterostomia|Chordata|Craniata|Vertebrata|Gnathostomata|Teleostomi|Euteleostomi|Actinopterygii|Actinopteri|Neopterygii|Teleostei|Elopocephala|Clupeocephala|Euteleostei|Neognathi|Esociformes|Umbridae|Umbra|Umbra limi",
+          "classification_path_ranks": "|superkingdom||kingdom|||||phylum|subphylum||superclass|||class||||||||order|family|genus|species",
+          "classification_path_ids": "131567|2759|33154|33208|6072|33213|33316|33511|7711|89593|7742|7776|117570|117571|7898|186623|41665|32443|186624|186625|32447|186839|8007|30950|75932|75935",
+          "taxon_id": "75935",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "cb298021-5616-5585-acbe-2ed40252f63f",
+          "name_string": "Umbra limi",
+          "canonical_form": "Umbra limi",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "34809396",
+          "local_id": "216793",
+          "url": "http://eol.org/pages/216793",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "data_sources_number": 18,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Amphibia",
+      "results": [
+        {
+          "data_source_id": 1,
+          "data_source_title": "Catalogue of Life",
+          "gni_uuid": "9d6eb935-92ad-5289-837f-ac3984fb0634",
+          "name_string": "Amphibia",
+          "canonical_form": "Amphibia",
+          "classification_path": "Animalia|Chordata|Amphibia",
+          "classification_path_ranks": "kingdom|phylum|class",
+          "classification_path_ids": "2362377|2362754|2370861",
+          "taxon_id": "2370861",
+          "match_type": 1,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "9d6eb935-92ad-5289-837f-ac3984fb0634",
+          "name_string": "Amphibia",
+          "canonical_form": "Amphibia",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "36748142",
+          "local_id": "1552",
+          "url": "http://eol.org/pages/1552",
+          "match_type": 1,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "data_sources_number": 19,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Ambystoma maculatum",
+      "results": [
+        {
+          "data_source_id": 4,
+          "data_source_title": "NCBI",
+          "gni_uuid": "108fe08c-2c5b-55f4-bff3-dbc3d4164542",
+          "name_string": "Ambystoma maculatum",
+          "canonical_form": "Ambystoma maculatum",
+          "classification_path": "|Eukaryota|Opisthokonta|Metazoa|Eumetazoa|Bilateria|Coelomata|Deuterostomia|Chordata|Craniata|Vertebrata|Gnathostomata|Teleostomi|Euteleostomi|Sarcopterygii|Tetrapoda|Amphibia|Batrachia|Caudata|Salamandroidea|Ambystomatidae|Ambystoma|Ambystoma maculatum",
+          "classification_path_ranks": "|superkingdom||kingdom|||||phylum|subphylum||superclass|||||class|superorder|order|superfamily|family|genus|species",
+          "classification_path_ids": "131567|2759|33154|33208|6072|33213|33316|33511|7711|89593|7742|7776|117570|117571|8287|32523|8292|41666|8293|30367|8294|8295|43114",
+          "taxon_id": "43114",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "108fe08c-2c5b-55f4-bff3-dbc3d4164542",
+          "name_string": "Ambystoma maculatum",
+          "canonical_form": "Ambystoma maculatum",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "29121328",
+          "local_id": "1048181",
+          "url": "http://eol.org/pages/1048181",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "data_sources_number": 18,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Ambystoma mexicanum",
+      "results": [
+        {
+          "data_source_id": 4,
+          "data_source_title": "NCBI",
+          "gni_uuid": "98e30b12-e8ae-590d-a1ba-b93c70fd551b",
+          "name_string": "Ambystoma mexicanum",
+          "canonical_form": "Ambystoma mexicanum",
+          "classification_path": "|Eukaryota|Opisthokonta|Metazoa|Eumetazoa|Bilateria|Coelomata|Deuterostomia|Chordata|Craniata|Vertebrata|Gnathostomata|Teleostomi|Euteleostomi|Sarcopterygii|Tetrapoda|Amphibia|Batrachia|Caudata|Salamandroidea|Ambystomatidae|Ambystoma|Ambystoma mexicanum",
+          "classification_path_ranks": "|superkingdom||kingdom|||||phylum|subphylum||superclass|||||class|superorder|order|superfamily|family|genus|species",
+          "classification_path_ids": "131567|2759|33154|33208|6072|33213|33316|33511|7711|89593|7742|7776|117570|117571|8287|32523|8292|41666|8293|30367|8294|8295|8296",
+          "taxon_id": "8296",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "98e30b12-e8ae-590d-a1ba-b93c70fd551b",
+          "name_string": "Ambystoma mexicanum",
+          "canonical_form": "Ambystoma mexicanum",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "29121305",
+          "local_id": "1019571",
+          "url": "http://eol.org/pages/1019571",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "data_sources_number": 20,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Ambystoma opacum",
+      "results": [
+        {
+          "data_source_id": 4,
+          "data_source_title": "NCBI",
+          "gni_uuid": "8f47992f-8b13-5852-907d-f7447fa15f27",
+          "name_string": "Ambystoma opacum",
+          "canonical_form": "Ambystoma opacum",
+          "classification_path": "|Eukaryota|Opisthokonta|Metazoa|Eumetazoa|Bilateria|Coelomata|Deuterostomia|Chordata|Craniata|Vertebrata|Gnathostomata|Teleostomi|Euteleostomi|Sarcopterygii|Tetrapoda|Amphibia|Batrachia|Caudata|Salamandroidea|Ambystomatidae|Ambystoma|Ambystoma opacum",
+          "classification_path_ranks": "|superkingdom||kingdom|||||phylum|subphylum||superclass|||||class|superorder|order|superfamily|family|genus|species",
+          "classification_path_ids": "131567|2759|33154|33208|6072|33213|33316|33511|7711|89593|7742|7776|117570|117571|8287|32523|8292|41666|8293|30367|8294|8295|43115",
+          "taxon_id": "43115",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "8f47992f-8b13-5852-907d-f7447fa15f27",
+          "name_string": "Ambystoma opacum",
+          "canonical_form": "Ambystoma opacum",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "29121329",
+          "local_id": "330513",
+          "url": "http://eol.org/pages/330513",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "data_sources_number": 18,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Ambystoma punctatum",
+      "results": [
+        {
+          "data_source_id": 164,
+          "data_source_title": "BioLib.cz",
+          "gni_uuid": "2786f017-6a58-521b-99f6-165dad007071",
+          "name_string": "Ambystoma punctatum",
+          "canonical_form": "Ambystoma punctatum",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "141841716",
+          "url": "http://www.biolib.cz/en/taxon/id182359/",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "preferred_results": [
+
+      ],
+      "data_sources_number": 3,
+      "in_curated_sources": false
+    },
+    {
+      "supplied_name_string": "Ambystoma tigrinum",
+      "results": [
+        {
+          "data_source_id": 4,
+          "data_source_title": "NCBI",
+          "gni_uuid": "6b0556a6-3015-54e8-b88b-b81113ad1838",
+          "name_string": "Ambystoma tigrinum",
+          "canonical_form": "Ambystoma tigrinum",
+          "classification_path": "|Eukaryota|Opisthokonta|Metazoa|Eumetazoa|Bilateria|Coelomata|Deuterostomia|Chordata|Craniata|Vertebrata|Gnathostomata|Teleostomi|Euteleostomi|Sarcopterygii|Tetrapoda|Amphibia|Batrachia|Caudata|Salamandroidea|Ambystomatidae|Ambystoma|Ambystoma tigrinum",
+          "classification_path_ranks": "|superkingdom||kingdom|||||phylum|subphylum||superclass|||||class|superorder|order|superfamily|family|genus|species",
+          "classification_path_ids": "131567|2759|33154|33208|6072|33213|33316|33511|7711|89593|7742|7776|117570|117571|8287|32523|8292|41666|8293|30367|8294|8295|8305",
+          "taxon_id": "8305",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "6b0556a6-3015-54e8-b88b-b81113ad1838",
+          "name_string": "Ambystoma tigrinum",
+          "canonical_form": "Ambystoma tigrinum",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "29121310",
+          "local_id": "1018893",
+          "url": "http://eol.org/pages/1018893",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "data_sources_number": 19,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Hynobius nebulosus",
+      "results": [
+        {
+          "data_source_id": 4,
+          "data_source_title": "NCBI",
+          "gni_uuid": "f7f9904d-428e-547a-aef2-1392dd7825a5",
+          "name_string": "Hynobius nebulosus",
+          "canonical_form": "Hynobius nebulosus",
+          "classification_path": "|Eukaryota|Opisthokonta|Metazoa|Eumetazoa|Bilateria|Coelomata|Deuterostomia|Chordata|Craniata|Vertebrata|Gnathostomata|Teleostomi|Euteleostomi|Sarcopterygii|Tetrapoda|Amphibia|Batrachia|Caudata|Cryptobranchoidea|Hynobiidae|Hynobius|Hynobius nebulosus",
+          "classification_path_ranks": "|superkingdom||kingdom|||||phylum|subphylum||superclass|||||class|superorder|order|superfamily|family|genus|species",
+          "classification_path_ids": "131567|2759|33154|33208|6072|33213|33316|33511|7711|89593|7742|7776|117570|117571|8287|32523|8292|41666|8293|30364|30366|36311|294368",
+          "taxon_id": "294368",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "f7f9904d-428e-547a-aef2-1392dd7825a5",
+          "name_string": "Hynobius nebulosus",
+          "canonical_form": "Hynobius nebulosus",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "39171555",
+          "local_id": "1048033",
+          "url": "http://eol.org/pages/1048033",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "data_sources_number": 17,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Necturus",
+      "results": [
+        {
+          "data_source_id": 1,
+          "data_source_title": "Catalogue of Life",
+          "gni_uuid": "19b07363-0428-5b2d-8d54-51551b27b834",
+          "name_string": "Necturus",
+          "canonical_form": "Necturus",
+          "classification_path": "Animalia|Chordata|Amphibia|Caudata|Proteidae|Necturus",
+          "classification_path_ranks": "kingdom|phylum|class|order|family|genus",
+          "classification_path_ids": "2362377|2362754|2370861|2370862|2370865|2525632",
+          "taxon_id": "2525632",
+          "match_type": 1,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "19b07363-0428-5b2d-8d54-51551b27b834",
+          "name_string": "Necturus",
+          "canonical_form": "Necturus",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "20625940",
+          "local_id": "39985",
+          "url": "http://eol.org/pages/39985",
+          "match_type": 1,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "data_sources_number": 13,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Pleurodeles",
+      "results": [
+        {
+          "data_source_id": 1,
+          "data_source_title": "Catalogue of Life",
+          "gni_uuid": "6236a61b-d18d-5eac-9df6-4ea6ebc31920",
+          "name_string": "Pleurodeles",
+          "canonical_form": "Pleurodeles",
+          "classification_path": "Animalia|Chordata|Amphibia|Caudata|Salamandridae|Pleurodeles",
+          "classification_path_ranks": "kingdom|phylum|class|order|family|genus",
+          "classification_path_ids": "2362377|2362754|2370861|2370862|2370863|2530126",
+          "taxon_id": "2530126",
+          "match_type": 1,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "6236a61b-d18d-5eac-9df6-4ea6ebc31920",
+          "name_string": "Pleurodeles",
+          "canonical_form": "Pleurodeles",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "20625973",
+          "local_id": "42645",
+          "url": "http://eol.org/pages/42645",
+          "match_type": 1,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "data_sources_number": 13,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Triturus alpestris",
+      "results": [
+        {
+          "data_source_id": 7,
+          "data_source_title": "Union 4",
+          "gni_uuid": "0c2aca0e-a12e-5738-9316-303c18366058",
+          "name_string": "Triturus alpestris",
+          "canonical_form": "Triturus alpestris",
+          "classification_path": "|Cellular life|Eukaryota|Opisthokonts|Choanoflagellates and animals|Animalia|Epitheliates|Bilateria|Deuterostomia|Chordata|Craniata|Vertebrata|Gnathostomata|Osteichthyes|Sarcopterygii|Tetrapoda|Amphibia|Caudata|Salamandridae|Pleurodelinae|Triturus|Triturus alpestris",
+          "classification_path_ranks": "|above family|above family|above family|above family|unranked|above family|above family|above family|above family|unranked|above family|above family|superclass|class|unranked|unranked|above family|family||genus|species",
+          "classification_path_ids": "2822864|2823207|2828118|2843765|2843766|2843767|2843768|17974913|2843770|2844251|2844262|2844327|2844348|2845520|2872875|2872898|2900602|2905788|2906286|22174881|2906343|2906344",
+          "taxon_id": "2906344",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "0c2aca0e-a12e-5738-9316-303c18366058",
+          "name_string": "Triturus alpestris",
+          "canonical_form": "Triturus alpestris",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "s_5225615",
+          "local_id": "330758",
+          "url": "http://eol.org/pages/330758/names/synonyms",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "data_sources_number": 16,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Triturus boscai",
+      "results": [
+        {
+          "data_source_id": 7,
+          "data_source_title": "Union 4",
+          "gni_uuid": "176dfd1c-9bef-5eac-a8af-7fa2e343f4a4",
+          "name_string": "Triturus boscai",
+          "canonical_form": "Triturus boscai",
+          "classification_path": "|Cellular life|Eukaryota|Opisthokonts|Choanoflagellates and animals|Animalia|Epitheliates|Bilateria|Deuterostomia|Chordata|Craniata|Vertebrata|Gnathostomata|Osteichthyes|Sarcopterygii|Tetrapoda|Amphibia|Caudata|Salamandridae|Pleurodelinae|Triturus|Triturus boscai",
+          "classification_path_ranks": "|above family|above family|above family|above family|unranked|above family|above family|above family|above family|unranked|above family|above family|superclass|class|unranked|unranked|above family|family||genus|species",
+          "classification_path_ids": "2822864|2823207|2828118|2843765|2843766|2843767|2843768|17974913|2843770|2844251|2844262|2844327|2844348|2845520|2872875|2872898|2900602|2905788|2906286|22174881|2906343|2906345",
+          "taxon_id": "2906345",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "176dfd1c-9bef-5eac-a8af-7fa2e343f4a4",
+          "name_string": "Triturus boscai",
+          "canonical_form": "Triturus boscai",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "s_5225608",
+          "local_id": "332576",
+          "url": "http://eol.org/pages/332576/names/synonyms",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "data_sources_number": 15,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Triturus cristatus",
+      "results": [
+        {
+          "data_source_id": 4,
+          "data_source_title": "NCBI",
+          "gni_uuid": "4ed24159-2e75-56e4-9c29-ca9a7582e1db",
+          "name_string": "Triturus cristatus",
+          "canonical_form": "Triturus cristatus",
+          "classification_path": "|Eukaryota|Opisthokonta|Metazoa|Eumetazoa|Bilateria|Coelomata|Deuterostomia|Chordata|Craniata|Vertebrata|Gnathostomata|Teleostomi|Euteleostomi|Sarcopterygii|Tetrapoda|Amphibia|Batrachia|Caudata|Salamandroidea|Salamandridae|Triturus|Triturus cristatus",
+          "classification_path_ranks": "|superkingdom||kingdom|||||phylum|subphylum||superclass|||||class|superorder|order|superfamily|family|genus|species",
+          "classification_path_ids": "131567|2759|33154|33208|6072|33213|33316|33511|7711|89593|7742|7776|117570|117571|8287|32523|8292|41666|8293|30367|8314|8322|8323",
+          "taxon_id": "8323",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "4ed24159-2e75-56e4-9c29-ca9a7582e1db",
+          "name_string": "Triturus cristatus",
+          "canonical_form": "Triturus cristatus",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "39171703",
+          "local_id": "1018157",
+          "url": "http://eol.org/pages/1018157",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "data_sources_number": 21,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Triturus helveticus",
+      "results": [
+        {
+          "data_source_id": 7,
+          "data_source_title": "Union 4",
+          "gni_uuid": "ada81215-3ba2-5a68-9003-844ccbedb3a2",
+          "name_string": "Triturus helveticus",
+          "canonical_form": "Triturus helveticus",
+          "classification_path": "|Cellular life|Eukaryota|Opisthokonts|Choanoflagellates and animals|Animalia|Epitheliates|Bilateria|Deuterostomia|Chordata|Craniata|Vertebrata|Gnathostomata|Osteichthyes|Sarcopterygii|Tetrapoda|Amphibia|Caudata|Salamandridae|Pleurodelinae|Triturus|Triturus helveticus",
+          "classification_path_ranks": "|above family|above family|above family|above family|unranked|above family|above family|above family|above family|unranked|above family|above family|superclass|class|unranked|unranked|above family|family||genus|species",
+          "classification_path_ids": "2822864|2823207|2828118|2843765|2843766|2843767|2843768|17974913|2843770|2844251|2844262|2844327|2844348|2845520|2872875|2872898|2900602|2905788|2906286|22174881|2906343|2906349",
+          "taxon_id": "2906349",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "ada81215-3ba2-5a68-9003-844ccbedb3a2",
+          "name_string": "Triturus helveticus",
+          "canonical_form": "Triturus helveticus",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "s_5225591",
+          "local_id": "332574",
+          "url": "http://eol.org/pages/332574/names/synonyms",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "data_sources_number": 16,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Triturus marmoratus",
+      "results": [
+        {
+          "data_source_id": 4,
+          "data_source_title": "NCBI",
+          "gni_uuid": "cd003d86-3570-564b-bcfb-d8084daf69cc",
+          "name_string": "Triturus marmoratus",
+          "canonical_form": "Triturus marmoratus",
+          "classification_path": "|Eukaryota|Opisthokonta|Metazoa|Eumetazoa|Bilateria|Coelomata|Deuterostomia|Chordata|Craniata|Vertebrata|Gnathostomata|Teleostomi|Euteleostomi|Sarcopterygii|Tetrapoda|Amphibia|Batrachia|Caudata|Salamandroidea|Salamandridae|Triturus|Triturus marmoratus",
+          "classification_path_ranks": "|superkingdom||kingdom|||||phylum|subphylum||superclass|||||class|superorder|order|superfamily|family|genus|species",
+          "classification_path_ids": "131567|2759|33154|33208|6072|33213|33316|33511|7711|89593|7742|7776|117570|117571|8287|32523|8292|41666|8293|30367|8314|8322|8328",
+          "taxon_id": "8328",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "cd003d86-3570-564b-bcfb-d8084daf69cc",
+          "name_string": "Triturus marmoratus",
+          "canonical_form": "Triturus marmoratus",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "20625992",
+          "local_id": "332572",
+          "url": "http://eol.org/pages/332572",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "data_sources_number": 19,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Triturus pyrrhogaster",
+      "results": [
+        {
+          "data_source_id": 11,
+          "data_source_title": "GBIF Taxonomic Backbone",
+          "gni_uuid": "d30baa69-1735-56f6-8c54-7aaf2eb9873d",
+          "name_string": "Triturus pyrrhogaster",
+          "canonical_form": "Triturus pyrrhogaster",
+          "classification_path": "Animalia|Chordata|Amphibia|Caudata|Salamandridae|Cynops|Cynops pyrrhogaster",
+          "classification_path_ranks": "kingdom|phylum|class|order|family|genus|species",
+          "classification_path_ids": "1|44|131|953|6750|2431859|2431862",
+          "taxon_id": "5848776",
+          "current_taxon_id": "2431862",
+          "current_name_string": "Cynops pyrrhogaster (Boie, 1826)",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "d30baa69-1735-56f6-8c54-7aaf2eb9873d",
+          "name_string": "Triturus pyrrhogaster",
+          "canonical_form": "Triturus pyrrhogaster",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "s_5225444",
+          "local_id": "1048102",
+          "url": "http://eol.org/pages/1048102/names/synonyms",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "data_sources_number": 4,
+      "in_curated_sources": false
+    },
+    {
+      "supplied_name_string": "Triturus taeniatus",
+      "results": [
+        {
+          "data_source_id": 168,
+          "data_source_title": "Index to Organism Names",
+          "gni_uuid": "1d3b70dd-a069-5a79-9e62-3772db1b9e12",
+          "name_string": "Triturus taeniatus",
+          "canonical_form": "Triturus taeniatus",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "125772257",
+          "url": "http://www.organismnames.com/details.htm?lsid=217122",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "preferred_results": [
+
+      ],
+      "data_sources_number": 2,
+      "in_curated_sources": false
+    },
+    {
+      "supplied_name_string": "Triturus torosus",
+      "results": [
+        {
+          "data_source_id": 168,
+          "data_source_title": "Index to Organism Names",
+          "gni_uuid": "5fb9492e-6bb1-5372-b3f9-7362a399b400",
+          "name_string": "Triturus torosus",
+          "canonical_form": "Triturus torosus",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "127819058",
+          "url": "http://www.organismnames.com/details.htm?lsid=2481749",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "preferred_results": [
+
+      ],
+      "data_sources_number": 1,
+      "in_curated_sources": false
+    },
+    {
+      "supplied_name_string": "Triturus viridescens",
+      "results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "a6201888-158b-5f88-8665-4b3d6bb12b84",
+          "name_string": "Triturus viridescens",
+          "canonical_form": "Triturus viridescens",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "s_5225388",
+          "local_id": "1025186",
+          "url": "http://eol.org/pages/1025186/names/synonyms",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "a6201888-158b-5f88-8665-4b3d6bb12b84",
+          "name_string": "Triturus viridescens",
+          "canonical_form": "Triturus viridescens",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "s_5225388",
+          "local_id": "1025186",
+          "url": "http://eol.org/pages/1025186/names/synonyms",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "data_sources_number": 8,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Triturus vittatus",
+      "results": [
+        {
+          "data_source_id": 7,
+          "data_source_title": "Union 4",
+          "gni_uuid": "997ec900-704a-551d-b12f-c0a9e63ace19",
+          "name_string": "Triturus vittatus",
+          "canonical_form": "Triturus vittatus",
+          "classification_path": "|Cellular life|Eukaryota|Opisthokonts|Choanoflagellates and animals|Animalia|Epitheliates|Bilateria|Deuterostomia|Chordata|Craniata|Vertebrata|Gnathostomata|Osteichthyes|Sarcopterygii|Tetrapoda|Amphibia|Caudata|Salamandridae|Pleurodelinae|Triturus|Triturus vittatus",
+          "classification_path_ranks": "|above family|above family|above family|above family|unranked|above family|above family|above family|above family|unranked|above family|above family|superclass|class|unranked|unranked|above family|family||genus|species",
+          "classification_path_ids": "2822864|2823207|2828118|2843765|2843766|2843767|2843768|17974913|2843770|2844251|2844262|2844327|2844348|2845520|2872875|2872898|2900602|2905788|2906286|22174881|2906343|2906354",
+          "taxon_id": "2906354",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "997ec900-704a-551d-b12f-c0a9e63ace19",
+          "name_string": "Triturus vittatus",
+          "canonical_form": "Triturus vittatus",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "s_5225654",
+          "local_id": "7243480",
+          "url": "http://eol.org/pages/7243480/names/synonyms",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "data_sources_number": 14,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Triturus vulgaris",
+      "results": [
+        {
+          "data_source_id": 7,
+          "data_source_title": "Union 4",
+          "gni_uuid": "bcf9b466-ab46-5d49-84c5-209ba5e9d4c9",
+          "name_string": "Triturus vulgaris",
+          "canonical_form": "Triturus vulgaris",
+          "classification_path": "|Cellular life|Eukaryota|Opisthokonts|Choanoflagellates and animals|Animalia|Epitheliates|Bilateria|Deuterostomia|Chordata|Craniata|Vertebrata|Gnathostomata|Osteichthyes|Sarcopterygii|Tetrapoda|Amphibia|Caudata|Salamandridae|Pleurodelinae|Triturus|Triturus vulgaris",
+          "classification_path_ranks": "|above family|above family|above family|above family|unranked|above family|above family|above family|above family|unranked|above family|above family|superclass|class|unranked|unranked|above family|family||genus|species",
+          "classification_path_ids": "2822864|2823207|2828118|2843765|2843766|2843767|2843768|17974913|2843770|2844251|2844262|2844327|2844348|2845520|2872875|2872898|2900602|2905788|2906286|22174881|2906343|2906355",
+          "taxon_id": "2906355",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "bcf9b466-ab46-5d49-84c5-209ba5e9d4c9",
+          "name_string": "Triturus vulgaris",
+          "canonical_form": "Triturus vulgaris",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "s_5225574",
+          "local_id": "333313",
+          "url": "http://eol.org/pages/333313/names/synonyms",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "data_sources_number": 17,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Anura",
+      "results": [
+        {
+          "data_source_id": 1,
+          "data_source_title": "Catalogue of Life",
+          "gni_uuid": "58305eaf-9617-5566-9bed-45388e44643b",
+          "name_string": "Anura",
+          "canonical_form": "Anura",
+          "classification_path": "Plantae|Magnoliophyta|Magnoliopsida|Asterales|Asteraceae|Anura",
+          "classification_path_ranks": "kingdom|phylum|class|order|family|genus",
+          "classification_path_ids": "2362539|2362540|2362541|2370936|2370937|2521705",
+          "taxon_id": "2521705",
+          "match_type": 1,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "58305eaf-9617-5566-9bed-45388e44643b",
+          "name_string": "Anura",
+          "canonical_form": "Anura",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "39172317",
+          "local_id": "1553",
+          "url": "http://eol.org/pages/1553",
+          "match_type": 1,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "data_sources_number": 22,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Acris",
+      "results": [
+        {
+          "data_source_id": 1,
+          "data_source_title": "Catalogue of Life",
+          "gni_uuid": "532d9c35-7bef-52a4-a336-2ec7a1a0ceab",
+          "name_string": "Acris",
+          "canonical_form": "Acris",
+          "classification_path": "Animalia|Chordata|Amphibia|Anura|Hylidae|Acris",
+          "classification_path_ranks": "kingdom|phylum|class|order|family|genus",
+          "classification_path_ids": "2362377|2362754|2370861|2370871|2370900|2428103",
+          "taxon_id": "2428103",
+          "match_type": 1,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "532d9c35-7bef-52a4-a336-2ec7a1a0ceab",
+          "name_string": "Acris",
+          "canonical_form": "Acris",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "20626373",
+          "local_id": "35904",
+          "url": "http://eol.org/pages/35904",
+          "match_type": 1,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "data_sources_number": 13,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Alytes",
+      "results": [
+        {
+          "data_source_id": 1,
+          "data_source_title": "Catalogue of Life",
+          "gni_uuid": "a8b35ba0-121a-5d7d-b656-89f869d62da6",
+          "name_string": "Alytes",
+          "canonical_form": "Alytes",
+          "classification_path": "Animalia|Chordata|Amphibia|Anura|Alytidae|Alytes",
+          "classification_path_ranks": "kingdom|phylum|class|order|family|genus",
+          "classification_path_ids": "2362377|2362754|2370861|2370871|2370919|2529939",
+          "taxon_id": "2529939",
+          "match_type": 1,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "a8b35ba0-121a-5d7d-b656-89f869d62da6",
+          "name_string": "Alytes",
+          "canonical_form": "Alytes",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "20625398",
+          "local_id": "39979",
+          "url": "http://eol.org/pages/39979",
+          "match_type": 1,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "data_sources_number": 15,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Alytes obstetricans",
+      "results": [
+        {
+          "data_source_id": 4,
+          "data_source_title": "NCBI",
+          "gni_uuid": "ce53d0be-878c-5a68-85c4-3dd4a6291e3a",
+          "name_string": "Alytes obstetricans",
+          "canonical_form": "Alytes obstetricans",
+          "classification_path": "|Eukaryota|Opisthokonta|Metazoa|Eumetazoa|Bilateria|Coelomata|Deuterostomia|Chordata|Craniata|Vertebrata|Gnathostomata|Teleostomi|Euteleostomi|Sarcopterygii|Tetrapoda|Amphibia|Batrachia|Anura|Discoglossidae|Alytes|Alytes obstetricans",
+          "classification_path_ranks": "|superkingdom||kingdom|||||phylum|subphylum||superclass|||||class|superorder|order|family|genus|species",
+          "classification_path_ids": "131567|2759|33154|33208|6072|33213|33316|33511|7711|89593|7742|7776|117570|117571|8287|32523|8292|41666|8342|8343|8442|8443",
+          "taxon_id": "8443",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "ce53d0be-878c-5a68-85c4-3dd4a6291e3a",
+          "name_string": "Alytes obstetricans",
+          "canonical_form": "Alytes obstetricans",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "39176929",
+          "local_id": "330761",
+          "url": "http://eol.org/pages/330761",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "data_sources_number": 19,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Bombina bombina",
+      "results": [
+        {
+          "data_source_id": 4,
+          "data_source_title": "NCBI",
+          "gni_uuid": "382bdc21-3f18-513d-bac7-d73a47d10a78",
+          "name_string": "Bombina bombina",
+          "canonical_form": "Bombina bombina",
+          "classification_path": "|Eukaryota|Opisthokonta|Metazoa|Eumetazoa|Bilateria|Coelomata|Deuterostomia|Chordata|Craniata|Vertebrata|Gnathostomata|Teleostomi|Euteleostomi|Sarcopterygii|Tetrapoda|Amphibia|Batrachia|Anura|Bombinatoridae|Bombina|Bombina bombina",
+          "classification_path_ranks": "|superkingdom||kingdom|||||phylum|subphylum||superclass|||||class|superorder|order|family|genus|species",
+          "classification_path_ids": "131567|2759|33154|33208|6072|33213|33316|33511|7711|89593|7742|7776|117570|117571|8287|32523|8292|41666|8342|30312|8344|8345",
+          "taxon_id": "8345",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "382bdc21-3f18-513d-bac7-d73a47d10a78",
+          "name_string": "Bombina bombina",
+          "canonical_form": "Bombina bombina",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "20625491",
+          "local_id": "333308",
+          "url": "http://eol.org/pages/333308",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "data_sources_number": 19,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Bufo",
+      "results": [
+        {
+          "data_source_id": 1,
+          "data_source_title": "Catalogue of Life",
+          "gni_uuid": "504a2f52-145e-5672-ab7d-d6b3d3e85b6c",
+          "name_string": "Bufo",
+          "canonical_form": "Bufo",
+          "classification_path": "Animalia|Chordata|Amphibia|Anura|Bufonidae|Bufo",
+          "classification_path_ranks": "kingdom|phylum|class|order|family|genus",
+          "classification_path_ids": "2362377|2362754|2370861|2370871|2370913|2525651",
+          "taxon_id": "2525651",
+          "match_type": 1,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "504a2f52-145e-5672-ab7d-d6b3d3e85b6c",
+          "name_string": "Bufo",
+          "canonical_form": "Bufo",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "29122161",
+          "local_id": "12112274",
+          "url": "http://eol.org/pages/12112274",
+          "match_type": 1,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "data_sources_number": 14,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Bufo americanus",
+      "results": [
+        {
+          "data_source_id": 7,
+          "data_source_title": "Union 4",
+          "gni_uuid": "0a5407b1-92b8-51b4-a8fa-6e483bdd8edc",
+          "name_string": "Bufo americanus",
+          "canonical_form": "Bufo americanus",
+          "classification_path": "|Cellular life|Eukaryota|Opisthokonts|Choanoflagellates and animals|Animalia|Epitheliates|Bilateria|Deuterostomia|Chordata|Craniata|Vertebrata|Gnathostomata|Osteichthyes|Sarcopterygii|Tetrapoda|Amphibia|Anura|Neobatrachids|Bufonids and hylids|Bufonidae|Bufo|Bufo americanus",
+          "classification_path_ranks": "|above family|above family|above family|above family|unranked|above family|above family|above family|above family|unranked|above family|above family|superclass|class|unranked|unranked|above family|above family|above family|family|genus|species",
+          "classification_path_ids": "2822864|2823207|2828118|2843765|2843766|2843767|2843768|17974913|2843770|2844251|2844262|2844327|2844348|2845520|2872875|2872898|2900602|2900603|2900822|2900823|2900920|2901030|2901038",
+          "taxon_id": "2901038",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "0a5407b1-92b8-51b4-a8fa-6e483bdd8edc",
+          "name_string": "Bufo americanus",
+          "canonical_form": "Bufo americanus",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "29122133",
+          "local_id": "1019159",
+          "url": "http://eol.org/pages/1019159",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "data_sources_number": 18,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Bufo bufo",
+      "results": [
+        {
+          "data_source_id": 4,
+          "data_source_title": "NCBI",
+          "gni_uuid": "8095e447-3686-525d-92f1-f22b722d5b22",
+          "name_string": "Bufo bufo",
+          "canonical_form": "Bufo bufo",
+          "classification_path": "|Eukaryota|Opisthokonta|Metazoa|Eumetazoa|Bilateria|Coelomata|Deuterostomia|Chordata|Craniata|Vertebrata|Gnathostomata|Teleostomi|Euteleostomi|Sarcopterygii|Tetrapoda|Amphibia|Batrachia|Anura|Neobatrachia|Hyloidea|Bufonidae|Bufo|Bufo bufo",
+          "classification_path_ranks": "|superkingdom||kingdom|||||phylum|subphylum||superclass|||||class|superorder|order|suborder|superfamily|family|genus|species",
+          "classification_path_ids": "131567|2759|33154|33208|6072|33213|33316|33511|7711|89593|7742|7776|117570|117571|8287|32523|8292|41666|8342|8416|8417|8382|8383|8384",
+          "taxon_id": "8384",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "8095e447-3686-525d-92f1-f22b722d5b22",
+          "name_string": "Bufo bufo",
+          "canonical_form": "Bufo bufo",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "20625766",
+          "local_id": "333310",
+          "url": "http://eol.org/pages/333310",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "data_sources_number": 21,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Bufo regularis",
+      "results": [
+        {
+          "data_source_id": 7,
+          "data_source_title": "Union 4",
+          "gni_uuid": "a6b5c03a-4cca-5edf-93b1-27c295a16e85",
+          "name_string": "Bufo regularis",
+          "canonical_form": "Bufo regularis",
+          "classification_path": "|Cellular life|Eukaryota|Opisthokonts|Choanoflagellates and animals|Animalia|Epitheliates|Bilateria|Deuterostomia|Chordata|Craniata|Vertebrata|Gnathostomata|Osteichthyes|Sarcopterygii|Tetrapoda|Amphibia|Anura|Neobatrachids|Bufonids and hylids|Bufonidae|Bufo|Bufo regularis",
+          "classification_path_ranks": "|above family|above family|above family|above family|unranked|above family|above family|above family|above family|unranked|above family|above family|superclass|class|unranked|unranked|above family|above family|above family|family|genus|species",
+          "classification_path_ids": "2822864|2823207|2828118|2843765|2843766|2843767|2843768|17974913|2843770|2844251|2844262|2844327|2844348|2845520|2872875|2872898|2900602|2900603|2900822|2900823|2900920|2901030|2901224",
+          "taxon_id": "2901224",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "a6b5c03a-4cca-5edf-93b1-27c295a16e85",
+          "name_string": "Bufo regularis",
+          "canonical_form": "Bufo regularis",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "39172402",
+          "local_id": "1024388",
+          "url": "http://eol.org/pages/1024388",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "data_sources_number": 14,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Bufo valliceps",
+      "results": [
+        {
+          "data_source_id": 7,
+          "data_source_title": "Union 4",
+          "gni_uuid": "7863d47f-743f-5ff2-95f9-53f536867a55",
+          "name_string": "Bufo valliceps",
+          "canonical_form": "Bufo valliceps",
+          "classification_path": "|Cellular life|Eukaryota|Opisthokonts|Choanoflagellates and animals|Animalia|Epitheliates|Bilateria|Deuterostomia|Chordata|Craniata|Vertebrata|Gnathostomata|Osteichthyes|Sarcopterygii|Tetrapoda|Amphibia|Anura|Neobatrachids|Bufonids and hylids|Bufonidae|Bufo|Bufo valliceps",
+          "classification_path_ranks": "|above family|above family|above family|above family|unranked|above family|above family|above family|above family|unranked|above family|above family|superclass|class|unranked|unranked|above family|above family|above family|family|genus|species",
+          "classification_path_ids": "2822864|2823207|2828118|2843765|2843766|2843767|2843768|17974913|2843770|2844251|2844262|2844327|2844348|2845520|2872875|2872898|2900602|2900603|2900822|2900823|2900920|2901030|2901266",
+          "taxon_id": "2901266",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "7863d47f-743f-5ff2-95f9-53f536867a55",
+          "name_string": "Bufo valliceps",
+          "canonical_form": "Bufo valliceps",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "39172427",
+          "local_id": "330794",
+          "url": "http://eol.org/pages/330794",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "data_sources_number": 14,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Bufo vulgaris formosus",
+      "results": [
+        {
+          "data_source_id": 168,
+          "data_source_title": "Index to Organism Names",
+          "gni_uuid": "47ae8847-0350-5ec7-adaf-50f0abf080ca",
+          "name_string": "Bufo vulgaris formosus",
+          "canonical_form": "Bufo vulgaris formosus",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "125925533",
+          "url": "http://www.organismnames.com/details.htm?lsid=377973",
+          "match_type": 1,
+          "prescore": "8|0|0",
+          "score": 0.999
+        }
+      ],
+      "preferred_results": [
+
+      ],
+      "data_sources_number": 2,
+      "in_curated_sources": false
+    },
+    {
+      "supplied_name_string": "Hyla",
+      "results": [
+        {
+          "data_source_id": 1,
+          "data_source_title": "Catalogue of Life",
+          "gni_uuid": "8708e77d-a77a-593b-b6f9-2672d5478c1e",
+          "name_string": "Hyla",
+          "canonical_form": "Hyla",
+          "classification_path": "Animalia|Chordata|Amphibia|Anura|Hylidae|Hyla",
+          "classification_path_ranks": "kingdom|phylum|class|order|family|genus",
+          "classification_path_ids": "2362377|2362754|2370861|2370871|2370900|2428201",
+          "taxon_id": "2428201",
+          "match_type": 1,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "8708e77d-a77a-593b-b6f9-2672d5478c1e",
+          "name_string": "Hyla",
+          "canonical_form": "Hyla",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "39173193",
+          "local_id": "15936",
+          "url": "http://eol.org/pages/15936",
+          "match_type": 1,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "data_sources_number": 14,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Hyla regilla",
+      "results": [
+        {
+          "data_source_id": 7,
+          "data_source_title": "Union 4",
+          "gni_uuid": "9dcc4716-880e-5b1c-b034-7be9faf8d492",
+          "name_string": "Hyla regilla",
+          "canonical_form": "Hyla regilla",
+          "classification_path": "|Cellular life|Eukaryota|Opisthokonts|Choanoflagellates and animals|Animalia|Epitheliates|Bilateria|Deuterostomia|Chordata|Craniata|Vertebrata|Gnathostomata|Osteichthyes|Sarcopterygii|Tetrapoda|Amphibia|Anura|Neobatrachids|Bufonids and hylids|Hylidae|Hylinae|Hyla|Hyla regilla",
+          "classification_path_ranks": "|above family|above family|above family|above family|unranked|above family|above family|above family|above family|unranked|above family|above family|superclass|class|unranked|unranked|above family|above family|above family|family||genus|species",
+          "classification_path_ids": "2822864|2823207|2828118|2843765|2843766|2843767|2843768|17974913|2843770|2844251|2844262|2844327|2844348|2845520|2872875|2872898|2900602|2900603|2900822|2900823|2901763|22175014|2901877|2902128",
+          "taxon_id": "2902128",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "9dcc4716-880e-5b1c-b034-7be9faf8d492",
+          "name_string": "Hyla regilla",
+          "canonical_form": "Hyla regilla",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "s_5227946",
+          "local_id": "330496",
+          "url": "http://eol.org/pages/330496/names/synonyms",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "data_sources_number": 11,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Hyla savigny",
+      "results": [
+        {
+          "data_source_id": 1,
+          "data_source_title": "Catalogue of Life",
+          "gni_uuid": "8708e77d-a77a-593b-b6f9-2672d5478c1e",
+          "name_string": "Hyla",
+          "canonical_form": "Hyla",
+          "classification_path": "Animalia|Chordata|Amphibia|Anura|Hylidae|Hyla",
+          "classification_path_ranks": "kingdom|phylum|class|order|family|genus",
+          "classification_path_ids": "2362377|2362754|2370861|2370871|2370900|2428201",
+          "taxon_id": "2428201",
+          "match_type": 6,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "b19ac82f-5fc6-5b5f-92b6-79d44d097c7f",
+          "name_string": "Hyla aff. thorectes JAC 2224",
+          "canonical_form": "Hyla",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "s_5228027",
+          "local_id": "1036435",
+          "url": "http://eol.org/pages/1036435/names/synonyms",
+          "match_type": 6,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "data_sources_number": 14,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Hyla versicolor",
+      "results": [
+        {
+          "data_source_id": 4,
+          "data_source_title": "NCBI",
+          "gni_uuid": "b0f1fa82-165f-5293-851c-033307f96fd3",
+          "name_string": "Hyla versicolor",
+          "canonical_form": "Hyla versicolor",
+          "classification_path": "|Eukaryota|Opisthokonta|Metazoa|Eumetazoa|Bilateria|Coelomata|Deuterostomia|Chordata|Craniata|Vertebrata|Gnathostomata|Teleostomi|Euteleostomi|Sarcopterygii|Tetrapoda|Amphibia|Batrachia|Anura|Neobatrachia|Hyloidea|Hylidae|Hylinae|Hylini|Hyla|Hyla versicolor",
+          "classification_path_ranks": "|superkingdom||kingdom|||||phylum|subphylum||superclass|||||class|superorder|order|suborder|superfamily|family|subfamily|tribe|genus|species",
+          "classification_path_ids": "131567|2759|33154|33208|6072|33213|33316|33511|7711|89593|7742|7776|117570|117571|8287|32523|8292|41666|8342|8416|8417|8418|192734|374063|8421|30343",
+          "taxon_id": "30343",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "b0f1fa82-165f-5293-851c-033307f96fd3",
+          "name_string": "Hyla versicolor",
+          "canonical_form": "Hyla versicolor",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "39173196",
+          "local_id": "331209",
+          "url": "http://eol.org/pages/331209",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "data_sources_number": 18,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Microhyla olivacea",
+      "results": [
+        {
+          "data_source_id": 168,
+          "data_source_title": "Index to Organism Names",
+          "gni_uuid": "c9b54f21-633c-5509-9406-0e25f84d385a",
+          "name_string": "Microhyla olivacea",
+          "canonical_form": "Microhyla olivacea",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "126219211",
+          "url": "http://www.organismnames.com/details.htm?lsid=690623",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "preferred_results": [
+
+      ],
+      "data_sources_number": 1,
+      "in_curated_sources": false
+    },
+    {
+      "supplied_name_string": "Pseudacris",
+      "results": [
+        {
+          "data_source_id": 1,
+          "data_source_title": "Catalogue of Life",
+          "gni_uuid": "c8b83409-edc5-54c1-8c1a-f98ee82cf7f5",
+          "name_string": "Pseudacris",
+          "canonical_form": "Pseudacris",
+          "classification_path": "Animalia|Chordata|Amphibia|Anura|Hylidae|Pseudacris",
+          "classification_path_ranks": "kingdom|phylum|class|order|family|genus",
+          "classification_path_ids": "2362377|2362754|2370861|2370871|2370900|2427940",
+          "taxon_id": "2427940",
+          "match_type": 1,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "c8b83409-edc5-54c1-8c1a-f98ee82cf7f5",
+          "name_string": "Pseudacris",
+          "canonical_form": "Pseudacris",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "20625276",
+          "local_id": "35908",
+          "url": "http://eol.org/pages/35908",
+          "match_type": 1,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "data_sources_number": 13,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Rana catesbiana",
+      "results": [
+        {
+          "data_source_id": 11,
+          "data_source_title": "GBIF Taxonomic Backbone",
+          "gni_uuid": "8cf3bf4e-b13d-50cb-8630-80298d93cc34",
+          "name_string": "Rana catesbiana",
+          "canonical_form": "Rana catesbiana",
+          "classification_path": "Animalia|Chordata|Amphibia|Anura|Ranidae|Lithobates|Lithobates catesbeianus",
+          "classification_path_ranks": "kingdom|phylum|class|order|family|genus|species",
+          "classification_path_ids": "1|44|131|952|6746|2427046|2427091",
+          "taxon_id": "5850688",
+          "current_taxon_id": "2427091",
+          "current_name_string": "Lithobates catesbeianus (Shaw, 1802)",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "8cf3bf4e-b13d-50cb-8630-80298d93cc34",
+          "name_string": "Rana catesbiana",
+          "canonical_form": "Rana catesbiana",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "s_5231991",
+          "local_id": "330963",
+          "url": "http://eol.org/pages/330963/names/synonyms",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "data_sources_number": 4,
+      "in_curated_sources": false
+    },
+    {
+      "supplied_name_string": "Branchiostoma",
+      "results": [
+        {
+          "data_source_id": 1,
+          "data_source_title": "Catalogue of Life",
+          "gni_uuid": "50bb34a6-ae5e-5948-a82c-739ab1ad1b97",
+          "name_string": "Branchiostoma",
+          "canonical_form": "Branchiostoma",
+          "classification_path": "Animalia|Chordata|Cephalochordata|Not assigned|Branchiostomidae|Branchiostoma",
+          "classification_path_ranks": "kingdom|phylum|class|order|family|genus",
+          "classification_path_ids": "2362377|2362754|2363135|2363375|2363376|2445378",
+          "taxon_id": "2445378",
+          "match_type": 1,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "50bb34a6-ae5e-5948-a82c-739ab1ad1b97",
+          "name_string": "Branchiostoma",
+          "canonical_form": "Branchiostoma",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "34309882",
+          "local_id": "65177",
+          "url": "http://eol.org/pages/65177",
+          "match_type": 1,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "data_sources_number": 15,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Alytes tigrinum",
+      "results": [
+        {
+          "data_source_id": 169,
+          "data_source_title": "uBio NameBank",
+          "gni_uuid": "638e26de-ce77-520b-af85-899267d1585b",
+          "name_string": "Polytes tigrinus (Vollenhoven 1868)",
+          "canonical_form": "Polytes tigrinus",
+          "classification_path": "|Polytes tigrinus",
+          "classification_path_ranks": "kingdom|",
+          "classification_path_ids": "",
+          "taxon_id": "99437837",
+          "local_id": "urn:lsid:ubio.org:namebank:6522196",
+          "global_id": "urn:lsid:ubio.org:namebank:6522196",
+          "url": "http://www.ubio.org/browser/details.php?namebankID=6522196",
+          "match_type": 3,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "preferred_results": [
+
+      ],
+      "data_sources_number": 1,
+      "in_curated_sources": false
+    },
+    {
+      "supplied_name_string": "Xenopus laevis",
+      "results": [
+        {
+          "data_source_id": 4,
+          "data_source_title": "NCBI",
+          "gni_uuid": "22a6df90-1cc9-5462-a5d9-144a006cf030",
+          "name_string": "Xenopus laevis",
+          "canonical_form": "Xenopus laevis",
+          "classification_path": "|Eukaryota|Opisthokonta|Metazoa|Eumetazoa|Bilateria|Coelomata|Deuterostomia|Chordata|Craniata|Vertebrata|Gnathostomata|Teleostomi|Euteleostomi|Sarcopterygii|Tetrapoda|Amphibia|Batrachia|Anura|Pipoidea|Pipidae|Xenopodinae|Xenopus|Xenopus|Xenopus laevis",
+          "classification_path_ranks": "|superkingdom||kingdom|||||phylum|subphylum||superclass|||||class|superorder|order|superfamily|family|subfamily|genus|subgenus|species",
+          "classification_path_ids": "131567|2759|33154|33208|6072|33213|33316|33511|7711|89593|7742|7776|117570|117571|8287|32523|8292|41666|8342|30319|8352|8360|8353|262014|8355",
+          "taxon_id": "8355",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "22a6df90-1cc9-5462-a5d9-144a006cf030",
+          "name_string": "Xenopus laevis",
+          "canonical_form": "Xenopus laevis",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "29126132",
+          "local_id": "1038993",
+          "url": "http://eol.org/pages/1038993",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "data_sources_number": 21,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Anolis carolinensis",
+      "results": [
+        {
+          "data_source_id": 4,
+          "data_source_title": "NCBI",
+          "gni_uuid": "70f05678-98cc-50ff-bcf0-336ca59961ed",
+          "name_string": "Anolis carolinensis",
+          "canonical_form": "Anolis carolinensis",
+          "classification_path": "|Eukaryota|Opisthokonta|Metazoa|Eumetazoa|Bilateria|Coelomata|Deuterostomia|Chordata|Craniata|Vertebrata|Gnathostomata|Teleostomi|Euteleostomi|Sarcopterygii|Tetrapoda|Amniota|Sauropsida|Sauria|Lepidosauria|Squamata|Iguania|Iguanidae|Polychrotinae|Anolis|Anolis carolinensis",
+          "classification_path_ranks": "|superkingdom||kingdom|||||phylum|subphylum||superclass||||||||superorder|order|suborder|family|subfamily|genus|species",
+          "classification_path_ids": "131567|2759|33154|33208|6072|33213|33316|33511|7711|89593|7742|7776|117570|117571|8287|32523|32524|8457|32561|8504|8509|8511|8515|81957|28376|28377",
+          "taxon_id": "28377",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "70f05678-98cc-50ff-bcf0-336ca59961ed",
+          "name_string": "Anolis carolinensis",
+          "canonical_form": "Anolis carolinensis",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "20627835",
+          "local_id": "795869",
+          "url": "http://eol.org/pages/795869",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "data_sources_number": 18,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Triturus cristatus carnifex",
+      "results": [
+        {
+          "data_source_id": 168,
+          "data_source_title": "Index to Organism Names",
+          "gni_uuid": "448e7086-13da-5bdf-9877-2b9136fa59cf",
+          "name_string": "Triturus cristatus carnifex",
+          "canonical_form": "Triturus cristatus carnifex",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "125713483",
+          "url": "http://www.organismnames.com/details.htm?lsid=156273",
+          "match_type": 1,
+          "prescore": "8|0|0",
+          "score": 0.999
+        }
+      ],
+      "preferred_results": [
+
+      ],
+      "data_sources_number": 3,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Ambystoma",
+      "results": [
+        {
+          "data_source_id": 1,
+          "data_source_title": "Catalogue of Life",
+          "gni_uuid": "9da2d500-8853-53ba-9627-218a21d6a857",
+          "name_string": "Ambystoma",
+          "canonical_form": "Ambystoma",
+          "classification_path": "Animalia|Chordata|Amphibia|Caudata|Ambystomatidae|Ambystoma",
+          "classification_path_ranks": "kingdom|phylum|class|order|family|genus",
+          "classification_path_ids": "2362377|2362754|2370861|2370862|2370870|2525341",
+          "taxon_id": "2525341",
+          "match_type": 1,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "9da2d500-8853-53ba-9627-218a21d6a857",
+          "name_string": "Ambystoma",
+          "canonical_form": "Ambystoma",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "39171615",
+          "local_id": "15817",
+          "url": "http://eol.org/pages/15817",
+          "match_type": 1,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "data_sources_number": 14,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Rana esculenta",
+      "results": [
+        {
+          "data_source_id": 7,
+          "data_source_title": "Union 4",
+          "gni_uuid": "46a9c089-7aa1-5e7d-94da-e794a3f70fbb",
+          "name_string": "Rana esculenta",
+          "canonical_form": "Rana esculenta",
+          "classification_path": "|Cellular life|Eukaryota|Opisthokonts|Choanoflagellates and animals|Animalia|Epitheliates|Bilateria|Deuterostomia|Chordata|Craniata|Vertebrata|Gnathostomata|Osteichthyes|Sarcopterygii|Tetrapoda|Amphibia|Anura|Neobatrachids|Ranidae|Raninae|Rana|Rana esculenta",
+          "classification_path_ranks": "|above family|above family|above family|above family|unranked|above family|above family|above family|above family|unranked|above family|above family|superclass|class|unranked|unranked|above family|above family|family||genus|species",
+          "classification_path_ids": "2822864|2823207|2828118|2843765|2843766|2843767|2843768|17974913|2843770|2844251|2844262|2844327|2844348|2845520|2872875|2872898|2900602|2900603|2900822|2904588|22175224|2905078|2905148",
+          "taxon_id": "2905148",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "46a9c089-7aa1-5e7d-94da-e794a3f70fbb",
+          "name_string": "Rana esculenta",
+          "canonical_form": "Rana esculenta",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "29124711",
+          "local_id": "1018660",
+          "url": "http://eol.org/pages/1018660",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "data_sources_number": 20,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Rana clamitans",
+      "results": [
+        {
+          "data_source_id": 4,
+          "data_source_title": "NCBI",
+          "gni_uuid": "a8f53b31-cba3-59d7-bd25-6f765335caa8",
+          "name_string": "Rana clamitans",
+          "canonical_form": "Rana clamitans",
+          "classification_path": "|Eukaryota|Opisthokonta|Metazoa|Eumetazoa|Bilateria|Coelomata|Deuterostomia|Chordata|Craniata|Vertebrata|Gnathostomata|Teleostomi|Euteleostomi|Sarcopterygii|Tetrapoda|Amphibia|Batrachia|Anura|Neobatrachia|Ranoidea|Ranidae|Rana|Aquarana|Rana clamitans",
+          "classification_path_ranks": "|superkingdom||kingdom|||||phylum|subphylum||superclass|||||class|superorder|order|suborder|superfamily|family|genus|subgenus|species",
+          "classification_path_ids": "131567|2759|33154|33208|6072|33213|33316|33511|7711|89593|7742|7776|117570|117571|8287|32523|8292|41666|8342|8416|30352|8397|8399|121236|145282",
+          "taxon_id": "145282",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "a8f53b31-cba3-59d7-bd25-6f765335caa8",
+          "name_string": "Rana clamitans",
+          "canonical_form": "Rana clamitans",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "29124839",
+          "local_id": "330883",
+          "url": "http://eol.org/pages/330883",
+          "match_type": 1,
+          "prescore": "3|0|0",
+          "score": 0.988
+        }
+      ],
+      "data_sources_number": 18,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Horstadius"
+    },
+    {
+      "supplied_name_string": "Spiralia",
+      "results": [
+        {
+          "data_source_id": 2,
+          "data_source_title": "Wikispecies",
+          "gni_uuid": "4af39f28-022f-5a51-8154-256ad136f397",
+          "name_string": "Spiralia",
+          "canonical_form": "Spiralia",
+          "classification_path": "Animalia|Eumetazoa|Bilateria|Nephrozoa|Protostomia|Spiralia",
+          "classification_path_ranks": "|||||",
+          "classification_path_ids": "80|4404|192967|249913|99137|247631",
+          "taxon_id": "247631",
+          "url": "http://species.wikimedia.org/wiki/Spiralia",
+          "match_type": 1,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "4af39f28-022f-5a51-8154-256ad136f397",
+          "name_string": "Spiralia",
+          "canonical_form": "Spiralia",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "30214135",
+          "local_id": "6551609",
+          "url": "http://eol.org/pages/6551609",
+          "match_type": 1,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "data_sources_number": 11,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Mammalia",
+      "results": [
+        {
+          "data_source_id": 1,
+          "data_source_title": "Catalogue of Life",
+          "gni_uuid": "9fd2fe86-2e29-5137-9bbf-2e322132ed55",
+          "name_string": "Mammalia",
+          "canonical_form": "Mammalia",
+          "classification_path": "Animalia|Chordata|Mammalia",
+          "classification_path_ranks": "kingdom|phylum|class",
+          "classification_path_ids": "2362377|2362754|2362755",
+          "taxon_id": "2362755",
+          "match_type": 1,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "9fd2fe86-2e29-5137-9bbf-2e322132ed55",
+          "name_string": "Mammalia",
+          "canonical_form": "Mammalia",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "29143585",
+          "local_id": "1642",
+          "url": "http://eol.org/pages/1642",
+          "match_type": 1,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "data_sources_number": 20,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "O. xford"
+    },
+    {
+      "supplied_name_string": "Ammocoetes",
+      "results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "7a2fd644-e36a-5f71-9aa3-bb6294801a77",
+          "name_string": "Ammocoetes",
+          "canonical_form": "Ammocoetes",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "35636411",
+          "local_id": "4539567",
+          "url": "http://eol.org/pages/4539567",
+          "match_type": 1,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "7a2fd644-e36a-5f71-9aa3-bb6294801a77",
+          "name_string": "Ammocoetes",
+          "canonical_form": "Ammocoetes",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "35636411",
+          "local_id": "4539567",
+          "url": "http://eol.org/pages/4539567",
+          "match_type": 1,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "data_sources_number": 5,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Amphioxus",
+      "results": [
+        {
+          "data_source_id": 11,
+          "data_source_title": "GBIF Taxonomic Backbone",
+          "gni_uuid": "a75107e6-203c-5b94-8cc5-d00dd00a4e30",
+          "name_string": "Amphioxus",
+          "canonical_form": "Amphioxus",
+          "classification_path": "Animalia|Chordata|Cephalochordata|Branchiostomidae|Amphioxus",
+          "classification_path_ranks": "kingdom|phylum|class|family|genus",
+          "classification_path_ids": "1|44|357|2016|2473323",
+          "taxon_id": "2473323",
+          "match_type": 1,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "00b8bcc5-5da4-5521-9116-b721fc515cf8",
+          "name_string": "Amphioxus Yarrell 1836",
+          "canonical_form": "Amphioxus",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "s_12024203",
+          "local_id": "65177",
+          "url": "http://eol.org/pages/65177/names/synonyms",
+          "match_type": 2,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "data_sources_number": 8,
+      "in_curated_sources": true
+    },
+    {
+      "supplied_name_string": "Porifera",
+      "results": [
+        {
+          "data_source_id": 1,
+          "data_source_title": "Catalogue of Life",
+          "gni_uuid": "99981e2d-6c30-54b3-9230-5416603c5a58",
+          "name_string": "Porifera",
+          "canonical_form": "Porifera",
+          "classification_path": "Animalia|Porifera",
+          "classification_path_ranks": "kingdom|phylum",
+          "classification_path_ids": "2362377|2364202",
+          "taxon_id": "2364202",
+          "match_type": 1,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "preferred_results": [
+        {
+          "data_source_id": 12,
+          "data_source_title": "EOL",
+          "gni_uuid": "99981e2d-6c30-54b3-9230-5416603c5a58",
+          "name_string": "Porifera",
+          "canonical_form": "Porifera",
+          "classification_path": "",
+          "classification_path_ranks": "",
+          "classification_path_ids": "",
+          "taxon_id": "40913760",
+          "local_id": "11143412",
+          "url": "http://eol.org/pages/11143412",
+          "match_type": 1,
+          "prescore": "1|0|0",
+          "score": 0.75
+        }
+      ],
+      "data_sources_number": 19,
+      "in_curated_sources": true
+    }
+  ]
+}

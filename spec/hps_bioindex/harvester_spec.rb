@@ -31,7 +31,7 @@ describe HpsBioindex::Harvester do
     end
     
     stub_request(:get, %r|/rest/bitstream/|).to_return do |request|
-      { body: open(File.join(FILES_DIR, 'bitstream_0.xhtml')) }
+      { body: open(File.join(FILES_DIR, 'bitstream_0.txt')) }
     end
     Item.count.should == 0
     Bitstream.count.should == 0
@@ -60,7 +60,7 @@ describe HpsBioindex::Harvester do
       { body: get_item_file(request) }
     end
     stub_request(:get, %r|/rest/bitstream/|).to_return do |request|
-      { body: open(File.join(FILES_DIR, 'bitstream_0.xhtml')) }
+      { body: open(File.join(FILES_DIR, 'bitstream_0.txt')) }
     end
 
     res = harvester.harvest(community_id: 6)
@@ -87,7 +87,7 @@ describe HpsBioindex::Harvester do
       { body: get_item_file(request) }
     end
     stub_request(:get, %r|/rest/bitstream/|).to_return do |request|
-      { body: open(File.join(FILES_DIR, 'bitstream_0.xhtml')) }
+      { body: open(File.join(FILES_DIR, 'bitstream_0.txt')) }
     end
     res = harvester.harvest(community_id: 6)
     Item.count.should == 26
