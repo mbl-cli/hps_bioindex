@@ -5,6 +5,7 @@ require 'nokogiri'
 require 'active_record'
 require 'rest_client'
 require 'karousel'
+require 'tag_along'
 
 module HpsBioindex
 

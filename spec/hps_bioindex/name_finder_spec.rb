@@ -26,6 +26,10 @@ describe HpsBioindex::NameFinder do
       select {|d| d =~ /json$/}
     json_files.size.should == 25
 
+    tagged_files = Find.find(HpsBioindex.conf.harvest_dir).
+      select {|d| d =~ /_tagged$/}
+    tagged_files.size.should == 0
+
     NameString.count.should == 0
     norg = HpsBioindex::NameOrganizer.new
     norg.organize 
@@ -38,6 +42,9 @@ describe HpsBioindex::NameFinder do
     NameString.count.should == 67
     Outlink.count. should == 54
     CanonicalForm.count.should == 62
+    tagged_files = Find.find(HpsBioindex.conf.harvest_dir).
+      select {|d| d =~ /\.tagged$/}
+    tagged_files.size.should == 25
   end
 
 end

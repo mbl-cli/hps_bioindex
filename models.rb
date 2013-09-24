@@ -9,8 +9,8 @@ end
 class Bitstream < ActiveRecord::Base
   has_many :bitstreams_items
   has_many :items, through: :bitstreams_items
-  has_many :bitstream_name_strings
-  has_many :name_strings, through: :bitstream_name_strings
+  has_many :bitstreams_name_strings
+  has_many :name_strings, through: :bitstreams_name_strings
   
   def path
     dir = File.join(HpsBioindex.conf.harvest_dir,
@@ -19,6 +19,35 @@ class Bitstream < ActiveRecord::Base
               internal_id)
     FileUtils.mkdir_p(dir) unless File.exist?(dir) 
     File.join(dir, file_name)
+  end
+
+  def names_info
+    ids = Bitstream.connection.select_values("
+      select ns.id 
+      from name_strings ns 
+        join bitstreams_name_strings bns 
+          on bns.name_string_id = ns.id 
+        join bitstreams bs 
+          on bs.id = bns.bitstream_id 
+      where bs.id = %s" % self.id).uniq.sort.join(',')
+    return [] if ids == '' 
+    Bitstream.connection.select("
+      select ns.id, rns.id as resolved_name_string_id, 
+             cf.id as canonial_form_id, ns.name, ns.resolved, 
+             ns.expanded_abbr, rns.in_curated_sources, 
+             rns.data_sources_num, ol.url,
+             bns.pos_start, bns.pos_end
+      from name_strings ns 
+        left outer join resolved_name_strings rns 
+          on rns.name_string_id = ns.id 
+        left outer join canonical_forms cf 
+          on cf.id = rns.canonical_form_id 
+        left outer join outlinks ol  
+          on rns.id = ol.resolved_name_string_id 
+        join bitstreams_name_strings bns
+          on bns.name_string_id = ns.id
+      where ns.id in (%s) and bns.bitstream_id = %s
+      order by ns.id" % [ids, self.id])
   end
 end
 

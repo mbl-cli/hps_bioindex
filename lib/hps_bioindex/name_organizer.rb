@@ -1,15 +1,97 @@
 module HpsBioindex
   class NameOrganizer
     def organize
+      clean_names_data
       Item.transaction do
         import_names
       end
+      tag_names
     end
+    
+    def tag_names
+      HpsBioindex.logger.info("Creating tagged version of files")
+      bitstreams = Bitstream.where(tagged: false)
+      HpsBioindex.logger.info("Tagging %s texts" % bitstreams.size)
+      bitstreams.each_with_index do |b, i|
+        HpsBioindex.logger.info("Tagging %s bitstream" %
+                                i) if i > 0 && i % 20 == 0
+        process_tagged_info(b)
+      end
+    end
+
 
     private
 
+    def clean_names_data
+      HpsBioindex.logger.info("Cleaning up old data")
+      %w(name_strings resolved_name_strings 
+         canonical_forms outlinks bitstreams_name_strings).each do |t|
+        Item.connection.execute("truncate table %s" % t)
+      end
+    end
+
+    def process_tagged_info(bitstream)
+      processed_names = {}
+      tag_offsets = []
+      names = bitstream.names_info
+      names.each do |name|
+        process_tag_name(name, processed_names, tag_offsets)
+      end
+      tag_offsets.each do |offsets|
+        name_id = offsets.pop
+        offsets << [processed_names[name_id]['url'],
+                   processed_names[name_id]['type']]
+      end
+      file = open(bitstream.path, 'r:utf-8')
+      tagged_file = open(bitstream.path + '.tagged', 'w:utf-8')
+      begin
+        ta = TagAlong.new(file.read, tag_offsets)
+        tagged_file.write(ta.tag("<a href=\"%s\" class=\"%s\">", "</a>"))
+      rescue
+        require 'ruby-debug'; debugger
+        puts ''
+      end
+      file.close
+      tagged_file.close
+    end
+
+    def process_tag_name(name, processed_names, tag_offsets)
+      tag_offsets << [name['pos_start'], name['pos_end'], name['id']]
+      unless processed_names[name['id']] && processed_names[name['id']]['url']
+        process_name(name, processed_names)
+      end
+    end
+
+    def process_name(name, processed_names)
+      if processed_names[name['id']]
+        n = processed_names[name['id']]
+        n['url'] = get_url(name) if !n['url'] 
+      else
+        processed_names[name['id']] = {
+          'url' => get_url(name),
+          'type' => get_tag_type(name)
+        }
+      end
+    end
+
+    def get_url(name)
+      name['url'] ? name['url'] : "http://google.com?search=%s" %
+        URI.escape(name['name'])
+    end
+
+    def get_tag_type(name)
+      return "unresolved" unless name['resolved_name_string_id']
+      return "doubtful" unless (name['in_curated_sources'] && 
+        name['data_sources_num'].to_i > 4)
+      'resolved'
+    end
+
     def import_names
-      Bitstream.all.each do |b|
+      HpsBioindex.logger.info("Importing names from json into database")
+      Bitstream.all.each_with_index do |b, i|
+        HpsBioindex.logger.info("Processing bitstream %s" % 
+                               i) if i % 50 == 0 && i > 0
+
         json_file = b.path + '.json'
         data = JSON.parse(open(json_file, 'r:utf-8').read, 
                           symbolize_names: true)
