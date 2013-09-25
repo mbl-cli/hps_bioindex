@@ -1,0 +1,6 @@
+#names
+  - if @name
+    %h1= @name.name
+    %h2 Documents
+    - @bitstreams.each do |b|
+      %a{ href: "/documents?doc_id=%s" % b.id } #{b.file_name},

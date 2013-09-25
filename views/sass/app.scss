@@ -88,13 +88,13 @@ html, button, input, select, textarea {
     
 }
 
-#pages {
+#documents {
   @include zen-clear;
-  @include zen-grid-item(1,1);
+  @include zen-grid-item(3,1);
 }
 
-#page_content {
-  @include zen-grid-item(13,2);
+#document_content {
+  @include zen-grid-item(10,4);
   #page_tabs {
     li {
       margin: 10px;
@@ -110,10 +110,27 @@ html, button, input, select, textarea {
   }
   #page_data {
   }
+  a { 
+    text-decoration: none;
+    color: #333;
+  }
 }
 
+#names {
+  @include zen-clear;
+  @include zen-grid-item(14,1);
+  a { 
+    text-decoration: none;
+    color: #333;
+  }
+}
 
-  
+.doclist {
+  a { 
+    text-decoration: none;
+    color: #333;
+  }
+}
 
 body {
   // background: url(/images/ru_reverse.png) no-repeat bottom right, url(/images/pattern.png);
@@ -125,8 +142,16 @@ pre {
   overflow: auto;
   word-wrap: normal;
   white-space: pre;
-  span.nametag {
-    color: #0a0;
+  a {
     font-weight: bold;
+  }
+  .unresolved {
+    color: red;
+  }
+  .doubtful {
+    color: #f60;
+  }
+  .resolved {
+    color: green;
   }
 }

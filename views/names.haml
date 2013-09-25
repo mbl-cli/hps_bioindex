@@ -1,0 +1,8 @@
+#names
+  - current_letter = nil
+  - @names.each do |name|
+    - n = name.name
+    - if n[0] != current_letter
+      - current_letter = n[0]
+      %h3= current_letter
+    %a{ href: "/names/%s" % name.id } #{n},

@@ -75,14 +75,15 @@ module HpsBioindex
     end
 
     def get_url(name)
-      name['url'] ? name['url'] : "http://google.com?search=%s" %
-        URI.escape(name['name'])
+      name['url'] ? name['url'] : "http://google.com?search=%s#q=%s" %
+        [URI.escape(name['name']), URI.escape(name['name'])]
     end
 
     def get_tag_type(name)
       return "unresolved" unless name['resolved_name_string_id']
-      return "doubtful" unless (name['in_curated_sources'] && 
-        name['data_sources_num'].to_i > 4)
+      return "doubtful" unless (name['expanded_abbr'] != 1 && 
+                                name['in_curated_sources'] && 
+                                name['data_sources_num'].to_i > 3)
       'resolved'
     end
 

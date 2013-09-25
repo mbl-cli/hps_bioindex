@@ -21,6 +21,17 @@ class Bitstream < ActiveRecord::Base
     File.join(dir, file_name)
   end
 
+  def names
+    CanonicalForm.find_by_sql("
+      select distinct cf.* 
+        from canonical_forms cf
+        join resolved_name_strings rns
+          on rns.canonical_form_id = cf.id
+        join bitstreams_name_strings bns
+          on bns.name_string_id = rns.name_string_id
+      where bns.bitstream_id = %s" % id)
+  end
+
   def names_info
     ids = Bitstream.connection.select_values("
       select ns.id 
@@ -79,6 +90,17 @@ end
 
 class CanonicalForm < ActiveRecord::Base
   has_many :resolved_name_strings
+
+  def bitstreams
+    Bitstream.find_by_sql("
+      select distinct bs.* 
+      from resolved_name_strings rns
+        join bitstreams_name_strings bns
+          on bns.name_string_id = rns.name_string_id
+        join bitstreams bs
+          on bs.id = bns.bitstream_id
+      where rns.canonical_form_id = %s" % id)
+  end
 end
 
 class BitstreamsNameString < ActiveRecord::Base

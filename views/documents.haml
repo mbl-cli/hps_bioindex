@@ -1,0 +1,11 @@
+#documents
+  - @bitstreams.each do |bitstream|
+    .doclist
+      %a{ href: "/documents?doc_id=%s" % bitstream.id }
+        #{bitstream.file_name} (names: #{ bitstream.names.count })
+
+- if @bitstream
+  #document_content
+    - @bitstream.names.each do |name|
+      %a{ href: "/names/%s" % name.id } #{name.name},
+    %pre= @bitstream_text

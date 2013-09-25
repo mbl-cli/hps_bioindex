@@ -17,3 +17,115 @@ haml :index
 [2013-09-20 15:15:12] INFO  WEBrick::HTTPServer#start: pid=13232 port=9292
 [2013-09-20 15:15:39] INFO  going to shutdown ...
 [2013-09-20 15:15:39] INFO  WEBrick::HTTPServer#start done.
+[2013-09-25 06:30:43] INFO  WEBrick 1.3.1
+[2013-09-25 06:30:43] INFO  ruby 2.0.0 (2013-06-27) [x86_64-darwin12.4.0]
+[2013-09-25 06:30:43] INFO  WEBrick::HTTPServer#start: pid=3813 port=9292
+[2013-09-25 06:53:54] INFO  going to shutdown ...
+[2013-09-25 06:53:54] INFO  WEBrick::HTTPServer#start done.
+[2013-09-25 06:53:56] INFO  WEBrick 1.3.1
+[2013-09-25 06:53:56] INFO  ruby 2.0.0 (2013-06-27) [x86_64-darwin12.4.0]
+[2013-09-25 06:53:56] INFO  WEBrick::HTTPServer#start: pid=3890 port=9292
+[2013-09-25 06:54:58] INFO  going to shutdown ...
+[2013-09-25 06:54:58] INFO  WEBrick::HTTPServer#start done.
+[2013-09-25 06:55:00] INFO  WEBrick 1.3.1
+[2013-09-25 06:55:00] INFO  ruby 2.0.0 (2013-06-27) [x86_64-darwin12.4.0]
+[2013-09-25 06:55:00] INFO  WEBrick::HTTPServer#start: pid=3915 port=9292
+[2013-09-25 07:18:42] INFO  going to shutdown ...
+[2013-09-25 07:18:42] INFO  WEBrick::HTTPServer#start done.
+[2013-09-25 07:18:56] INFO  WEBrick 1.3.1
+[2013-09-25 07:18:56] INFO  ruby 2.0.0 (2013-06-27) [x86_64-darwin12.4.0]
+[2013-09-25 07:18:56] INFO  WEBrick::HTTPServer#start: pid=4077 port=9292
+ActiveRecord::StatementInvalid - Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== rns.name_string_id
+      where bns.bitstream_id = ?' at line 6: 
+      select distinct cf.* 
+        from canonical_forms cf
+        join resolved_name_strings rns
+          on rns.canonical_form_id = cf.id
+        join bitstreams_name_strings bns
+          on bns.name_string_id == rns.name_string_id
+      where bns.bitstream_id = ?:
+	/Users/work/code/hps_bioindex/.bundle/gems/activerecord-4.0.0/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:286:in `query'
+	/Users/work/code/hps_bioindex/.bundle/gems/activerecord-4.0.0/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:286:in `block in execute'
+	/Users/work/code/hps_bioindex/.bundle/gems/activerecord-4.0.0/lib/active_record/connection_adapters/abstract_adapter.rb:425:in `block in log'
+	/Users/work/code/hps_bioindex/.bundle/gems/activesupport-4.0.0/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+	/Users/work/code/hps_bioindex/.bundle/gems/activerecord-4.0.0/lib/active_record/connection_adapters/abstract_adapter.rb:420:in `log'
+	/Users/work/code/hps_bioindex/.bundle/gems/activerecord-4.0.0/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:286:in `execute'
+	/Users/work/code/hps_bioindex/.bundle/gems/activerecord-4.0.0/lib/active_record/connection_adapters/mysql2_adapter.rb:220:in `execute'
+	/Users/work/code/hps_bioindex/.bundle/gems/activerecord-4.0.0/lib/active_record/connection_adapters/mysql2_adapter.rb:224:in `exec_query'
+	/Users/work/code/hps_bioindex/.bundle/gems/activerecord-4.0.0/lib/active_record/connection_adapters/mysql2_adapter.rb:233:in `select'
+	/Users/work/code/hps_bioindex/.bundle/gems/activerecord-4.0.0/lib/active_record/connection_adapters/abstract/database_statements.rb:24:in `select_all'
+	/Users/work/code/hps_bioindex/.bundle/gems/activerecord-4.0.0/lib/active_record/connection_adapters/abstract/query_cache.rb:63:in `select_all'
+	/Users/work/code/hps_bioindex/.bundle/gems/activerecord-4.0.0/lib/active_record/querying.rb:36:in `find_by_sql'
+	/Users/work/code/hps_bioindex/models.rb:25:in `names'
+	/Users/work/code/hps_bioindex/views/documents.haml:4:in `block (2 levels) in singleton class'
+	/Users/work/code/hps_bioindex/.bundle/gems/activerecord-4.0.0/lib/active_record/relation/delegation.rb:13:in `each'
+	/Users/work/code/hps_bioindex/.bundle/gems/activerecord-4.0.0/lib/active_record/relation/delegation.rb:13:in `each'
+	/Users/work/code/hps_bioindex/views/documents.haml:1:in `block in singleton class'
+	/Users/work/code/hps_bioindex/views/documents.haml:-8:in `instance_eval'
+	/Users/work/code/hps_bioindex/views/documents.haml:-8:in `singleton class'
+	/Users/work/code/hps_bioindex/views/documents.haml:-10:in `__tilt_70353154603620'
+	/Users/work/code/hps_bioindex/.bundle/gems/tilt-1.4.1/lib/tilt/template.rb:170:in `call'
+	/Users/work/code/hps_bioindex/.bundle/gems/tilt-1.4.1/lib/tilt/template.rb:170:in `evaluate'
+	/Users/work/code/hps_bioindex/.bundle/gems/tilt-1.4.1/lib/tilt/haml.rb:24:in `evaluate'
+	/Users/work/code/hps_bioindex/.bundle/gems/tilt-1.4.1/lib/tilt/template.rb:103:in `render'
+	/Users/work/code/hps_bioindex/.bundle/gems/sinatra-1.4.3/lib/sinatra/base.rb:798:in `render'
+	/Users/work/code/hps_bioindex/.bundle/gems/sinatra-1.4.3/lib/sinatra/base.rb:667:in `haml'
+	/Users/work/code/hps_bioindex/routes.rb:9:in `block in <class:HpsBioindexApp>'
+	/Users/work/code/hps_bioindex/.bundle/gems/sinatra-1.4.3/lib/sinatra/base.rb:1541:in `call'
+	/Users/work/code/hps_bioindex/.bundle/gems/sinatra-1.4.3/lib/sinatra/base.rb:1541:in `block in compile!'
+	/Users/work/code/hps_bioindex/.bundle/gems/sinatra-1.4.3/lib/sinatra/base.rb:950:in `[]'
+	/Users/work/code/hps_bioindex/.bundle/gems/sinatra-1.4.3/lib/sinatra/base.rb:950:in `block (3 levels) in route!'
+	/Users/work/code/hps_bioindex/.bundle/gems/sinatra-1.4.3/lib/sinatra/base.rb:966:in `route_eval'
+	/Users/work/code/hps_bioindex/.bundle/gems/sinatra-1.4.3/lib/sinatra/base.rb:950:in `block (2 levels) in route!'
+	/Users/work/code/hps_bioindex/.bundle/gems/sinatra-1.4.3/lib/sinatra/base.rb:987:in `block in process_route'
+	/Users/work/code/hps_bioindex/.bundle/gems/sinatra-1.4.3/lib/sinatra/base.rb:985:in `catch'
+	/Users/work/code/hps_bioindex/.bundle/gems/sinatra-1.4.3/lib/sinatra/base.rb:985:in `process_route'
+	/Users/work/code/hps_bioindex/.bundle/gems/sinatra-1.4.3/lib/sinatra/base.rb:948:in `block in route!'
+	/Users/work/code/hps_bioindex/.bundle/gems/sinatra-1.4.3/lib/sinatra/base.rb:947:in `each'
+	/Users/work/code/hps_bioindex/.bundle/gems/sinatra-1.4.3/lib/sinatra/base.rb:947:in `route!'
+	/Users/work/code/hps_bioindex/.bundle/gems/sinatra-1.4.3/lib/sinatra/base.rb:1059:in `block in dispatch!'
+	/Users/work/code/hps_bioindex/.bundle/gems/sinatra-1.4.3/lib/sinatra/base.rb:1041:in `block in invoke'
+	/Users/work/code/hps_bioindex/.bundle/gems/sinatra-1.4.3/lib/sinatra/base.rb:1041:in `catch'
+	/Users/work/code/hps_bioindex/.bundle/gems/sinatra-1.4.3/lib/sinatra/base.rb:1041:in `invoke'
+	/Users/work/code/hps_bioindex/.bundle/gems/sinatra-1.4.3/lib/sinatra/base.rb:1056:in `dispatch!'
+	/Users/work/code/hps_bioindex/.bundle/gems/sinatra-1.4.3/lib/sinatra/base.rb:882:in `block in call!'
+	/Users/work/code/hps_bioindex/.bundle/gems/sinatra-1.4.3/lib/sinatra/base.rb:1041:in `block in invoke'
+	/Users/work/code/hps_bioindex/.bundle/gems/sinatra-1.4.3/lib/sinatra/base.rb:1041:in `catch'
+	/Users/work/code/hps_bioindex/.bundle/gems/sinatra-1.4.3/lib/sinatra/base.rb:1041:in `invoke'
+	/Users/work/code/hps_bioindex/.bundle/gems/sinatra-1.4.3/lib/sinatra/base.rb:882:in `call!'
+	/Users/work/code/hps_bioindex/.bundle/gems/sinatra-1.4.3/lib/sinatra/base.rb:870:in `call'
+	/Users/work/code/hps_bioindex/.bundle/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+	/Users/work/code/hps_bioindex/.bundle/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+	/Users/work/code/hps_bioindex/.bundle/gems/rack-timeout-0.0.4/lib/rack/timeout.rb:16:in `block in call'
+	/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/timeout.rb:66:in `timeout'
+	/Users/work/code/hps_bioindex/.bundle/gems/rack-timeout-0.0.4/lib/rack/timeout.rb:16:in `call'
+	/Users/work/code/hps_bioindex/.bundle/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+	/Users/work/code/hps_bioindex/.bundle/gems/rack-protection-1.5.0/lib/rack/protection/xss_header.rb:18:in `call'
+	/Users/work/code/hps_bioindex/.bundle/gems/rack-protection-1.5.0/lib/rack/protection/path_traversal.rb:16:in `call'
+	/Users/work/code/hps_bioindex/.bundle/gems/rack-protection-1.5.0/lib/rack/protection/json_csrf.rb:18:in `call'
+	/Users/work/code/hps_bioindex/.bundle/gems/rack-protection-1.5.0/lib/rack/protection/base.rb:49:in `call'
+	/Users/work/code/hps_bioindex/.bundle/gems/rack-protection-1.5.0/lib/rack/protection/base.rb:49:in `call'
+	/Users/work/code/hps_bioindex/.bundle/gems/rack-protection-1.5.0/lib/rack/protection/frame_options.rb:31:in `call'
+	/Users/work/code/hps_bioindex/.bundle/gems/rack-1.5.2/lib/rack/nulllogger.rb:9:in `call'
+	/Users/work/code/hps_bioindex/.bundle/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+	/Users/work/code/hps_bioindex/.bundle/gems/sinatra-1.4.3/lib/sinatra/base.rb:175:in `call'
+	/Users/work/code/hps_bioindex/.bundle/gems/sinatra-1.4.3/lib/sinatra/base.rb:1949:in `call'
+	/Users/work/code/hps_bioindex/.bundle/gems/sinatra-1.4.3/lib/sinatra/base.rb:1449:in `block in call'
+	/Users/work/code/hps_bioindex/.bundle/gems/sinatra-1.4.3/lib/sinatra/base.rb:1726:in `synchronize'
+	/Users/work/code/hps_bioindex/.bundle/gems/sinatra-1.4.3/lib/sinatra/base.rb:1449:in `call'
+	/Users/work/code/hps_bioindex/.bundle/gems/activerecord-4.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+	/Users/work/code/hps_bioindex/.bundle/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+	/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+	/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+	/usr/local/var/rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'E, [2013-09-25T07:19:02.721525 #4077] ERROR -- : Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== rns.name_string_id
+      where bns.bitstream_id = ?' at line 6: 
+      select distinct cf.* 
+        from canonical_forms cf
+        join resolved_name_strings rns
+          on rns.canonical_form_id = cf.id
+        join bitstreams_name_strings bns
+          on bns.name_string_id == rns.name_string_id
+      where bns.bitstream_id = ?
+
+[2013-09-25 07:19:12] INFO  going to shutdown ...
+[2013-09-25 07:19:12] INFO  WEBrick::HTTPServer#start done.
