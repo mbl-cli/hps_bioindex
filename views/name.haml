@@ -3,4 +3,4 @@
     %h1= @name.name
     %h2 Documents
     - @bitstreams.each do |b|
-      %a{ href: "/documents?doc_id=%s" % b.id } #{b.file_name},
+      %a{ href: "/documents?doc_id=%s&name_id=%s" % [b.id, @name.id] } #{b.file_name},

@@ -25,8 +25,7 @@ class HpsBioindexApp < Sinatra::Base
   end
 
   get '/' do
-    haml :index
-    # redirect '/bitstreams'
+    redirect '/names'
   end
 
 end

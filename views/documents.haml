@@ -6,6 +6,7 @@
 
 - if @bitstream
   #document_content
-    - @bitstream.names.each do |name|
-      %a{ href: "/names/%s" % name.id } #{name.name},
+    - @bitstream.names.sort_by(&:name).each do |name|
+      - current_name = params['name_id'].to_i == name.id ? 'current_name' : nil
+      %a{ href: "/names/%s" % name.id, class: current_name } #{name.name},
     %pre= @bitstream_text
