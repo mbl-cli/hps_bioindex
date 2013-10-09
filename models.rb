@@ -12,6 +12,18 @@ class Bitstream < ActiveRecord::Base
   has_many :bitstreams_name_strings
   has_many :name_strings, through: :bitstreams_name_strings
 
+  def self.clean
+    Bitstream.all.each do |bitstream|
+      if bitstream.path =~ /xhtml$/
+        text = File.read(bitstream.path)
+        w = open(bitstream.path, 'w')
+        text.gsub!(/\r/, '')
+        w.write(text)
+        w.close
+      end
+    end
+  end
+
   def path(opts = {})
     dir = File.join(HpsBioindex.conf.harvest_dir,
               internal_id[0..1],
@@ -20,10 +32,11 @@ class Bitstream < ActiveRecord::Base
     FileUtils.mkdir_p(dir) unless File.exist?(dir)
     path = File.join(dir, file_name)
     if opts[:plain_text] && path =~ /xhtml$/
-      w = open(path + '.txt', 'w:utf-8')
+      path_txt  = path.gsub(/\.xhtml$/, '.txt')
+      w = open(path_txt, 'w:utf-8')
       tt = TagAlong::TaggedText.new(File.read(path))
       w.write tt.plain_text
-      path = path + '.txt'
+      path = path_txt
     end
     path
   end

@@ -38,15 +38,15 @@ module HpsBioindex
   private
 
   def self.get_db_conf
-    conf = File.read(File.join(File.dirname(__FILE__), 
-                          'config', 'config.yml'))  
+    conf = File.read(File.join(File.dirname(__FILE__),
+                          'config', 'config.yml'))
     @db_conf = YAML.load(conf)
   end
 
   def self.get_conf
     conf = self.db_conf[self.env.to_s]
-    @conf = OpenStruct.new(      
-                            session_secret:   conf['session_secret'], 
+    @conf = OpenStruct.new(
+                            session_secret:   conf['session_secret'],
                             dspace_api_url:   conf['dspace_api_url'],
                             name_finding_url: conf['name_finding_url'],
                             harvest_dir:      conf['harvest_dir'],
@@ -58,6 +58,7 @@ module HpsBioindex
                             username:         conf['username'],
                             password:         conf['password'],
                             database:         conf['database'],
+                            eol_api:          '',
                            )
   end
 end

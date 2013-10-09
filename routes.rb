@@ -17,10 +17,14 @@ class HpsBioindexApp < Sinatra::Base
     @names = CanonicalForm.all.sort_by(&:name)
     haml :names
   end
-  
+
   get '/names/:name_id' do
     @name = CanonicalForm.where(id: params[:name_id]).first
     @bitstreams = @name.bitstreams if @name
+    # @eol = RestClient.get("http://eol.org/api/pages/1.0/#{}.json?" +
+    #                       "images=2&subjects=overview&licenses=all&" +
+    #                       "&common_names=true&synonyms=true")
+
     haml :name
   end
 
