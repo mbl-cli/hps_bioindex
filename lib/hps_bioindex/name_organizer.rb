@@ -7,7 +7,7 @@ module HpsBioindex
       end
       tag_names
     end
-    
+
     def tag_names
       HpsBioindex.logger.info("Creating tagged version of files")
       bitstreams = Bitstream.where(tagged: false)
@@ -24,7 +24,7 @@ module HpsBioindex
 
     def clean_names_data
       HpsBioindex.logger.info("Cleaning up old data")
-      %w(name_strings resolved_name_strings 
+      %w(name_strings resolved_name_strings
          canonical_forms outlinks bitstreams_name_strings).each do |t|
         Item.connection.execute("truncate table %s" % t)
       end
@@ -44,6 +44,10 @@ module HpsBioindex
       end
       file = open(bitstream.path, 'r:utf-8')
       tagged_file = open(bitstream.path + '.tagged', 'w:utf-8')
+      if bitstream.path =~ /xhtml$/
+        tt = TagAlong::TaggedText.new(File.read(bitstream.path))
+        tag_offsets = tt.adjust_offsets(tag_offsets)
+      end
       begin
         ta = TagAlong.new(file.read, tag_offsets)
         tagged_file.write(ta.tag("<a href=\"%s\" class=\"%s\">", "</a>"))
@@ -65,7 +69,7 @@ module HpsBioindex
     def process_name(name, processed_names)
       if processed_names[name['id']]
         n = processed_names[name['id']]
-        n['url'] = get_url(name) if !n['url'] 
+        n['url'] = get_url(name) if !n['url']
       else
         processed_names[name['id']] = {
           'url' => get_url(name),
@@ -81,8 +85,8 @@ module HpsBioindex
 
     def get_tag_type(name)
       return "unresolved" unless name['resolved_name_string_id']
-      return "doubtful" unless (name['expanded_abbr'] != 1 && 
-                                name['in_curated_sources'] && 
+      return "doubtful" unless (name['expanded_abbr'] != 1 &&
+                                name['in_curated_sources'] &&
                                 name['data_sources_num'].to_i > 3)
       'resolved'
     end
@@ -90,11 +94,11 @@ module HpsBioindex
     def import_names
       HpsBioindex.logger.info("Importing names from json into database")
       Bitstream.all.each_with_index do |b, i|
-        HpsBioindex.logger.info("Processing bitstream %s" % 
+        HpsBioindex.logger.info("Processing bitstream %s" %
                                i) if i % 50 == 0 && i > 0
 
         json_file = b.path + '.json'
-        data = JSON.parse(open(json_file, 'r:utf-8').read, 
+        data = JSON.parse(open(json_file, 'r:utf-8').read,
                           symbolize_names: true)
         data[:names].map do |n|
           add_name_strings(n)
@@ -120,27 +124,27 @@ module HpsBioindex
                                    pos_end: pos_end)
       end
     end
-        
+
     def resolve_names(data)
       resolved, unresolved = data[:resolved_names].partition do |n|
         n[:results] && n[:results].first
       end
       update_resolved(resolved)
     end
-  
+
     def update_resolved(resolved)
       return if resolved.empty?
-      names = resolved.map do |n| 
+      names = resolved.map do |n|
         Item.connection.quote(n[:supplied_name_string])
       end
       db_names = "%s" % names.join(',')
       new_names = Item.connection.select("
-        select id, name 
-        from name_strings 
+        select id, name
+        from name_strings
         where name in (%s)
           and resolved = 0" % db_names)
       if new_names.first
-        ids = new_names.map do |n| 
+        ids = new_names.map do |n|
           n['id']
         end.join(',')
         names = new_names.inject({}) do |res, n|
@@ -148,8 +152,8 @@ module HpsBioindex
           res
         end
         Item.connection.execute("
-                  update name_strings 
-                  set resolved = 1 
+                  update name_strings
+                  set resolved = 1
                   where id in (%s)" % ids)
         resolved.each do |n|
           name = n[:supplied_name_string]
@@ -179,12 +183,12 @@ module HpsBioindex
                 (%s, %s, %s)" % e)
       end
     end
-  
+
     def get_canonical_form_id(name)
       name = Item.connection.quote(name)
       id = Item.connection.select("
-          select id 
-          from canonical_forms 
+          select id
+          from canonical_forms
           where name = %s" % name).first
       if id
         id['id']
@@ -230,7 +234,7 @@ module HpsBioindex
      canonical_form_id, in_curated_sources, data_sources_num,
      match_type, data_source_id, data_source].map { |n| quote(n) }
   end
-  
+
   def quote(obj)
     return 'null' unless obj
     return obj if obj.is_a? Fixnum
