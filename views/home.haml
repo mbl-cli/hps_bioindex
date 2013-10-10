@@ -1,0 +1,19 @@
+
+%form{ action: 'search', method: 'post', name: 'search' }
+  Search
+  %input{ type: 'text', name: 'search_term', id: 'names_search'}
+:javascript
+  $(function() {
+    var names = #{@names.to_json}
+    $( "#names_search" ).autocomplete({
+      source: function(req, res) {
+        var data = $.ui.autocomplete.escapeRegex( req.term );
+        var matcher = new RegExp( "^" + data, "i" );
+        res(
+          $.grep(names, function(value) {
+           return matcher.test(value); 
+          })
+        );
+      },
+    });
+  });

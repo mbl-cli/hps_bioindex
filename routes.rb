@@ -29,7 +29,11 @@ class HpsBioindexApp < Sinatra::Base
   end
 
   get '/' do
-    redirect '/names'
+    @names = CanonicalForm.connection.select_values('
+      select name
+      from canonical_forms'
+      )
+    haml :home
   end
 
 end
