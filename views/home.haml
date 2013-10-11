@@ -2,6 +2,10 @@
 %form{ action: 'search', method: 'post', name: 'search' }
   Search
   %input{ type: 'text', name: 'search_term', id: 'names_search'}
+  #alphabet
+    - %w(A B C D E F G H I J K L M N O P Q R S T U V W X Y Z).each do |l|
+      %a{ href: "/names?search_term=%s" % l  }= l
+      = '&nbsp;'*3
 :javascript
   $(function() {
     var names = #{@names.to_json}
@@ -10,9 +14,6 @@
         var data = $.ui.autocomplete.escapeRegex( req.term );
         var matcher = new RegExp( "^" + data, "i" );
         res(
-          $.grep(names, function(value) {
-           return matcher.test(value); 
-          })
         );
       },
     });

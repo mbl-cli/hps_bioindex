@@ -4,7 +4,7 @@ describe '/' do
 
   it 'should render' do
     get '/'
-    last_response.should be_redirect
+    last_response.should be_ok
   end
 
 end
