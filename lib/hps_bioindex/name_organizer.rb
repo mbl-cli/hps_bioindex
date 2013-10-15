@@ -52,8 +52,6 @@ module HpsBioindex
         ta = TagAlong.new(file.read, tag_offsets)
         tagged_file.write(ta.tag("<a href=\"%s\" class=\"%s\">", "</a>"))
       rescue
-        require 'ruby-debug'; debugger
-        puts ''
       end
       file.close
       tagged_file.close
@@ -178,10 +176,68 @@ module HpsBioindex
       outlink_data = prepare_outlink_data(id, n[:preferred_results])
       outlink_data.each do |e|
         Item.connection.execute("insert into outlinks
-                (resolved_name_string_id, name, url)
+                (resolved_name_string_id, name, url, local_id)
                 values
-                (%s, %s, %s)" % e)
+                (%s, %s, %s, %s)" % e)
+        outlink_id = Item.connection.select_value("select last_insert_id()")
+        populate_eol_data(e, outlink_id)
       end
+    end
+
+    def populate_eol_data(outlink, outlink_id)
+      eol_id = outlink[3].gsub(/'/, '')
+      begin
+        eol = RestClient.get(
+          "http://eol.org/api/pages/1.0/%s.json?" % eol_id +
+          'images=1&subjects=overview&licenses=all&' +
+          'common_names=true&synonyms=true&details=true')
+      rescue
+        eol = nil
+      end
+      if eol && !EolData.find_by(outlink_id: outlink_id)
+        eol = JSON.parse(eol, symbolize_names: true)
+        image_url, thumbnail_url, overview = extract_eol_data(eol)
+        eol_data = EolData.create(outlink_id: outlink_id, image_url: image_url,
+                             thumbnail_url: thumbnail_url, overview: nil)
+        add_eol_synonyms(eol, eol_data)
+        add_eol_vernaculars(eol, eol_data)
+      end
+    end
+
+    def add_eol_synonyms(eol, eol_data)
+      eol_data_id = eol_data.id
+      if eol[:synonyms] && !eol[:synonyms].empty?
+        eol[:synonyms].each do |s|
+          EolDataSynonym.create(eol_data_id: eol_data_id,
+                                name: s[:synonym], 
+                                relationship: s[:relationship])
+        end
+      end
+    end
+    
+    def add_eol_vernaculars(eol, eol_data)
+      eol_data_id = eol_data.id
+      if eol[:vernacularNames] && !eol[:vernacularNames].empty?
+        eol[:vernacularNames].each do |v|
+          EolDataVernacular.create(eol_data_id: eol_data_id,
+                                   name: v[:vernacularName], 
+                                   language: v[:language])
+        end
+      end
+    end
+
+    def extract_eol_data(eol_data)
+      image_url = thumbnail_url = overview = nil
+      if eol_data[:dataObjects] && !eol_data[:dataObjects].empty?
+        eol_data[:dataObjects].each do |obj|
+          if obj[:dataType] =~ /StillImage/
+            image_url = obj[:eolMediaURL]
+            thumbnail_url = obj[:eolThumbnailURL]
+          end
+          overview = obj[:description] if obj[:dataType] =~ /Text/
+        end
+      end
+      [image_url, thumbnail_url, overview]
     end
 
     def get_canonical_form_id(name)
@@ -218,41 +274,40 @@ module HpsBioindex
     end
 
 
-  def prepare_resolved_data(n, name_string_id)
-    r = n[:results].first
-    name = r[:name_string]
-    current_name = r[:current_name]
-    data_source_id = r[:data_source_id]
-    data_source = r[:data_source_title]
-    classification = r[:classification_path]
-    ranks = r[:classification_path_ranks]
-    canonical_form_id = get_canonical_form_id(r[:canonical_form])
-    in_curated_sources = n[:in_curated_sources] ? 1 : 0
-    data_sources_num = n[:data_sources_number]
-    match_type = r[:match_type]
-    [name_string_id, name, current_name, classification, ranks,
-     canonical_form_id, in_curated_sources, data_sources_num,
-     match_type, data_source_id, data_source].map { |n| quote(n) }
-  end
-
-  def quote(obj)
-    return 'null' unless obj
-    return obj if obj.is_a? Fixnum
-    Item.connection.quote(obj)
-  end
-
-
-  def prepare_outlink_data(resolved_name_string_id, outlink_results)
-    outlink_data = []
-    outlink_results.each do |e|
-      name = e[:name_string]
-      url = e[:url]
-      outlink_data << [resolved_name_string_id, name, url].map { |e| quote(e) }
+    def prepare_resolved_data(n, name_string_id)
+      r = n[:results].first
+      name = r[:name_string]
+      current_name = r[:current_name]
+      data_source_id = r[:data_source_id]
+      data_source = r[:data_source_title]
+      classification = r[:classification_path]
+      ranks = r[:classification_path_ranks]
+      canonical_form_id = get_canonical_form_id(r[:canonical_form])
+      in_curated_sources = n[:in_curated_sources] ? 1 : 0
+      data_sources_num = n[:data_sources_number]
+      match_type = r[:match_type]
+      [name_string_id, name, current_name, classification, ranks,
+       canonical_form_id, in_curated_sources, data_sources_num,
+       match_type, data_source_id, data_source].map { |n| quote(n) }
     end
-    outlink_data
-  end
+
+    def quote(obj)
+      return 'null' unless obj
+      return obj if obj.is_a? Fixnum
+      Item.connection.quote(obj)
+    end
 
 
-
+    def prepare_outlink_data(resolved_name_string_id, outlink_results)
+      outlink_data = []
+      outlink_results.each do |e|
+        name = e[:name_string]
+        url = e[:url]
+        local_id = e[:local_id]
+        outlink_data << [resolved_name_string_id, name, url, local_id].
+          map { |e| quote(e) }
+      end
+      outlink_data
+    end
   end
 end

@@ -55,3 +55,39 @@ describe CommunitiesItem do
     Item.count.should == 1
   end
 end
+
+describe EolData do
+  let(:eol_data) { FactoryGirl.create(:eol_data) }
+  before(:all) { truncate_tables }
+  
+  it 'should work' do
+    eol_data.class.should == EolData 
+    EolData.count.should == 1
+    Outlink.count.should == 1
+    ResolvedNameString.count.should == 1
+    CanonicalForm.count.should == 1
+    NameString.count.should == 1
+  end
+end
+
+describe EolDataSynonym do
+  let(:eol_data_synonym) { FactoryGirl.create(:eol_data_synonym) }
+  before(:all) { truncate_tables }
+
+  it 'should work' do
+    eol_data_synonym.class.should == EolDataSynonym
+    EolData.count.should == 1
+    EolDataSynonym.count.should == 1
+  end
+end
+
+describe EolDataVernacular do
+  let(:eol_data_vernacular){ FactoryGirl.create(:eol_data_vernacular) }
+  before(:all) { truncate_tables }
+
+  it 'should work' do
+    eol_data_vernacular.class.should == EolDataVernacular
+    EolData.count.should == 1
+    EolDataVernacular.count.should == 1
+  end
+end

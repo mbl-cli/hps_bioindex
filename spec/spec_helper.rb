@@ -28,6 +28,14 @@ def get_item_file(request)
   open(File.join(FILES_DIR, "item_%s.xml" % id))
 end
 
+def get_eol_file(request)
+  id = request.uri.path.match(%r|pages/1\.0/([\d]+)\.json|)[1]
+  eol_file = File.join(FILES_DIR, "eol_%s.json" % id)
+  File.exists?(eol_file) ? 
+    open(eol_file) :
+    raise(Bioindex::EolRequestError.new)
+end
+
 def prepare_name_data
   truncate_tables
   stub_request(:get, %r|/rest/updates/|).to_return(
@@ -42,6 +50,11 @@ def prepare_name_data
   
   stub_request(:get, %r|/rest/bitstream/|).to_return do |request|
     { body: open(File.join(FILES_DIR, 'bitstream_0.txt')) }
+  end
+  
+  stub_request(:get, %r|eol.org/api/pages/1.0/|).
+    to_return do |request|
+    { body: get_eol_file(request) }
   end
     
   harvester = HpsBioindex::Harvester.new

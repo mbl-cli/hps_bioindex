@@ -130,4 +130,19 @@ end
 
 class Outlink < ActiveRecord::Base
   belongs_to :resolved_name_string
+  has_one :eol_data
+end
+
+class EolData < ActiveRecord::Base
+  belongs_to :outlink
+  has_many :eol_data_synonyms
+  has_many :eol_data_vernaculars
+end
+
+class EolDataSynonym < ActiveRecord::Base
+  belongs_to :eol_data
+end
+
+class EolDataVernacular < ActiveRecord::Base
+  belongs_to :eol_data
 end

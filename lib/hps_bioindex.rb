@@ -1,6 +1,7 @@
 require_relative '../environment'
 require_relative 'monkey_patches.rb'
 require_relative '../models'
+require_relative 'hps_bioindex/errors'
 require_relative 'hps_bioindex/version'
 require_relative 'hps_bioindex/downloader'
 require_relative 'hps_bioindex/harvester'

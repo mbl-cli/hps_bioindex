@@ -19,6 +19,11 @@ describe HpsBioindex::NameFinder do
     stub_request(:get, url).to_return(
       body: open(File.join(FILES_DIR, 'bitstream_0.txt.json')))
 
+    stub_request(:get, %r|eol.org/api/pages/1.0/|).
+      to_return do |request|
+      { body: get_eol_file(request) }
+    end
+    
     k = Karousel.new(HpsBioindex::NameFinder, 3, 0)
     k.run do
     end
@@ -36,12 +41,18 @@ describe HpsBioindex::NameFinder do
     NameString.count.should == 67
     Outlink.count. should == 54
     CanonicalForm.count.should == 62
+    EolData.count.should == 53
+    EolDataSynonym.count.should == 1068
+    EolDataVernacular.count.should == 602
 
     # idempotency
     norg.organize 
     NameString.count.should == 67
     Outlink.count. should == 54
     CanonicalForm.count.should == 62
+    EolData.count.should == 53
+    EolDataSynonym.count.should == 1068
+    EolDataVernacular.count.should == 602
     tagged_files = Find.find(HpsBioindex.conf.harvest_dir).
       select {|d| d =~ /\.tagged$/}
     tagged_files.size.should == 25
