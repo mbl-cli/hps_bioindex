@@ -58,7 +58,7 @@ module HpsBioindex
                             username:         conf['username'],
                             password:         conf['password'],
                             database:         conf['database'],
-                            eol_api:          '',
+                            batch_size:       100,
                            )
   end
 end

@@ -11,6 +11,7 @@ require 'sass'
 
 require_relative 'lib/hps_bioindex'
 require_relative 'routes'
+require_relative 'helpers'
 
 
 class HpsBioindexApp < Sinatra::Base

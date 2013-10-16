@@ -9,6 +9,7 @@ require_relative 'hps_bioindex/dspace_api'
 require_relative 'hps_bioindex/name_finder'
 require_relative 'hps_bioindex/gnrd_api'
 require_relative 'hps_bioindex/name_organizer'
+require_relative 'hps_bioindex/eol_harvester'
 
 module HpsBioindex
 

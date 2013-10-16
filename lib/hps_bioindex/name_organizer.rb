@@ -96,14 +96,16 @@ module HpsBioindex
                                i) if i % 50 == 0 && i > 0
 
         json_file = b.path + '.json'
-        data = JSON.parse(open(json_file, 'r:utf-8').read,
-                          symbolize_names: true)
-        data[:names].map do |n|
-          add_name_strings(n)
-        end
-        unless data[:names].empty?
-          resolve_names(data)
-          add_bitstream_names(b, data[:names])
+        if File.exists?(json_file)
+          data = JSON.parse(open(json_file, 'r:utf-8').read,
+                            symbolize_names: true)
+          data[:names].map do |n|
+            add_name_strings(n)
+          end
+          unless data[:names].empty?
+            resolve_names(data)
+            add_bitstream_names(b, data[:names])
+          end
         end
       end
     end
@@ -180,64 +182,7 @@ module HpsBioindex
                 values
                 (%s, %s, %s, %s)" % e)
         outlink_id = Item.connection.select_value("select last_insert_id()")
-        populate_eol_data(e, outlink_id)
       end
-    end
-
-    def populate_eol_data(outlink, outlink_id)
-      eol_id = outlink[3].gsub(/'/, '')
-      begin
-        eol = RestClient.get(
-          "http://eol.org/api/pages/1.0/%s.json?" % eol_id +
-          'images=1&subjects=overview&licenses=all&' +
-          'common_names=true&synonyms=true&details=true')
-      rescue
-        eol = nil
-      end
-      if eol && !EolData.find_by(outlink_id: outlink_id)
-        eol = JSON.parse(eol, symbolize_names: true)
-        image_url, thumbnail_url, overview = extract_eol_data(eol)
-        eol_data = EolData.create(outlink_id: outlink_id, image_url: image_url,
-                             thumbnail_url: thumbnail_url, overview: nil)
-        add_eol_synonyms(eol, eol_data)
-        add_eol_vernaculars(eol, eol_data)
-      end
-    end
-
-    def add_eol_synonyms(eol, eol_data)
-      eol_data_id = eol_data.id
-      if eol[:synonyms] && !eol[:synonyms].empty?
-        eol[:synonyms].each do |s|
-          EolDataSynonym.create(eol_data_id: eol_data_id,
-                                name: s[:synonym], 
-                                relationship: s[:relationship])
-        end
-      end
-    end
-    
-    def add_eol_vernaculars(eol, eol_data)
-      eol_data_id = eol_data.id
-      if eol[:vernacularNames] && !eol[:vernacularNames].empty?
-        eol[:vernacularNames].each do |v|
-          EolDataVernacular.create(eol_data_id: eol_data_id,
-                                   name: v[:vernacularName], 
-                                   language: v[:language])
-        end
-      end
-    end
-
-    def extract_eol_data(eol_data)
-      image_url = thumbnail_url = overview = nil
-      if eol_data[:dataObjects] && !eol_data[:dataObjects].empty?
-        eol_data[:dataObjects].each do |obj|
-          if obj[:dataType] =~ /StillImage/
-            image_url = obj[:eolMediaURL]
-            thumbnail_url = obj[:eolThumbnailURL]
-          end
-          overview = obj[:description] if obj[:dataType] =~ /Text/
-        end
-      end
-      [image_url, thumbnail_url, overview]
     end
 
     def get_canonical_form_id(name)

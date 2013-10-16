@@ -29,6 +29,8 @@ group :test do
   gem 'rr', '~> 1.1'
   gem 'webmock', '~> 1.13'
   gem 'factory_girl', '~> 4.2'
+  gem 'capybara', '~> 2.1'
+  gem 'capybara-webkit', '~> 1.0'
   gem 'coveralls', '~> 0.7', require: false
 end
 

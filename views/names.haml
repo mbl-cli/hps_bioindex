@@ -1,8 +1,32 @@
 #names
-  - current_letter = nil
-  - @names.each do |name|
-    - n = name.name
-    - if n[0] != current_letter
-      - current_letter = n[0]
-      %h3= current_letter
-    %a{ href: "/names/%s" % name.id } #{n},
+  %table
+    %tr
+      %th Image
+      %th Name
+      %th Synonyms
+      %th Vernacular Names
+    - @names.each do |name|
+      - outlink, eol_data = name_details(name)
+      %tr
+        %td
+          - if eol_data && eol_data.thumbnail_url
+            %a{ href: outlink.url }
+              %img{ src: eol_data.thumbnail_url }
+          - else
+            no pix
+        %td
+          %a{ href: outlink.url }= name.name
+        %td
+          - if eol_data && !eol_data.eol_data_synonyms.empty?
+            = eol_data.eol_data_synonyms.map(&:name).join(', ')
+        %td
+          - if eol_data && !eol_data.eol_data_vernaculars.empty?
+            - vernaculars = eol_data.eol_data_vernaculars.map do |v|
+              - "%s(%s)" % [v.name, v.language]
+            - vernaculars = vernaculars.join(', ')
+          - else
+            - vernaculars = ''
+          = vernaculars
+      
+
+

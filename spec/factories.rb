@@ -29,7 +29,7 @@ FactoryGirl.define do
     id { FactoryGirl.generate(:num) }
     name { "Community #%s" % id }
   end
-  
+
   factory :communities_item do
     id { FactoryGirl.generate(:num) }
     community
@@ -38,37 +38,37 @@ FactoryGirl.define do
 
   factory :name_string do
     id { FactoryGirl.generate(:num) }
-    name = 'Namus stringus Linnaeus 1586'
+    name = 'Triturus cristatus Laurenti, 1768'
     expanded_abbr = false
     resolved = true
   end
-  
+
   factory :canonical_form do 
     id { FactoryGirl.generate(:num) }
-    name = 'Namus stringus'
+    name = 'Triturus cristatus'
   end
 
   factory :resolved_name_string do
     id { FactoryGirl.generate(:num) }
-    name_string
+    name_string 
     canonical_form
-    name 'Namus stringus L, 1586'
+    name 'Triturus cristatus (Laurenti, 1768)'
     data_source_id = 1
     data_source = 'Encyclopedia of Life'
-    current_name = 'Namus stringus L. 1586'
+    current_name = 'Triturus cristatus (Laurenti, 1768)'
     classification = ''
     ranks = ''
     in_curated_sources = true
     data_sources_num = 42
-    match_type = 1
+    match_type = 2
   end
 
   factory :outlink do
     id { FactoryGirl.generate(:num) }
     resolved_name_string
     name = 'Namus stringus Linnaeus, 1786'
-    url = 'http://eol.org/pages/2'
-    local_id = 2
+    url = 'http://eol.org/pages/1018157'
+    local_id = '1018157'
   end
 
   factory :eol_data do
@@ -82,14 +82,14 @@ FactoryGirl.define do
   factory :eol_data_synonym do
     id { FactoryGirl.generate(:num) }
     eol_data
-    name = 'Synonymus vulgaris'
+    name = 'Triturus cristatus cristatus'
     type = 'synonym'
   end
 
   factory :eol_data_vernacular do
     id { FactoryGirl.generate(:num) }
     eol_data
-    name = 'Red tiger'
+    name = 'great crested newt'
     language = 'en'
   end
 
