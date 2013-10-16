@@ -41,18 +41,12 @@ describe HpsBioindex::NameFinder do
     NameString.count.should == 67
     Outlink.count. should == 54
     CanonicalForm.count.should == 62
-    EolData.count.should == 53
-    EolDataSynonym.count.should == 1068
-    EolDataVernacular.count.should == 602
 
     # idempotency
     norg.organize 
     NameString.count.should == 67
     Outlink.count. should == 54
     CanonicalForm.count.should == 62
-    EolData.count.should == 53
-    EolDataSynonym.count.should == 1068
-    EolDataVernacular.count.should == 602
     tagged_files = Find.find(HpsBioindex.conf.harvest_dir).
       select {|d| d =~ /\.tagged$/}
     tagged_files.size.should == 25
