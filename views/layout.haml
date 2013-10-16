@@ -4,12 +4,23 @@
     %title 
       HPS Biodiversity Index
     %link{ rel: 'stylesheet', href: '/css/app.css', type: 'text/css' }
+    %link{ rel: 'stylesheet', href: 'http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css', type: 'text/css' }
     %script{ src: 'http://code.jquery.com/jquery-1.9.1.js' }
     %script{ src: 'http://code.jquery.com/ui/1.10.3/jquery-ui.js' }
   %body
     .container
       %h1{ id: 'title' }
         %a{ href: '/' } HPS Biodiversity Index
+      .ui-widget
+        %form#search_box{ action: 'names', method: 'get', name: 'search_box' }
+          Search
+          %input{ type: 'text', name: 'search_term', 
+            id: 'names_search', autofocus: 'autofocus' }
+
+      #alphabet
+        - %w(A B C D E F G H I J K L M N O P Q R S T U V W X Y Z).each do |l|
+          %a{ href: "/names?search_term=%s" % l  }= l
+          = '&nbsp;'*3
       #sidebar
         %ul
           %li
@@ -24,4 +35,33 @@
     #footer
       Version:
       = HpsBioindex::VERSION
+
+:javascript
+  $( "#search_box" ).on( "autocompleteselect", function( event, ui ) { 
+    $("form#search_box").submit();
+  } );
+  $(function() {
+    $( "#names_search" ).autocomplete({
+      source: function( request, response ) {
+        $.ajax({
+          url: "/names.json",
+          dataType: "jsonp",
+          data: {
+            search_term: request.term,
+            batch_size: 10
+          },
+          success: function( data ) {
+            response( $.map( data, function( item ) {
+              return {
+                id: item.id,
+                value: item.name              }
+            }));
+          },
+        });
+      },
+      minLength: 2,
+      autoFocus: true,
+    });
+  });
+
 

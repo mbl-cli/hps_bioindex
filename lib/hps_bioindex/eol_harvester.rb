@@ -66,8 +66,8 @@ module HpsBioindex
       if eol_data[:dataObjects] && !eol_data[:dataObjects].empty?
         eol_data[:dataObjects].each do |obj|
           if obj[:dataType] =~ /StillImage/
-            image_url = obj[:eolMediaURL]
-            thumbnail_url = obj[:eolThumbnailURL]
+            image_url = obj[:eolMediaURL] unless image_url
+            thumbnail_url = obj[:eolThumbnailURL] unless thumbnail_url
           end
           overview = obj[:description] if obj[:dataType] =~ /Text/
         end
