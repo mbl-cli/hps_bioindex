@@ -3,6 +3,7 @@ class HpsBioindexApp
   helpers do
 
     def name_details(name)
+      eol_data = eol_url = nil
       outlink = Outlink.select([:url, 'outlinks.id'] ).
         joins('join resolved_name_strings
           on resolved_name_strings.id = resolved_name_string_id').
@@ -14,12 +15,11 @@ class HpsBioindexApp
         eol_data = EolData.includes(:eol_data_synonyms, 
                                      :eol_data_vernaculars).
                                      where(outlink_id: outlink.id).first
-      else
-        eol_data = nil
-        outlink = Outlink.new(url: 'http://google.com/search?' +
-                              "q=%s" % name.name)
+        eol_url = outlink.url
       end
-      [outlink, eol_data]
+      google_url = 'http://google.com/search?' + "q=%s" % name.name
+      
+      [eol_url, google_url, eol_data]
     end
 
   end

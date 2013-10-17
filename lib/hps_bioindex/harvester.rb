@@ -53,7 +53,7 @@ module HpsBioindex
     end
     
     def store_item(item, community)
-      db_item = Item.find(item[:id]) rescue nil
+      db_item = Item.find(item[:id]) rescue false
       if db_item 
          if db_item.last_modified < Time.parse(item[:last_modified])
            db_item.update(last_modified: item[:last_modified], 
@@ -63,7 +63,7 @@ module HpsBioindex
       else
         Item.create(id: item[:id], 
                   last_modified: item[:last_modified], 
-                  resource: "/rest/items%s.xml" % item[:id],
+                  resource: "/rest/items/%s.xml" % item[:id],
                   harvested: false,
                  )
         CommunitiesItem.create(item_id: item[:id], 
@@ -81,9 +81,34 @@ module HpsBioindex
         params = { api_key: @api.key, api_digest: @api.digest(path) }
         item_xml = @api.site[path].get(params: params)
         item_hash = Hash.from_xml(item_xml)
+        item_title = get_item_title(item_xml)
         process_bitstreams(item_hash, item)
+        item.title = item_title
+        item.handle = item_hash[:items][:handle]
         item.harvested = true
         item.save!
+        create_metadata(item, item_hash[:items][:metadata][:metadataentity])
+      end
+    end
+
+    def create_metadata(item, metadata)
+      metadata = [metadata] unless metadata.is_a?(Array)
+      metadata.each do |m|
+        unless Metadata.where(item_id: item.id).empty?
+          Metadata.where(item_id: item.id).destroy_all
+        end
+        value = m[:value]
+        long_value = nil
+        if value.size > 250
+          long_value = value
+          value = nil
+        end
+        Metadata.create(item_id: item.id, 
+                        element: m[:element],
+                        qualifier: m[:qualifier],
+                        schema: m[:schema],
+                        value: value,
+                        long_value: long_value)
       end
     end
 
@@ -134,6 +159,20 @@ module HpsBioindex
       res = Hash.from_xml(res)
         Community.create(id: opts[:community_id], 
                          name: res[:communities][:name])
+    end
+
+    def get_item_title(item_xml)
+      doc = Nokogiri::XML(item_xml)
+      titles = doc.xpath('//metadataentity[element="title"]')
+      return nil if titles.empty?
+
+      title = titles.select{ |t| t.xpath('qualifier').text == '' }.first
+      
+      if title
+        title.xpath('value').text
+      else
+        nil
+      end
     end
 
   end

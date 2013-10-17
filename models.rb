@@ -1,5 +1,6 @@
 
 class Item < ActiveRecord::Base
+  has_many :metadata
   has_many :bitstreams_items
   has_many :bitstreams, through: :bitstreams_items
   has_many :communities_items
@@ -145,4 +146,8 @@ end
 
 class EolDataVernacular < ActiveRecord::Base
   belongs_to :eol_data
+end
+
+class Metadata < ActiveRecord::Base
+  belongs_to :item
 end

@@ -5,6 +5,7 @@ module HpsBioindex
       Item.transaction do
         import_names
       end
+      calculate_quality
       tag_names
     end
 
@@ -19,6 +20,20 @@ module HpsBioindex
       end
     end
 
+    def calculate_quality
+      HpsBioindex.logger.info("Calculating quality of the found name")
+
+      CanonicalForm.all.each do |name|
+        best_match = OpenStruct.new(match_type: 10)
+        name.resolved_name_strings.each do |rns|
+          best_match = rns if rns.match_type < best_match.match_type
+        end
+        show = best_match.match_type < 6 &&
+          (best_match.in_curated_sources || best_match.data_sources_num > 1)
+        name.show = show
+        name.save!
+      end
+    end
 
     private
 
@@ -42,12 +57,8 @@ module HpsBioindex
         offsets << [processed_names[name_id]['url'],
                    processed_names[name_id]['type']]
       end
-      file = open(bitstream.path, 'r:utf-8')
+      file = open(bitstream.path(plain_text: true), 'r:utf-8')
       tagged_file = open(bitstream.path + '.tagged', 'w:utf-8')
-      if bitstream.path =~ /xhtml$/
-        tt = TagAlong::TaggedText.new(File.read(bitstream.path))
-        tag_offsets = tt.adjust_offsets(tag_offsets)
-      end
       begin
         ta = TagAlong.new(file.read, tag_offsets)
         tagged_file.write(ta.tag("<a href=\"%s\" class=\"%s\">", "</a>"))

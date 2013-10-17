@@ -20,20 +20,25 @@ module HpsBioindex
     private
 
     def populate_eol_data(outlink)
-      eol_id = outlink.id
+      eol_id = outlink.local_id
+      eol_api_url = "http://eol.org/api/pages/1.0/%s.json?" % eol_id +
+        'images=1&subjects=overview&licenses=all&' +
+        'common_names=true&synonyms=true&details=true'
+      if HpsBioindex.conf.eol_api_key
+        eol_api_url += "&key=%s" % HpsBioindex.conf.eol_api_key
+      end
       begin
-        eol = RestClient.get(
-          "http://eol.org/api/pages/1.0/%s.json?" % eol_id +
-          'images=1&subjects=overview&licenses=all&' +
-          'common_names=true&synonyms=true&details=true')
+        eol = RestClient.get(eol_api_url)
+        sleep(0.5)
       rescue
         eol = nil
       end
       if eol && !EolData.find_by(outlink_id: outlink.id)
         eol = JSON.parse(eol, symbolize_names: true)
         image_url, thumbnail_url, overview = extract_eol_data(eol)
+        overview = nil if overview && overview.size > 3000
         eol_data = EolData.create(outlink_id: outlink.id, image_url: image_url,
-                             thumbnail_url: thumbnail_url, overview: nil)
+                             thumbnail_url: thumbnail_url, overview: overview)
         add_eol_synonyms(eol, eol_data)
         add_eol_vernaculars(eol, eol_data)
       end

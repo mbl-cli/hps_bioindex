@@ -1,6 +1,33 @@
 #names
   - if @name
-    %h1= @name.name
-    %h2 Documents
-    - @bitstreams.each do |b|
-      %a{ href: "/documents?doc_id=%s&name_id=%s" % [b.id, @name.id] } #{b.file_name},
+    %h1 
+      %a{ href: "/names/%s" % @name.id }= @name.name
+      - if @eol_url
+        %a{ href: @eol_url }
+          %img{ src: "/images/eol.png", height: 20, width: 20 }
+      %a{ href: @google_url }
+        %img{ src: "/images/google.png", height: 20, width: 20 }
+    #name_details
+      #name_image
+        - if @eol_data.image_url rescue false
+          %a{ href: eol_url }
+            %img{ src: @eol_data.image_url }
+      #overview
+        - if @eol_data.overview rescue false
+          %h3 Overview
+          = @eol_data.overview
+      #synonyms
+        - unless @eol_data.eol_data_synonyms.empty? rescue false
+          - synonyms = @eol_data.eol_data_synonyms.map do |s|
+            - synonym_type = s.relationship ? " (%s) s.relationship : ''
+            - "%s (%s)" % [s.name, synonym_type]
+          = synonyms.join(', ')
+      #vernaculars
+        - unless @eol_data.eol_data_vernaculars.empty? rescue false
+          - vernaculars = eol_data.eol_data_vernaculars.sort_by(&:language, &:name) 
+          - vernaculars = vernaculars.map { |v| "%s (%s)" % [v.name, v.language] }
+          = vernaculars.join(', ')
+    #documents
+      %h2 Documents
+      - @bitstreams.each do |b|
+        %a{ href: "/documents?doc_id=%s&name_id=%s" % [b.id, @name.id] } #{b.file_name},
