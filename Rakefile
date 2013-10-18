@@ -72,7 +72,7 @@ end
 
 task(release: :environment) do
   require 'git'
-  g = Git.open(__dir__)
+  g = Git.open(File.dirname(__FILE__))
   new_tag = HpsBioindex.version
     g.add_tag("v.%s" % new_tag)
     g.add(all: true)
