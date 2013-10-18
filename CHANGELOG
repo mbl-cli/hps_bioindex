@@ -1,3 +1,8 @@
+0.2.0 -- alphabetical browser to names, autocomplete search, metadata for 
+         items, data from EOL
+
+0.1.2 -- shows names and documents
+
 0.1.1 -- fixed problem with travis, added release task
 
 0.1.0 -- backend is there, 'hello world' sinatra is added on top
