@@ -7,6 +7,20 @@ module HpsBioindex
     STATUS = { init: 1 }
 
     @@bitstreams = nil
+    
+    def self.reopen_errors
+      HpsBioindex.logger.info("Reopening failed results")
+      Bitstream.where(name_processed: true).each do |b|
+        data = JSON.parse(File.read(b.path + '.json'), 
+                          symbolize_names: true) rescue nil
+        if !data || data[:status].to_s =~ /^5/
+          HpsBioindex.logger.info("Reopening failed bitstream %s" %
+                                 b.file_name)
+          b.name_processed = false
+          b.save!
+        end
+      end
+    end
 
     def self.populate(karousel_size)
       get_all_docs unless @@bitstreams
@@ -51,6 +65,7 @@ module HpsBioindex
       @bitstream.name_processed = true
       @bitstream.save!
     end
+
 
     private
 

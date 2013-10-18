@@ -6,11 +6,12 @@ class HpsBioindexApp < Sinatra::Base
 
   get '/documents' do
     @bitstreams = Bitstream.all
-    if params[:doc_id]
-      @bitstream = Bitstream.where(id: params[:doc_id]).first
-      @bitstream_text = File.read(@bitstream.path + '.tagged')
-    end
-    haml :documents
+  end
+  
+  get '/documents/:doc_id' do
+    @bitstream = Bitstream.where(id: params[:doc_id]).first
+    @bitstream_text = File.read(@bitstream.path + '.tagged')
+    haml :document
   end
 
   get '/names.?:format?' do
@@ -40,7 +41,7 @@ class HpsBioindexApp < Sinatra::Base
 
   get '/names/:name_id' do
     @name = CanonicalForm.where(id: params[:name_id]).first
-    @eol_url, @google_url, @name_details = name_details(@name)
+    @eol_url, @google_url, @eol_data = name_details(@name)
     @bitstreams = @name.bitstreams if @name
     haml :name
   end

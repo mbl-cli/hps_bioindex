@@ -50,7 +50,7 @@ class Bitstream < ActiveRecord::Base
           on rns.canonical_form_id = cf.id
         join bitstreams_name_strings bns
           on bns.name_string_id = rns.name_string_id
-      where bns.bitstream_id = %s" % id)
+      where bns.bitstream_id = %s and cf.show = 1" % id)
   end
 
   def names_info

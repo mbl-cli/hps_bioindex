@@ -18,9 +18,10 @@ class HpsBioindexApp
         eol_url = outlink.url
       end
       google_url = 'http://google.com/search?' + "q=%s" % name.name
-      
       [eol_url, google_url, eol_data]
     end
 
   end
+
 end
+

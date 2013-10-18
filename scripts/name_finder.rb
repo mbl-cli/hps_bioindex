@@ -15,11 +15,13 @@ require_relative '../lib/hps_bioindex'
 
 HpsBioindex.logger = Logger.new($stdout)
 
-# k = Karousel.new(HpsBioindex::NameFinder, 10, 20)
-# 
-# k.run  do 
-#   puts k.seats.map {|s| "%s, %s" % [s, s.finished?]}
-# end
+HpsBioindex::NameFinder.reopen_errors
+
+k = Karousel.new(HpsBioindex::NameFinder, 10, 20)
+
+k.run  do 
+  puts k.seats.map {|s| "%s, %s" % [s, s.finished?]}
+end
 
 norg = HpsBioindex::NameOrganizer.new
 

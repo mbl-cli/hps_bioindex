@@ -19,7 +19,6 @@ if OPTS[:new]
   HpsBioindex::Harvester.nuke
 end
 
-
 timestamp = Item.connection.
   select_value('select max(last_modified) from items') ||
   '1970-01-01'

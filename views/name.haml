@@ -9,25 +9,36 @@
         %img{ src: "/images/google.png", height: 20, width: 20 }
     #name_details
       #name_image
-        - if @eol_data.image_url rescue false
-          %a{ href: eol_url }
+        - if (@eol_data.image_url rescue false)
+          %a{ href: @eol_url }
             %img{ src: @eol_data.image_url }
       #overview
-        - if @eol_data.overview rescue false
-          %h3 Overview
+        %h3 Overview
+        - if (@eol_data.overview rescue false)
           = @eol_data.overview
       #synonyms
-        - unless @eol_data.eol_data_synonyms.empty? rescue false
+        %h3 Synonyms
+        - unless (@eol_data.eol_data_synonyms.empty? rescue true)
           - synonyms = @eol_data.eol_data_synonyms.map do |s|
-            - synonym_type = s.relationship ? " (%s) s.relationship : ''
-            - "%s (%s)" % [s.name, synonym_type]
+            - synonym_type = s.relationship ? " (%s)" % s.relationship : ''
+            - "%s%s" % [s.name, synonym_type]
           = synonyms.join(', ')
       #vernaculars
-        - unless @eol_data.eol_data_vernaculars.empty? rescue false
-          - vernaculars = eol_data.eol_data_vernaculars.sort_by(&:language, &:name) 
-          - vernaculars = vernaculars.map { |v| "%s (%s)" % [v.name, v.language] }
+        %h3 Vernacular Names
+        - unless (@eol_data.eol_data_vernaculars.empty? rescue true)
+          - vernaculars = @eol_data.eol_data_vernaculars.sort_by { |x| [x.language, x.name] } 
+          - vernaculars = vernaculars.map do |v| 
+            - name = v.name
+            - name = "<span class='highlight'>%s</span>" % name if v.language == 'en'
+            - "%s (%s)" % [name, v.language] 
           = vernaculars.join(', ')
-    #documents
-      %h2 Documents
-      - @bitstreams.each do |b|
-        %a{ href: "/documents?doc_id=%s&name_id=%s" % [b.id, @name.id] } #{b.file_name},
+    #hps_items
+      %h2 HPS Items
+      - @bitstreams.each_with_index do |b, i|
+        #item
+          = "%s." % (i+1) 
+          %a{ href: "http://hpsrepository.asu.edu/handle/%s" % b.items.first.handle }= b.items.first.title
+          %a{ href: "http://hpsrepository.asu.edu/handle/%s" % b.items.first.handle }  
+            %img{ src: '/images/hps.png', height: 20 }
+          %a{ href: "/documents/%s?name_id=%s" % [b.id, @name.id] }  
+            %img{ src: '/images/text.png', height: 20 }

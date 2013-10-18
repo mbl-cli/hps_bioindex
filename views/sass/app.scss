@@ -86,6 +86,10 @@ html, button, input, select, textarea {
     
 }
 
+#alphabet {
+  padding: 1em;
+}
+
 #documents {
   @include zen-clear;
   @include zen-grid-item(3,1);
@@ -155,8 +159,6 @@ pre {
   }
 }
 
-.ui-autocomplete-loading {
-  background: white 
-              url('images/ui-anim_basic_16x16.gif') 
-              right center no-repeat;
+span.highlight {
+  background-color: yellow
 }
