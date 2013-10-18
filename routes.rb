@@ -5,7 +5,9 @@ class HpsBioindexApp < Sinatra::Base
   end
 
   get '/documents' do
+    Bitstream.includes(:items)
     @bitstreams = Bitstream.all
+    haml :documents
   end
   
   get '/documents/:doc_id' do
@@ -47,6 +49,7 @@ class HpsBioindexApp < Sinatra::Base
   end
 
   get '/' do
+    
     haml :home
   end
 

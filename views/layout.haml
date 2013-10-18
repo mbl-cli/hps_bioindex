@@ -26,9 +26,9 @@
       #sidebar
         %ul
           %li
-            %a{ href: :documents }= "Documents (#{ Bitstream.count })"
+            %a{ href: :documents }= "Documents searched: (#{Bitstream.count})"
           %li
-            %a{ href: :names }= "Names (#{ CanonicalForm.count })"
+            %a{ href: :names }= "Scientific Names found: (#{CanonicalForm.where(show: true).count})"
 
         
       #content

@@ -1,12 +1,16 @@
-#documents
-  - @bitstreams.each do |bitstream|
-    .doclist
-      %a{ href: "/documents?doc_id=%s" % bitstream.id }
-        #{bitstream.file_name} (names: #{ bitstream.names.count })
+%h2 HPS Items
+#hps_items
+  %table
+    %tr
+      %th Names&nbsp;#
+      %th Item Title
+    - @bitstreams.each do |bitstream|
+      %tr
+        %td
+          %a{ href: "/documents/%s" % bitstream.id } 
+            = bitstream.names.count 
+        %td
+          - item = bitstream.items.first
+          %a{ href: "http://hpsrepository.asu.edu/handle/%s" % item.handle }
+            #{item.title} 
 
-- if @bitstream
-  #document_content
-    - @bitstream.names.sort_by(&:name).each do |name|
-      - current_name = params['name_id'].to_i == name.id ? 'current_name' : nil
-      %a{ href: "/names/%s" % name.id, class: current_name } #{name.name},
-    %pre= @bitstream_text
