@@ -21,6 +21,37 @@ class HpsBioindexApp
       [eol_url, google_url, eol_data]
     end
 
+    def get_items_by_decade
+      decades = {}
+      res = Item.connection.select_rows("
+        select distinct item_id, substring(value, 1, 4) as date 
+        from metadata 
+        where qualifier = 'createdstandard' 
+        having  date > 1800  
+        order by date")
+      current_decade = nil
+      res.each do |row|
+        year = row[1].to_i
+        item = row[0]
+        if !current_decade || year - current_decade >= 10
+          current_decade = (year.to_s[0..2] + '0').to_i
+          decades[current_decade] = [item]
+        else
+          decades[current_decade] << item
+        end
+      end
+      decades
+    end
+
+    def get_names_by_decade(items_by_decades)
+      res = {} 
+      items_by_decades.each do |key, value|
+        res[key] = []
+        require 'ruby-debug'; debugger
+        puts ''
+      end
+    end
+
   end
 
 end

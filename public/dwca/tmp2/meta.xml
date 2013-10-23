@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<archive xmlns="http://rs.tdwg.org/dwc/text/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://rs.tdwg.org/dwc/text/  http://rs.tdwg.org/dwc/text/tdwg_dwc_text.xsd">
+  <core encoding="UTF-8" fieldsTerminatedBy="," linesTerminatedBy="\n" rowType="http://rs.tdwg.org/dwc/terms/Taxon" ignoreHeaderLines="1">
+    <files>
+      <location>taxa.csv</location>
+    </files>
+    <id index="0"/>
+    <field term="http://rs.tdwg.org/dwc/terms/taxonID" index="0"/>
+    <field term="http://rs.tdwg.org/dwc/terms/scientificName" index="1"/>
+  </core>
+</archive>

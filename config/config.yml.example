@@ -1,5 +1,6 @@
 development:
   session_secret: chnge_me
+  hps_url: http://hpsrepository.asu.edu/
   dspace_api_url: http://0.0.0.0:9292
   name_finding_url: http://gnrd.globalnames.org
   harvest_dir: /tmp/hps_bioindex

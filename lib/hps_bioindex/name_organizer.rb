@@ -232,6 +232,10 @@ module HpsBioindex
 
     def prepare_resolved_data(n, name_string_id)
       r = n[:results].first
+      pr = n[:preferred_results].first
+      if pr && pr[:canonical_form] &&  r[:canonical_form] != pr[:canonical_form]
+        r = pr
+      end
       name = r[:name_string]
       current_name = r[:current_name]
       data_source_id = r[:data_source_id]

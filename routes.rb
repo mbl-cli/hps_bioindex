@@ -49,7 +49,8 @@ class HpsBioindexApp < Sinatra::Base
   end
 
   get '/' do
-    
+    items_by_decade = get_items_by_decade
+    # @names_by_decade = get_names_by_decade(items_by_decade)
     haml :home
   end
 

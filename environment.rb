@@ -6,6 +6,7 @@ require 'active_record'
 require 'rest_client'
 require 'karousel'
 require 'tag_along'
+require 'dwc-archive'
 
 module HpsBioindex
 
@@ -47,6 +48,7 @@ module HpsBioindex
     conf = self.db_conf[self.env.to_s]
     @conf = OpenStruct.new(
                             session_secret:   conf['session_secret'],
+                            hps_url:          conf['hps_url'],
                             dspace_api_url:   conf['dspace_api_url'],
                             name_finding_url: conf['name_finding_url'],
                             harvest_dir:      conf['harvest_dir'],

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:md="eml://ecoinformatics.org/methods-2.1.1" xmlns:proj="eml://ecoinformatics.org/project-2.1.1" xmlns:d="eml://ecoinformatics.org/dataset-2.1.1" xmlns:res="eml://ecoinformatics.org/resource-2.1.1" xmlns:dc="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packageId="047d69f8-9f67-4436-9a37-2e1bd75f7279/2013-10-22::17:44:47" system="http://globalnames.org" xml:lang="en" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.0.1/eml.xsd">
+  <dataset id="047d69f8-9f67-4436-9a37-2e1bd75f7279">
+    <title>History and Philosofy of Science Repository</title>
+    <license/>
+    <creator id="1" scope="document">
+      <individualName>
+        <givenName/>
+        <surName/>
+      </individualName>
+      <electronicMailAddress>jdoe at example dot com</electronicMailAddress>
+    </creator>
+    <metadataProvider>
+      <individualName>
+        <givenName>John</givenName>
+        <surName>Doe</surName>
+      </individualName>
+      <electronicMailAddress>jdoe@example.com</electronicMailAddress>
+    </metadataProvider>
+    <pubDate>2013-10-22 13:44:47 -0400</pubDate>
+    <abstract>
+      <para>Digital History and Philosophy of Science (dHPS) brings together historians and philosophers of science, with informaticians, computer scientists, and reference librarians with the goal of thinking of new ways to integrate traditional scholarship with digital tools andresources.</para>
+    </abstract>
+    <contact>
+      <references>1</references>
+    </contact>
+  </dataset>
+  <additionalMetadata>
+    <metadata>
+      <citation/>
+    </metadata>
+  </additionalMetadata>
+</eml:eml>

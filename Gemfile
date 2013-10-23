@@ -17,6 +17,7 @@ gem 'tag_along', '~> 0.8'
 gem 'sinatra', '~> 1.4'
 gem 'sinatra-activerecord', '~> 1.2'
 gem 'haml', '~> 4.0'
+gem 'dwc-archive', '~> 0.9'
 
 
 group :development do

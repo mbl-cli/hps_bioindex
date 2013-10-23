@@ -93,10 +93,10 @@ module HpsBioindex
 
     def create_metadata(item, metadata)
       metadata = [metadata] unless metadata.is_a?(Array)
+      unless Metadata.where(item_id: item.id).empty?
+        Metadata.where(item_id: item.id).destroy_all
+      end
       metadata.each do |m|
-        unless Metadata.where(item_id: item.id).empty?
-          Metadata.where(item_id: item.id).destroy_all
-        end
         value = m[:value]
         long_value = nil
         if value.size > 250

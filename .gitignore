@@ -17,6 +17,7 @@ tmp.*
 bin
 .sass-cache
 tags
+public/dwca/*.tar.gz
 
 # YARD artifacts
 .yardoc
