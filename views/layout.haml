@@ -9,34 +9,57 @@
     %script{ src: 'http://code.jquery.com/jquery-1.9.1.js' }
     %script{ src: 'http://code.jquery.com/ui/1.10.3/jquery-ui.js' }
   %body
-    .container
-      %h1{ id: 'title' }
-        %a{ href: '/' } HPS Biodiversity Index
-      .ui-widget
-        %form#search_box{ action: '/names', method: 'get', name: 'search_box' }
-          Search
-          %input#names_search{ type: 'text', name: 'search_term', 
-            autofocus: true }
-          %input#exact_search{ type: 'hidden', value: 'false', name: 'exact_search'}
+    .page.hpszen-i1-b2
+      %header#header.header.swimlane
+        .bucket.header__bucket
+          .header__brand
+            .header__name-and-slogan
+              %h1.header__site-name
+                %a.header_site-link{ href: '/' } HPS Biodiversity Index
+          .header__region
+            .ui-widget
+              %form#search_box{ action: '/names', method: 'get', name: 'search_box' }
+                Search
+                %input#names_search{ type: 'text', name: 'search_term', 
+                  autofocus: true }
+                %input#exact_search{ type: 'hidden', value: 'false', name: 'exact_search'}
 
-      #alphabet
-        - %w(A B C D E F G H I J K L M N O P Q R S T U V W X Y Z).each do |l|
-          %a{ href: "/names?search_term=%s" % l  }= l
-          = '&nbsp;'*3
-      #sidebar
-        %ul
-          %li
-            %a{ href: :documents }= "Documents searched: (#{Bitstream.count})"
-          %li
-            %a{ href: :names }= "Scientific Names found: (#{CanonicalForm.where(show: true).count})"
-
-        
-      #content
+            #alphabet
+              - %w(A B C D E F G H I J K L M N O P Q R S T U V W X Y Z).each do |l|
+                %a{ href: "/names?search_term=%s" % l  }= l
+                = '&nbsp;'*3
+      %nav#navigation.navigation
+        .bucket.navigation__bucket
+          .block.navigation__block
+            %ul.menu
+              %li
+                %a{ href: '/' } Home
+              %li
+                %a{ href: :documents } Documents
+              %li
+                %a{ href: :names } Names
+      #main.main
         = yield
-    .clear &nbsp;
-    #footer
-      Version:
-      = HpsBioindex::VERSION
+      #bottom.bottom
+        .bucket.bottom__bucket
+          .block
+            %p The HPS Bioindex project is supported by the National Science |
+              Foundation, Arizona State University Center for Biology and    |
+              Society and the Marine Biological Laboratoy.                   |
+            %ul
+              %li
+                %a{ href: 'http://nsf.org' }
+                  %img{ src: '/images/logo_nsf.png' }
+              %li
+                %a{ href: 'https://cbs.asu.edu' }
+                  %img{ src: '/images/logo_asucbs.png' }
+              %li
+                %a{ href: 'http://mbl.edu' }
+                  %img{ src: '/images/logo_mbl.png' }
+      #footer.footer
+        .bucket.footer__bucket
+          Version:
+          = HpsBioindex::VERSION
 
 :javascript
   $(function() {

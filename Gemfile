@@ -23,6 +23,7 @@ gem 'dwc-archive', '~> 0.9'
 group :development do
   gem 'debugger', '~> 1.6'
   gem 'git', '~> 1.2'
+  gem 'hipos', git: 'git@github.com:lwalley/hipos.git', tag: 'v0.0.0'
 end
 
 group :test do

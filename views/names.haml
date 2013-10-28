@@ -1,43 +1,48 @@
-#names
-  %table
-    %tr
-      %th Image
-      %th Name
-      %th Synonyms
-      %th Vernacular Names
-    - @names.each do |name|
-      - eol_url, google_url, eol_data = name_details(name)
-      %tr
-        %td
-          - if eol_data && eol_data.thumbnail_url
-            %a{ href: eol_url }
-              %img{ src: eol_data.thumbnail_url }
-          - else
-            %img{ src: '/images/no_pix.png', height: 65, width: 65 }
-        %td{ nowrap: true }
-          %a{ href: "/names/%s" % name.id }= name.name
-          - if eol_url
-            %a{ href: eol_url }
-              %img{ src: '/images/eol.png', height: 20, width: 20 }
-          %a{ href: google_url }
-            %img{ src: '/images/google.png', height: 20, width: 20 }
-        %td
-          - if eol_data && !eol_data.eol_data_vernaculars.empty?
-            - vernaculars = eol_data.eol_data_vernaculars.select { |v| v.language =~ /^en/i }
-            - vernaculars = vernaculars.map do |v|
-              - v.name
+.main__content
+  .main__content__bucket--ish
+    #basic.basic
+      .bucket.basic_bucket
+        #basic__one.panel.basic__panel
+          #names
+            %table
+              %tr
+                %th Image
+                %th Name
+                %th Synonyms
+                %th Vernacular Names
+              - @names.each do |name|
+                - eol_url, google_url, eol_data = name_details(name)
+                %tr
+                  %td
+                    - if eol_data && eol_data.thumbnail_url
+                      %a{ href: eol_url }
+                        %img{ src: eol_data.thumbnail_url }
+                    - else
+                      %img{ src: '/images/no_pix.png', height: 65, width: 65 }
+                  %td{ nowrap: true }
+                    %a{ href: "/names/%s" % name.id }= name.name
+                    - if eol_url
+                      %a{ href: eol_url }
+                        %img{ src: '/images/eol.png', height: 20, width: 20 }
+                    %a{ href: google_url }
+                      %img{ src: '/images/google.png', height: 20, width: 20 }
+                  %td
+                    - if eol_data && !eol_data.eol_data_vernaculars.empty?
+                      - vernaculars = eol_data.eol_data_vernaculars.select { |v| v.language =~ /^en/i }
+                      - vernaculars = vernaculars.map do |v|
+                        - v.name
 
-            - vernaculars_string = vernaculars[0..5].join(', ')
-            - vernaculars_string += '...' if vernaculars.size > 5
-          - else
-            - vernaculars = ''
-          = vernaculars_string
-        %td
-          - if eol_data && !eol_data.eol_data_synonyms.empty?
-            - synonyms = eol_data.eol_data_synonyms.map(&:name)
-            - synonyms_string = synonyms[0..5].join(', ')
-            - synonyms_string += '...' if synonyms.size > 5
-          = synonyms_string
-      
+                      - vernaculars_string = vernaculars[0..5].join(', ')
+                      - vernaculars_string += '...' if vernaculars.size > 5
+                    - else
+                      - vernaculars = ''
+                    = vernaculars_string
+                  %td
+                    - if eol_data && !eol_data.eol_data_synonyms.empty?
+                      - synonyms = eol_data.eol_data_synonyms.map(&:name)
+                      - synonyms_string = synonyms[0..5].join(', ')
+                      - synonyms_string += '...' if synonyms.size > 5
+                    = synonyms_string
+                
 
 

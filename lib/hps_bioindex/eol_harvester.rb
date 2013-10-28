@@ -1,5 +1,12 @@
 module HpsBioindex
   class EolHarvester
+
+    def self.cleanup
+      %w(eol_data eol_data_synonyms eol_data_vernaculars).each do |t|
+        Item.connection.execute("truncate table %s" % t)
+      end
+    end
+
     def harvest
       outlinks = Outlink.find_by_sql('
         select distinct o.*

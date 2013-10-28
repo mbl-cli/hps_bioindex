@@ -1,3 +1,10 @@
+GIT
+  remote: git@github.com:lwalley/hipos.git
+  revision: 7165e8ea941391de5eb1a2bdab3c658264cdd2cd
+  tag: v0.0.0
+  specs:
+    hipos (0.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -159,6 +166,7 @@ DEPENDENCIES
   factory_girl (~> 4.2)
   git (~> 1.2)
   haml (~> 4.0)
+  hipos!
   karousel (~> 0.9)
   mysql2 (~> 0.3)
   nokogiri (~> 1.6)

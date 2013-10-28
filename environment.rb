@@ -7,6 +7,7 @@ require 'rest_client'
 require 'karousel'
 require 'tag_along'
 require 'dwc-archive'
+require 'hipos'
 
 module HpsBioindex
 
