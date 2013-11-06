@@ -23,64 +23,51 @@
             #item
               = "%s." % (i+1) 
               %a{ href: "http://hpsrepository.asu.edu/handle/%s" % b.items.first.handle }= b.items.first.title
+              %a{ href: "http://hpsrepository.asu.edu/bitstream/handle/%s/%s?sequence=1" % [b.items.first.handle, b.file_name.gsub(/\.txt$/, '')]}<  
+                %img{ src: '/images/download.png', width: 27, height: 20 }
               %a{ href: "http://hpsrepository.asu.edu/handle/%s" % b.items.first.handle }<  
                 %img{ src: '/images/hps.png', width: 40, height: 20 }
               %a{ href: "/documents/%s?name_id=%s" % [b.id, @name.id] }<  
                 %img{ src: '/images/text.png', width: 40, height: 20 }
+          %br
         #basic__two.panel.basic_panel
           #name_image
             - if (@eol_data.image_url rescue false)
               %a{ href: @eol_url }
                 %img{ src: @eol_data.image_url }
-          .more-less
-            .more-block
-              #overview
-                %h3 Overview
-                - if (@eol_data.overview rescue false)
-                  = @eol_data.overview
-              #synonyms
-                %h3 Synonyms
-                - unless (@eol_data.eol_data_synonyms.empty? rescue true)
-                  - synonyms = @eol_data.eol_data_synonyms.map do |s|
-                    - synonym_type = s.relationship ? " (%s)" % s.relationship : ''
-                    - "%s%s" % [s.name, synonym_type]
-                  = synonyms.join(', ')
-              #vernaculars
-                %h3 Vernacular Names
-                - unless (@eol_data.eol_data_vernaculars.empty? rescue true)
-                  - vernaculars = @eol_data.eol_data_vernaculars.sort_by { |x| [x.language, x.name] } 
-                  - vernaculars = vernaculars.map do |v| 
-                    - name = v.name
-                    - name = "<span class='highlight'>%s</span>" % name if v.language == 'en'
-                    - "%s (%s)" % [name, v.language] 
-                  = vernaculars.join(', ')
+          %span#name_details Show More
+          #name_details_block{ style: 'display: none' }
+            #overview
+              %h3 Overview
+              - if (@eol_data.overview rescue false)
+                = @eol_data.overview
+            #synonyms
+              %h3 Synonyms
+              - unless (@eol_data.eol_data_synonyms.empty? rescue true)
+                - synonyms = @eol_data.eol_data_synonyms.map do |s|
+                  - synonym_type = s.relationship ? " (%s)" % s.relationship : ''
+                  - "%s%s" % [s.name, synonym_type]
+                = synonyms.join(', ')
+            #vernaculars
+              %h3 Vernacular Names
+              - unless (@eol_data.eol_data_vernaculars.empty? rescue true)
+                - vernaculars = @eol_data.eol_data_vernaculars.sort_by { |x| [x.language, x.name] } 
+                - vernaculars = vernaculars.map do |v| 
+                  - name = v.name
+                  - name = "<span class='highlight'>%s</span>" % name if v.language == 'en'
+                  - "%s (%s)" % [name, v.language] 
+                = vernaculars.join(', ')
 
 :javascript
-   $(function(){
+   $('#name_details').bind('click', function(event) {                              
+      if ($('#name_details_block').is(':hidden')) {                                
+        $(this).text('Show Less');                                               
+        $('#name_details_block').slideDown();//.css('display','none');             
+      } else {                                                                 
+         $(this).text('Show More');                                                    
+        $('#name_details_block').slideUp();//.css('display','block');              
+      }                                                                          
+    }                                                                            
+  );                                                                             
+                                                                                 
 
-  // The height of the content block when it's not expanded
-  var adjustheight = 0;
-  // The "more" link text
-  var moreText = "+  More";
-  // The "less" link text
-  var lessText = "- Less";
-
-  // Sets the .more-block div to the specified height and hides any content that overflows
-    $(".more-less .more-block").css('height', adjustheight).css('overflow', 'hidden');
-
-  // The section added to the bottom of the "more-less" div
-    $(".more-less").append('<p class="continued">[&hellip;]</p><a href="#" class="adj"></a>');
-
-    $("a.adj").text(moreText);
-
-    $(".adj").toggle(function() {
-        $(this).parents("div:first").find(".more-block").css('height', 'auto').css('overflow', 'visible');
-        // Hide the [...] when expanded
-        //$(this).parents("div:first").find("p.continued").css('display', 'none');
-        $(this).text(lessText);
-      }, function() {
-        $(this).parents("div:first").find(".more-block").css('height', adjustheight).css('overflow', 'hidden');
-        $(this).parents("div:first").find("p.continued").css('display', 'block');
-        $(this).text(moreText);
-    });
-  }) 

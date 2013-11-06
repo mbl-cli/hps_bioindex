@@ -27,28 +27,28 @@
               %strong Documents: 
               = @documents_count
             .stats_item
-              %strong 10 most found names:
+              %strong 10 most found used names:
               %ul
-              - @most_found.each_with_index do |r, i|
-                %li{ style: 'padding-left: 2em' }
-                  %a{ href: "/names/%s" % r[0] }
-                    = "%s (found %s times)" % [r[1], r[2]]
+                - @most_found.each_with_index do |r, i|
+                  %li
+                    %a{ href: "/names/%s" % r[0] }
+                      = "%s (found %s times)" % [r[1], r[2]]
             .stats_item
               %strong 10 most found species names:
               %ul
                 - @most_found_species.each_with_index do |r, i|
-                  %li{ style: 'padding-left: 2em' }
+                  %li
                     %a{ href: "/names/%s" % r[0] }
                       = "%s (found %s times)" % [r[1], r[2]]
           #basic__two.panel.basic__panel
-            %h3 Species names by decade
+            %h2 Species names by decade
 
             - @decades.each do |d|
               .stats_item
                 %strong= "%s - %s" % [d, d + 9]
                 %ul
                   - CanonicalForm.species_by_decade(d).each do |r|
-                    %li{ style: 'padding-left: 2em' }
+                    %li
                       %a{ href: "/names/%s" % r[0] }
                         = "%s (found %s times)" % [r[1], r[2]]
 

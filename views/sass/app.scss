@@ -42,6 +42,11 @@
   background: lighten($blue-light, 15);
 } 
 
+#name_details {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 #basic__one.panel {
   @include zen-grid-item(6,1);
   float: left;

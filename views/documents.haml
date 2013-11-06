@@ -31,6 +31,8 @@
                       - item = bitstream.items.first
                       %a{ href: "http://hpsrepository.asu.edu/handle/%s" % item.handle }
                         = item.title.gsub(/(#{params[:search_term]})/i, '<strong>\1</strong>')
+                      %a{ href: "http://hpsrepository.asu.edu/bitstream/handle/%s/%s?sequence=1" % [item.handle, item.bitstreams.first.file_name.gsub(/\.txt$/, '')]}<  
+                        %img{ src: '/images/download.png', width: 27, height: 20 }
                       %a{ href: "http://hpsrepository.asu.edu/handle/%s" % item.handle }<  
                         %img{ src: '/images/hps.png', width: 40, height: 20 }
                       %a{ href: "/documents/%s" % bitstream.id }<  
