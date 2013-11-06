@@ -18,13 +18,18 @@ gem 'sinatra', '~> 1.4'
 gem 'sinatra-activerecord', '~> 1.2'
 gem 'haml', '~> 4.0'
 gem 'dwc-archive', '~> 0.9'
+gem 'hipos', git: 'https://github.com/lwalley/hipos.git', tag: 'v0.0.0'
 
 
 group :development do
   gem 'debugger', '~> 1.6'
   gem 'git', '~> 1.2'
-  gem 'hipos', git: 'https://github.com/lwalley/hipos.git', tag: 'v0.0.0'
 end
+
+group :production do
+  gem 'unicorn', '~> 4.6'
+end
+
 
 group :test do
   gem 'rspec', '~> 2.14'

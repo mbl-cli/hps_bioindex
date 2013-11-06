@@ -75,6 +75,7 @@ GEM
       rdoc
     json (1.8.0)
     karousel (0.9.14)
+    kgio (2.8.1)
     mime-types (1.25)
     mini_portile (0.5.1)
     minitest (4.7.5)
@@ -94,6 +95,7 @@ GEM
     rack-test (0.6.2)
       rack (>= 1.0)
     rack-timeout (0.0.4)
+    raindrops (0.12.0)
     rake (10.1.0)
     rdoc (4.0.1)
       json (~> 1.4)
@@ -135,6 +137,10 @@ GEM
       polyglot (>= 0.3.1)
     tzinfo (0.3.37)
     unicode_utils (1.4.0)
+    unicorn (4.7.0)
+      kgio (~> 2.6)
+      rack
+      raindrops (~> 0.7)
     webmock (1.13.0)
       addressable (>= 2.2.7)
       crack (>= 0.3.2)
@@ -168,5 +174,6 @@ DEPENDENCIES
   sinatra (~> 1.4)
   sinatra-activerecord (~> 1.2)
   tag_along (~> 0.8)
+  unicorn (~> 4.6)
   webmock (~> 1.13)
   zen-grids (~> 1.4)
