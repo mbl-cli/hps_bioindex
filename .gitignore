@@ -18,6 +18,7 @@ bin
 .sass-cache
 tags
 public/dwca/*
+log/*
 
 # YARD artifacts
 .yardoc
