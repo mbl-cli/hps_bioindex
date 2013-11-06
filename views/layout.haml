@@ -3,13 +3,14 @@
   %head
     %title 
       HPS Biodiversity Index
+    %link{ rel: 'stylesheet',  href: 'http://fonts.googleapis.com/css?family=Raleway:100', type: 'text/css'}
     %link{ rel: 'stylesheet', href: '/css/app.css', type: 'text/css' }
     %link{ rel: 'stylesheet', href: 'http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css', type: 'text/css' }
 
     %script{ src: 'http://code.jquery.com/jquery-1.9.1.js' }
     %script{ src: 'http://code.jquery.com/ui/1.10.3/jquery-ui.js' }
   %body
-    .page.hpszen-i1-b2
+    .page.hpszen-i1-b1
       %header#header.header.swimlane
         .bucket.header__bucket
           .header__brand
@@ -19,15 +20,16 @@
           .header__region
             .ui-widget
               %form#search_box{ action: '/names', method: 'get', name: 'search_box' }
-                Search
+                Search Names:
                 %input#names_search{ type: 'text', name: 'search_term', 
                   autofocus: true }
                 %input#exact_search{ type: 'hidden', value: 'false', name: 'exact_search'}
 
-            #alphabet
-              - %w(A B C D E F G H I J K L M N O P Q R S T U V W X Y Z).each do |l|
+          #alphabet.panel.basic_panel.alphabet
+            Browse Names:&nbsp;&nbsp;&nbsp;
+            - %w(A B C D E F G H I J K L M N O P Q R S T U V W X Y Z).each do |l|
+              %span
                 %a{ href: "/names?search_term=%s" % l  }= l
-                = '&nbsp;'*3
       %nav#navigation.navigation
         .bucket.navigation__bucket
           .block.navigation__block
@@ -35,12 +37,12 @@
               %li
                 %a{ href: '/' } Home
               %li
-                %a{ href: :documents } Documents
+                %a{ href: '/documents' } Documents
               %li
-                %a{ href: :names } Names
+                %a{ href: '/names' } Names
       #main.main
         = yield
-      #bottom.bottom
+      #bottom.bottom.region_bottom
         .bucket.bottom__bucket
           .block
             %p The HPS Bioindex project is supported by the National Science |
@@ -48,13 +50,13 @@
               Society and the Marine Biological Laboratoy.                   |
             %ul
               %li
-                %a{ href: 'http://nsf.org' }
+                %a{ href: 'http://nsf.org' }<
                   %img{ src: '/images/logo_nsf.png' }
               %li
-                %a{ href: 'https://cbs.asu.edu' }
+                %a{ href: 'https://cbs.asu.edu' }<
                   %img{ src: '/images/logo_asucbs.png' }
               %li
-                %a{ href: 'http://mbl.edu' }
+                %a{ href: 'http://mbl.edu' }<
                   %img{ src: '/images/logo_mbl.png' }
       #footer.footer
         .bucket.footer__bucket

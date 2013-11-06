@@ -6,6 +6,125 @@
 
 @import "hipos/themes/swimlanes";
 
+.header__site-name {
+  font-size: 3em;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-family: Garamond,Perpetua,"Times New Roman", serif;
+  font-weight: bold;
+  a, a:link, a:visited { 
+    color: darken($blue, 10);
+    text-decoration: none; 
+  }
+}
+
+.alphabet {
+  font-size: 1.2em;
+  border: 1px solid darken($blue-light, 15);
+  padding: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+  text-align: center;
+  span {
+    margin-right: 1em;
+    text-align: center;
+  }
+
+  a, a:link, a:visited {
+    color: darken($blue, 10);
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
+
+.stats_item {
+  margin-top: 1em;
+  padding: 0.5em;
+  background: lighten($blue-light, 15);
+} 
+
+#basic__one.panel {
+  @include zen-grid-item(6,1);
+  float: left;
+}
+
+#basic__two.panel {
+  @include zen-grid-item(6,7);
+}
+
+#names #basic__two.panel {
+  padding: 1em;
+  background-color: lighten($blue-light, 15)
+}
+
+#hps_items {
+  strong {
+    font-weight: normal;
+    background-color: yellow;
+  }
+  .match_box {
+    background-color: lighten($blue-light, 10)
+  }
+}
+
+#docs_search_box {
+  padding-top: 1em;
+}
+
+.bottom__bucket {
+  ul {
+    text-align: center;
+    li {
+      display: inline;
+    }
+  }
+}
+
+.navigation__block {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.bottom { 
+  vertical-align: middle;
+  p {
+    display: block;
+    float:left;
+    width: 25em;
+    margin: 0;
+    margin-bottom: 1em;
+    padding: 0;
+  }
+  ul {
+    vertical-align: middle;
+  }
+  
+}
+
+.footer__bucket {
+  padding: 1em;
+}
+
+.names_table, .docs_table {
+  width: 100%;
+  background-color: $blue-light;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border: 1px solid darken($blue-light, 15);
+  -moz-border-radius: 0.5em;
+  border-radius: 0.5em;
+  tr td {
+    background-color: white;
+    border-bottom: 1px solid $blue-light;
+  }
+  td.darker {
+    background-color: lighten($blue-light, 15);
+  }
+}
+
+html {
+  font-size: 100%;
+}
+
 //@import "zen";
 //$zen-column-count: 14;
 //$zen-gutter-width: 10px;

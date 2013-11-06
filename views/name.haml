@@ -1,44 +1,86 @@
-#names
+#names.hpszen-i1-b2
   - if @name
-    %h1 
-      %a{ href: "/names/%s" % @name.id }= @name.name
-      - if @eol_url
-        %a{ href: @eol_url }
-          %img{ src: "/images/eol.png", height: 20, width: 20 }
-      %a{ href: @google_url }
-        %img{ src: "/images/google.png", height: 20, width: 20 }
-    #name_details
-      #name_image
-        - if (@eol_data.image_url rescue false)
-          %a{ href: @eol_url }
-            %img{ src: @eol_data.image_url }
-      #overview
-        %h3 Overview
-        - if (@eol_data.overview rescue false)
-          = @eol_data.overview
-      #synonyms
-        %h3 Synonyms
-        - unless (@eol_data.eol_data_synonyms.empty? rescue true)
-          - synonyms = @eol_data.eol_data_synonyms.map do |s|
-            - synonym_type = s.relationship ? " (%s)" % s.relationship : ''
-            - "%s%s" % [s.name, synonym_type]
-          = synonyms.join(', ')
-      #vernaculars
-        %h3 Vernacular Names
-        - unless (@eol_data.eol_data_vernaculars.empty? rescue true)
-          - vernaculars = @eol_data.eol_data_vernaculars.sort_by { |x| [x.language, x.name] } 
-          - vernaculars = vernaculars.map do |v| 
-            - name = v.name
-            - name = "<span class='highlight'>%s</span>" % name if v.language == 'en'
-            - "%s (%s)" % [name, v.language] 
-          = vernaculars.join(', ')
-    #hps_items
-      %h2 HPS Items
-      - @bitstreams.each_with_index do |b, i|
-        #item
-          = "%s." % (i+1) 
-          %a{ href: "http://hpsrepository.asu.edu/handle/%s" % b.items.first.handle }= b.items.first.title
-          %a{ href: "http://hpsrepository.asu.edu/handle/%s" % b.items.first.handle }  
-            %img{ src: '/images/hps.png', height: 20 }
-          %a{ href: "/documents/%s?name_id=%s" % [b.id, @name.id] }  
-            %img{ src: '/images/text.png', height: 20 }
+    %header.main__header
+      .bucket.main__header__bucket
+        .panel.main__header__panel{ style: 'margin-bottom: 1em' }
+          %h1 
+            Scientific Name:
+            = @name.name
+            - plural = @name.times_found == 1 ? '' : 's'
+            = "(found %s time%s)" % [@name.times_found, plural] 
+            - if @eol_url
+              %a{ href: @eol_url }<
+                %img{ src: "/images/eol.png", height: 20, width: 20, style: 'padding-bottom: 0.5em'}
+            %a{ href: @google_url }<
+              %img{ src: "/images/google.png", height: 20, width: 20, style: 'padding-bottom: 0.5em' }
+          - if @vernacular
+            %em= @vernacular.name 
+    #basic.basic
+      .bucket.basic_bucket
+        #basic__one.panel.basic__panel
+          %h2 HPS Documents
+          - @bitstreams.each_with_index do |b, i|
+            #item
+              = "%s." % (i+1) 
+              %a{ href: "http://hpsrepository.asu.edu/handle/%s" % b.items.first.handle }= b.items.first.title
+              %a{ href: "http://hpsrepository.asu.edu/handle/%s" % b.items.first.handle }<  
+                %img{ src: '/images/hps.png', width: 40, height: 20 }
+              %a{ href: "/documents/%s?name_id=%s" % [b.id, @name.id] }<  
+                %img{ src: '/images/text.png', width: 40, height: 20 }
+        #basic__two.panel.basic_panel
+          #name_image
+            - if (@eol_data.image_url rescue false)
+              %a{ href: @eol_url }
+                %img{ src: @eol_data.image_url }
+          .more-less
+            .more-block
+              #overview
+                %h3 Overview
+                - if (@eol_data.overview rescue false)
+                  = @eol_data.overview
+              #synonyms
+                %h3 Synonyms
+                - unless (@eol_data.eol_data_synonyms.empty? rescue true)
+                  - synonyms = @eol_data.eol_data_synonyms.map do |s|
+                    - synonym_type = s.relationship ? " (%s)" % s.relationship : ''
+                    - "%s%s" % [s.name, synonym_type]
+                  = synonyms.join(', ')
+              #vernaculars
+                %h3 Vernacular Names
+                - unless (@eol_data.eol_data_vernaculars.empty? rescue true)
+                  - vernaculars = @eol_data.eol_data_vernaculars.sort_by { |x| [x.language, x.name] } 
+                  - vernaculars = vernaculars.map do |v| 
+                    - name = v.name
+                    - name = "<span class='highlight'>%s</span>" % name if v.language == 'en'
+                    - "%s (%s)" % [name, v.language] 
+                  = vernaculars.join(', ')
+
+:javascript
+   $(function(){
+
+  // The height of the content block when it's not expanded
+  var adjustheight = 0;
+  // The "more" link text
+  var moreText = "+  More";
+  // The "less" link text
+  var lessText = "- Less";
+
+  // Sets the .more-block div to the specified height and hides any content that overflows
+    $(".more-less .more-block").css('height', adjustheight).css('overflow', 'hidden');
+
+  // The section added to the bottom of the "more-less" div
+    $(".more-less").append('<p class="continued">[&hellip;]</p><a href="#" class="adj"></a>');
+
+    $("a.adj").text(moreText);
+
+    $(".adj").toggle(function() {
+        $(this).parents("div:first").find(".more-block").css('height', 'auto').css('overflow', 'visible');
+        // Hide the [...] when expanded
+        //$(this).parents("div:first").find("p.continued").css('display', 'none');
+        $(this).text(lessText);
+      }, function() {
+        $(this).parents("div:first").find(".more-block").css('height', adjustheight).css('overflow', 'hidden');
+        $(this).parents("div:first").find("p.continued").css('display', 'block');
+        $(this).text(moreText);
+    });
+  }) 

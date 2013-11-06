@@ -1,16 +1,49 @@
-%h2 HPS Items
-#hps_items
-  %table
-    %tr
-      %th Names&nbsp;#
-      %th Item Title
-    - @bitstreams.each do |bitstream|
-      %tr
-        %td
-          %a{ href: "/documents/%s" % bitstream.id } 
-            = bitstream.names.count 
-        %td
-          - item = bitstream.items.first
-          %a{ href: "http://hpsrepository.asu.edu/handle/%s" % item.handle }
-            #{item.title} 
+#documents.hpszen-i1-b3
+  %header.main__header
+    .bucket.main__header__bucket
+      .panel.main__header__panel
+        %h1 HPS Documents
+  .main__content
+    .main__content__bucket--ish
+      #basic.basic
+        .bucket.basic_bucket
+          #basic.panel.basic__panel
+
+            .ui-widget
+              %form#docs_search_box{ action: '/documents', method: 'get', name: 'search_box' }
+                Search Docs:
+                %input#docs_search{ type: 'text', name: 'search_term', 
+                  value: params[:search_term], autofocus: true }
+                %input#docs_exact_search{ type: 'hidden', value: 'false', name: 'exact_search' }
+
+            #hps_items.docs_table
+              %table
+                %tr
+                  %th Names found
+                  %th Document's Title
+                - @bitstreams.each do |bitstream|
+                  %tr
+                    %td{ nowrap: true }
+                      %a{ href: "/documents/%s" % bitstream.id } 
+                        = bitstream.names.count
+                        names
+                    %td
+                      - item = bitstream.items.first
+                      %a{ href: "http://hpsrepository.asu.edu/handle/%s" % item.handle }
+                        = item.title.gsub(/(#{params[:search_term]})/i, '<strong>\1</strong>')
+                      %a{ href: "http://hpsrepository.asu.edu/handle/%s" % item.handle }<  
+                        %img{ src: '/images/hps.png', width: 40, height: 20 }
+                      %a{ href: "/documents/%s" % bitstream.id }<  
+                        %img{ src: '/images/text.png', width: 40, height: 20 }
+                      - if @matches && @matches[item.id]
+                        .match_box
+                          Matched by:
+                          %br/
+                          - @matches[item.id].each do |m|
+                            - element = "%s.%s" % [m.schema, m.element]
+                            - element << ".%s" % m.qualifier if m.qualifier && m.qualifier =~ /^[a-z]+$/
+                            - value = m.value.gsub(/(#{params[:search_term]})/i, '<strong>\1</strong>')
+                            = "%s: %s" % [element, value] 
+
+                         
 

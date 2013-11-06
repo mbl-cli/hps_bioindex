@@ -1,6 +1,17 @@
-
-#document_content
-  - @bitstream.names.sort_by(&:name).each do |name|
-    - current_name = params['name_id'].to_i == name.id ? 'current_name' : nil
-    %a{ href: "/names/%s" % name.id, class: current_name } #{name.name},
-  %pre= @bitstream_text
+#document_content.hpszen-i1-b2
+  %header.main__header
+    .bucket.main__header__bucket
+      .panel.main__header__panel{ style: 'margin-bottom: 1em' }
+        %h1 
+          Document: 
+          %a{ href: "http://hpsrepository.asu.edu/handle/%s" % @bitstream.items.first.handle }= @bitstream.items.first.title
+  #basic.basic
+    .bucket.basic_bucket
+      #basic__one.panel.basic__panel
+        %h2 Names in documen (#{@bitstream.names.count} found)
+        - @bitstream.names.sort_by(&:name).each do |name|
+          - current_name = params['name_id'].to_i == name.id ? 'current_name' : nil
+          %a{ href: "/names/%s" % name.id, class: current_name } #{name.name},
+      #basic__two.panel.basic__panel
+        %h2 Document's textual content
+        %pre= @bitstream_text

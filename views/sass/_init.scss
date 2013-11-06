@@ -5,32 +5,37 @@
 @import "hipos";
 
 // Variables for the font stacks.
-$hipos-font-base:        $neue;          // The font family set on the html element.
-$hipos-font-headings:    $lucida-grande; // The font family set on h elements
+$hipos-font-base:        $neue;          
+$hipos-font-headings:    $lucida-grande; 
 $hipos-font-menus:       $lucida-grande;
 $hipos-font-buttons:     $lucida-grande;
 $hipos-font-fancy:       $lucida-grande;
 $hipos-font-monospace:   $courier;       // The font family set on pre, code etc
 
-// Base color lists: background, text, link, button background, button text
+//HPS colors
+
+$blue-dark: #2b456c;
+$blue: #446dac;
+$blue-light: #adcbf8;
+
 $hipos-colors: (
-  white black $teal-dark $teal-dark white, //1 n1
-  $off-white black $teal-dark $teal-dark white, //2 n2
+  white black $blue-dark $blue white, //1 n1
+  $off-white black $blue-dark $blue-dark white, //2 n2
   $off-white $grey black $grey-dark white, //3 n3
   $grey white white $grey-dark white, //4 n4
-  $teal white white $grey-dark white, //5 a1
-  $teal-dark white white white $teal-dark, //6 a2
-  $grey-dark white $teal-bright $teal-dark white, //7 a3
-  $teal-light black black $teal-dark white, //8 a4
-  darken($grey-dark, 5%) white $teal-bright $teal-dark white, //9 a5
-  #446dac white white #446dac white
+  $blue-light black black $grey-dark white, //5 a1
+  $blue white white white $blue, //6 a2
+  $grey-dark white $blue-light $blue white, //7 a3
+  $blue-light black black $blue-dark white, //8 a4
+  darken($grey-dark, 5%) white $blue-light $blue white //9 a5
 );
 
 $body--colors:                  nth($hipos-colors, 1);
 $header--colors:                nth($hipos-colors, 5);
-$navigation--colors:            nth($hipos-colors, 10);
+$navigation--colors:            nth($hipos-colors, 6);
 $navigation--active--colors:    nth($hipos-colors, 2);
 $main__header--colors:          nth($hipos-colors, 2);
+$main__content--colors:         nth($hipos-colors, 1);
 $introduction--colors:          nth($hipos-colors, 2);
 $featured--colors:              nth($hipos-colors, 7);
 $results__exposed-form--colors: nth($hipos-colors, 8);

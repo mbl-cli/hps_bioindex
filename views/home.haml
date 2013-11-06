@@ -1,16 +1,54 @@
-%header.main__header
-  .bucket.main__header__bucket
-    .panel.main__header__panel
-      %h1 Home page
-.main__content
-  .main__content__bucket--ish
-    #introduction.introduction
-      .bucket.introduction__bucket
-        #introduction__one.panel.introduction__panel
-          %p About this thing      
-    #basic.basic
-      .bucket.basic__bucket
-        #basic__one.panel.basic__panel
-          %p This is a list of scientific names found in HPS repository
-        #basic__two.panel.basic__panel
-          %p Something here
+#home.hpszen-i1-b2
+  .main__content
+    .main__content__bucket--ish
+      #introduction.introduction
+        .bucket.introduction__bucket
+          #introduction__one.panel.introduction__panel
+            %p 
+              This site displays scientific names found automatically in publicly
+              accessable documents from
+              %a{ href: 'http://hpsrepository.asu.edu' }< 
+                HPS Respository
+
+            %p 
+              History and Philosophy of Science (HPS) Repository 
+              brings together historians and philosophers of science, with 
+              informaticians, computer scientists, and reference librarians 
+              with the goal of thinking of new ways to integrate traditional 
+              scholarship with digital tools andresources.
+      #basic.basic
+        .bucket.basic__bucket
+          #basic__one.panel.basic__panel
+            %h2 Statistics
+            .stats_item
+              %strong Names found:
+              = @names_count
+            .stats_item
+              %strong Documents: 
+              = @documents_count
+            .stats_item
+              %strong 10 most found names:
+              %ul
+              - @most_found.each_with_index do |r, i|
+                %li{ style: 'padding-left: 2em' }
+                  %a{ href: "/names/%s" % r[0] }
+                    = "%s (found %s times)" % [r[1], r[2]]
+            .stats_item
+              %strong 10 most found species names:
+              %ul
+                - @most_found_species.each_with_index do |r, i|
+                  %li{ style: 'padding-left: 2em' }
+                    %a{ href: "/names/%s" % r[0] }
+                      = "%s (found %s times)" % [r[1], r[2]]
+          #basic__two.panel.basic__panel
+            %h3 Species names by decade
+
+            - @decades.each do |d|
+              .stats_item
+                %strong= "%s - %s" % [d, d + 9]
+                %ul
+                  - CanonicalForm.species_by_decade(d).each do |r|
+                    %li{ style: 'padding-left: 2em' }
+                      %a{ href: "/names/%s" % r[0] }
+                        = "%s (found %s times)" % [r[1], r[2]]
+

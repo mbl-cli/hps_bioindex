@@ -127,6 +127,68 @@ class CanonicalForm < ActiveRecord::Base
           on bs.id = bns.bitstream_id
       where rns.canonical_form_id = %s" % id)
   end
+
+  def times_found
+    Item.connection.select_value("
+      select count(*) 
+        from bitstreams_name_strings bns
+        join resolved_name_strings rns
+          on rns.name_string_id = bns.name_string_id
+        join canonical_forms cf
+          on cf.id = rns.canonical_form_id
+        where cf.id = %s" % id).to_i 
+  end
+
+  def self.most_found_names
+    Item.connection.select_rows("
+                           select cf.id, cf.name, count(*) as count 
+                           from bitstreams_name_strings bns
+                           join resolved_name_strings rns
+                             on rns.name_string_id = bns.name_string_id
+                           join canonical_forms cf
+                             on cf.id = rns.canonical_form_id
+                           group by cf.id
+                           order by count desc")
+  end
+  
+  def self.most_found_species_names
+    Item.connection.select_rows("
+                           select cf.id, cf.name, count(*) as count 
+                           from bitstreams_name_strings bns
+                           join resolved_name_strings rns
+                             on rns.name_string_id = bns.name_string_id
+                           join canonical_forms cf
+                             on cf.id = rns.canonical_form_id
+                           where cf.name rlike ' '
+                           group by cf.id
+                           order by count desc")
+  end
+  
+  def self.species_by_decade(year)
+    str = year.to_s[0..2]
+    bitstreams = Item.connection.select_values("
+      select distinct bi.bitstream_id 
+      from metadata m 
+      join bitstreams_items bi
+        on bi.item_id = m.item_id
+      where m.element = 'date'
+      and m.qualifier in ('created', 'createdstandard')
+      and value like '%s%%'" % str).join(',')
+        
+    Item.connection.select_rows("
+       select cf.id, cf.name, count(*) as count 
+       from bitstreams_name_strings bns
+       join resolved_name_strings rns
+         on rns.name_string_id = bns.name_string_id
+       join canonical_forms cf
+         on cf.id = rns.canonical_form_id
+       where bns.bitstream_id in (%s)
+       and cf.name rlike ' '
+       group by cf.id
+       order by count desc
+       limit 5" % bitstreams)
+  end
+
 end
 
 class BitstreamsNameString < ActiveRecord::Base
