@@ -1,5 +1,5 @@
 GIT
-  remote: git@github.com:lwalley/hipos.git
+  remote: https://github.com/lwalley/hipos.git
   revision: 7165e8ea941391de5eb1a2bdab3c658264cdd2cd
   tag: v0.0.0
   specs:
