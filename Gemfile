@@ -34,8 +34,8 @@ end
 group :test do
   gem 'rspec', '~> 2.14'
   gem 'rr', '~> 1.1'
-  gem 'webmock', '~> 1.13'
-  gem 'factory_girl', '~> 4.2'
+  gem 'webmock', '~> 1.16'
+  gem 'factory_girl', '~> 4.3'
   # gem 'capybara', '~> 2.1'
   # gem 'capybara-webkit', '~> 1.0'
   gem 'coveralls', '~> 0.7', require: false
