@@ -6,8 +6,8 @@ branches:
       - master
 before_script:
   - cp config/config.yml.example config/config.yml
-  - rake db:create:all
-  - rake db:migrate
-  - rake db:migrate HPS_ENV=test
+  - bundle exec rake db:create:all
+  - bundle exec rake db:migrate
+  - bundle exec rake db:migrate HPS_ENV=test
 script:
   - bundle exec rake
