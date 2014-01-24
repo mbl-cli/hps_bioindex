@@ -27,14 +27,14 @@ group :development do
 end
 
 group :production do
-  gem 'unicorn', '~> 4.6'
+  gem 'unicorn', '~> 4.7'
 end
 
 
 group :test do
   gem 'rspec', '~> 2.14'
   gem 'rr', '~> 1.1'
-  gem 'webmock', '~> 1.16'
+  gem 'webmock', '~> 1.17'
   gem 'factory_girl', '~> 4.3'
   # gem 'capybara', '~> 2.1'
   # gem 'capybara-webkit', '~> 1.0'
