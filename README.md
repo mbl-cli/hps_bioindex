@@ -9,6 +9,8 @@ This is a tool for harvesting DS communities using DspaceTools API
 [![Dependency Status][7]][8]
 
 
+[Official Site][9]
+
 Copyright
 ---------
 
@@ -25,4 +27,5 @@ further details.
 [6]: https://codeclimate.com/github/mbl-cli/hps_bioindex
 [7]: https://gemnasium.com/mbl-cli/hps_bioindex.png
 [8]: https://gemnasium.com/mbl-cli/hps_bioindex
-[9]: https://github.com/dimus
+[9]: http://bioindex.hpsrepository.asu.edu/
+[10]: https://github.com/dimus
